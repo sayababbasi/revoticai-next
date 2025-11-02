@@ -1,0 +1,119 @@
+/* -----------------------------
+   GLOBAL VARIABLES & BASE SETUP
+------------------------------ */
+:root {
+  --header-total-height: 100px; /* Adjust if Topbar + Navbar total height changes */
+  /* --topbar-height: 40px;
+  --navbar-height: 60px; */
+  --topbar-height: 65px; /* Mobile height */
+  --navbar-height: 56px;
+  --topbar-h: 56px;
+
+
+  /* THEME COLORS */
+  --color-primary: #facc15; /* Yellowish for buttons */
+  --color-dark: #0a0a0a; /* Blackish for text & titles */
+  --color-bg: #f9fafb; /* Light background */
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply font-sans text-[#0a0a0a] bg-[#f9fafb];
+  padding-top: var(--header-total-height);
+  overflow-x: hidden;
+}
+
+/* -----------------------------
+   TAILWIND IMPORTS
+------------------------------ */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* -----------------------------
+   MOBILE DRAWER ANIMATION
+------------------------------ */
+@keyframes slide-in-right {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.animate-slide-in-right {
+  animation: slide-in-right 0.28s ease-out forwards;
+}
+
+/* -----------------------------
+   GLOBAL SCROLLBAR STYLE (Optional)
+------------------------------ */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--color-primary);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #e5e7eb;
+}
+
+/* -----------------------------
+   HELPER CLASSES
+------------------------------ */
+
+/* Add spacing for topbar + navbar if needed */
+.header-spacer {
+  height: calc(var(--topbar-height) + var(--navbar-height));
+}
+
+/* Smooth hover transition for all links */
+a {
+  @apply transition-all duration-200 ease-in-out;
+}
+
+/* Button styling utility */
+.btn-primary {
+  @apply bg-[#facc15] text-[#0a0a0a] px-5 py-2 rounded-full font-medium hover:bg-[#e5b900] transition;
+}
+
+@media (max-width: 900px) {
+  nav a, nav button {
+    font-size: 14px !important;
+  }
+  .text-responsive {
+    font-size: 14px !important;
+  }
+}
+
+
+.swiper-pagination-bullet {
+  background-color: #aaa !important;
+  opacity: 0.6;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #84cc16 !important; /* Lime/green highlight */
+  opacity: 1;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  color: white !important;
+  z-index: 30 !important;
+  transition: 0.3s;
+}
+
+.swiper-button-prev:hover,
+.swiper-button-next:hover {
+  color: #84cc16 !important;
+}
