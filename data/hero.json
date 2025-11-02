@@ -1,0 +1,23 @@
+[
+  {
+    "tag": "CASE STUDY | HEALTHCARE",
+    "company": "amwell",
+    "description": "Improving customer satisfaction and accelerating delivery of new telehealth services with a fully-automated software deployment process.",
+    "image": "/images/hero/hero1.webp",
+    "buttonText": "Read case study"
+  },
+  {
+    "tag": "CASE STUDY | RETAIL AI",
+    "company": "Agentic Commerce",
+    "description": "Revolutionizing retail with personalized, AI-driven automation for next-generation customer experience.",
+    "image": "/images/hero/hero2.webp",
+    "buttonText": "Explore more"
+  },
+  {
+    "tag": "CASE STUDY | FINANCE",
+    "company": "FinEdge",
+    "description": "Delivering secure, cloud-based fintech solutions through intelligent automation and digital platforms.",
+    "image": "/images/hero/hero3.webp",
+    "buttonText": "View project"
+  }
+]
