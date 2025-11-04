@@ -1,0 +1,38 @@
+[
+  {
+    "icon": "Brain",
+    "title": "AI & ML Automation",
+    "description": "Leverage our expertise in AI to automate complex processes and unlock data-driven insights.",
+    "link": "/services/ai-ml"
+  },
+  {
+    "icon": "Globe",
+    "title": "AI-Powered Web Apps",
+    "description": "We build high-performance, intelligent websites and apps that deliver scalable growth.",
+    "link": "/services/web-app"
+  },
+  {
+    "icon": "Zap",
+    "title": "Intelligent Automation",
+    "description": "Transform your business operations with cutting-edge automation that boosts efficiency.",
+    "link": "/services/automation"
+  },
+  {
+    "icon": "Gamepad2",
+    "title": "Custom Game Development",
+    "description": "Create immersive and engaging experiences with our end-to-end game development services.",
+    "link": "/services/game-dev"
+  },
+  {
+    "icon": "Sparkles",
+    "title": "Generative AI Solutions",
+    "description": "Harness the power of GenAI to create novel solutions, from content generation to smart chatbots.",
+    "link": "/services/ai-ml"
+  },
+  {
+    "icon": "PenTool",
+    "title": "Modern UI/UX Design",
+    "description": "Our design team creates intuitive and beautiful interfaces that delight users and drive engagement.",
+    "link": "/services/ui-ux"
+  }
+]

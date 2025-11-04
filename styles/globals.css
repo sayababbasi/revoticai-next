@@ -5,9 +5,9 @@
   --header-total-height: 100px; /* Adjust if Topbar + Navbar total height changes */
   /* --topbar-height: 40px;
   --navbar-height: 60px; */
-  --topbar-height: 65px; /* Mobile height */
-  --navbar-height: 56px;
-  --topbar-h: 56px;
+  --topbar-height: 50px; /* Mobile height */
+  --navbar-height: 40px;
+  --topbar-h: 40px;
 
 
   /* THEME COLORS */
