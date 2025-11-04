@@ -1,0 +1,27 @@
+[
+  {
+    "slug": "ai-automation-trends-2025",
+    "image": "https://placehold.co/1000x600/e0e0e0/555?text=AI+Trends",
+    "category": "AI & Automation",
+    "date": "Oct 28, 2025",
+    "title": "Top 5 AI Automation Trends to Watch in 2025",
+    "description": "Discover the key trends in AI and automation that are set to redefine industries, from hyperautomation to generative AI in business logic."
+  },
+  {
+    "slug": "building-scalable-saas-products",
+    "image": "https://placehold.co/1000x600/e0e0e0/555?text=SaaS+Dev",
+    "category": "SaaS & Development",
+    "date": "Oct 22, 2025",
+    "title": "The Architect's Guide to Building Scalable AI SaaS Products",
+    "description": "A deep dive into the architecture, technologies, and strategies required to build and scale a successful SaaS product in the age of AI."
+  },
+  {
+    "slug": "full-stack-ai-integration",
+    "image": "https://placehold.co/1000x600/e0e0e0/555?text=Full+Stack+AI",
+    "category": "Full Stack",
+    "date": "Oct 15, 2025",
+    "title": "Integrating AI: A Full-Stack Developer's Playbook",
+    "description": "Learn how to seamlessly integrate AI models and services into modern web applications, from the frontend to the backend."
+  }
+]
+

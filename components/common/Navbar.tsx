@@ -16,7 +16,7 @@ const Navbar: React.FC = () => {
     "Experts",
     "Blogs",
     "Contact",
-    "Verify",
+    "Career",
   ];
 
   useEffect(() => {
@@ -47,7 +47,7 @@ const Navbar: React.FC = () => {
     <>
       <nav
         className={`fixed w-full left-0 bg-white transition-all duration-300 z-[59] ${
-          isScrolled ? "top-0 shadow-md py-2" : "top-[56px] py-4"
+          isScrolled ? "top-0 shadow-md py-2" : "top-[40px] py-4"
         }`}
       >
         <div className="flex justify-between items-center px-4 sm:px-6 md:px-10">

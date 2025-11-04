@@ -1,0 +1,87 @@
+[
+  {
+    "name": "Alex Johnson",
+    "title": "Startup Founder",
+    "image": "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&q=80&w=100&h=100",
+    "rating": 5,
+    "review": "Revotic AI's automation solution cut our processing time by 70%. A total game-changer for our team. Their proactive support was exceptional."
+  },
+  {
+    "name": "Samantha Lee",
+    "title": "E-commerce Manager",
+    "image": "https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&q=80&w=100&h=100",
+    "rating": 5,
+    "review": "The AI-powered web app they built is fast, smart, and our users love it. Conversion rates are up 20% within weeks of launch."
+  },
+  {
+    "name": "Michael Chen",
+    "title": "CTO, FinTech Corp",
+    "image": "https://images.unsplash.com/photo-1560250097-0b73528c311a?auto=format&fit=crop&q=80&w=100&h=100",
+    "rating": 5,
+    "review": "A highly professional team. They delivered a complex AI dashboard on time and on budget. Their technical acumen is truly impressive."
+  },
+  {
+    "name": "Emily Rodriguez",
+    "title": "Marketing Director",
+    "image": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=100&h=100",
+    "rating": 5,
+    "review": "Their insights from the data analytics project were invaluable. We now make much smarter, data-driven decisions that impact our bottom line."
+  },
+  {
+    "name": "David Kim",
+    "title": "Logistics Head",
+    "image": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=100&h=100",
+    "rating": 4,
+    "review": "The AI model for supply chain optimization was impressive. It identified bottlenecks we hadn't seen in years, leading to significant savings."
+  },
+  {
+    "name": "Sarah Jenkins",
+    "title": "SaaS Product Owner",
+    "image": "https://images.unsplash.com/photo-1589571894960-98492066-5080?auto=format&fit=crop&q=80&w=100&h=100",
+    "rating": 5,
+    "review": "Working with Revotic to integrate GenAI into our platform was seamless. Their expertise is top-notch and their communication was excellent throughout."
+  },
+  {
+    "name": "Tom Wu",
+    "title": "Restaurateur",
+    "image": "https://images.unsplash.com/photo-1557862921-37829c790f19?auto=format&fit=crop&q=80&w=100&h=100",
+    "rating": 5,
+    "review": "The mobile app they developed for our delivery service is flawless and has handled thousands of orders without a hitch. Our customers love it!"
+  },
+  {
+    "name": "Laura Bianchi",
+    "title": "Healthcare Admin",
+    "image": "https://images.unsplash.com/photo-1599566150163-f25903967b0a?auto=format&fit=crop&q=80&w=100&h=100",
+    "rating": 5,
+    "review": "The new patient intake automation saves our staff hours every day. Secure, compliant, and incredibly efficient. A true asset."
+  },
+  {
+    "name": "James Anderson",
+    "title": "Real Estate Broker",
+    "image": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&q=80&w=100&h=100",
+    "rating": 4,
+    "review": "Their full-stack team rebuilt our legacy portal into a modern, fast, and scalable platform. Very satisfied with the outcome."
+  },
+  {
+    "name": "Chloe Tan",
+    "title": "Creative Director",
+    "image": "https://images.unsplash.com/photo-1573496359142-b8d8773400a4?auto=format&fit=crop&q=80&w=100&h=100",
+    "rating": 5,
+    "review": "The UI/UX design for our new brand website was stunning. They perfectly captured our vision and delivered a truly engaging experience."
+  },
+  {
+    "name": "Marcus Cole",
+    "title": "GameDev Studio Head",
+    "image": "https://images.unsplash.com/photo-1564564321837-a57b7070ac7f?auto=format&fit=crop&q=80&w=100&h=100",
+    "rating": 5,
+    "review": "Revotic's game development team helped us optimize our physics engine and integrate complex AI for NPCs. True experts in their field."
+  },
+  {
+    "name": "Priya Sharma",
+    "title": "Non-Profit Coordinator",
+    "image": "https://images.unsplash.com/photo-1628157529402-9963e6f1c7d2?auto=format&fit=crop&q=80&w=100&h=100",
+    "rating": 5,
+    "review": "They understood our budget constraints and still delivered a high-quality web application that helps us manage volunteers and donations effectively."
+  }
+]
+
