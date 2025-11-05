@@ -462,75 +462,216 @@ const ActionButton: React.FC<ActionButtonProps> = ({
   </div>
 );
 
+// // ============================================================
+// //   Offer Modal Component
+// // ============================================================
+
+
+// const OfferModal: React.FC<{ onClose: () => void }> = ({ onClose }) => {
+//   // Initialize state in seconds (459 seconds = 7m 39s)
+//   const [remainingTime, setRemainingTime] = useState(27540);
+
+//   /**
+//    * Convert total seconds into a formatted H:M:S string.
+//    */
+//   const formatTime = (totalSeconds: number): string => {
+//     const hrs = Math.floor(totalSeconds / 3600);
+//     const mins = Math.floor((totalSeconds % 3600) / 60);
+//     const secs = totalSeconds % 60;
+
+//     // Optional: Add leading zeros for consistent display (e.g., 01h 05m 03s)
+//     const pad = (num: number) => num.toString().padStart(2, '0');
+
+//     // Only display hours if they exist
+//     if (hrs > 0) {
+//         return `${pad(hrs)}h ${pad(mins)}m ${pad(secs)}s`;
+//     } else {
+//         return `${pad(mins)}m ${pad(secs)}s`;
+//     }
+//   };
+
+//   /**
+//    * Effect hook to manage the countdown timer.
+//    */
+//   useEffect(() => {
+//     // Only run the timer if time is greater than 0
+//     if (remainingTime <= 0) return;
+
+//     const timer = setInterval(() => {
+//       setRemainingTime((prevTime) => {
+//         // Stop the timer if we hit zero on this tick
+//         if (prevTime <= 1) {
+//           clearInterval(timer);
+//           // Optional: automatically close the modal when time runs out
+//           // onClose(); 
+//           return 0;
+//         }
+//         return prevTime - 1; // Decrement by one second
+//       });
+//     }, 1000); // Decrease every 1000ms (1 second)
+
+//     // Cleanup function to clear the interval when the component unmounts
+//     return () => clearInterval(timer);
+//   }, [remainingTime, onClose]); // Depend on remainingTime to check if it's zero
+
+
+// // const OfferModal: React.FC<{ onClose: () => void }> = ({ onClose }) => {
+// //   const [remainingTime, setRemainingTime] = useState(459); // in minutes
+
+// //   // Convert minutes to hours and minutes
+// //   const formatTime = (minutes: number) => {
+// //     const hrs = Math.floor(minutes / 60);
+// //     const mins = minutes % 60;
+// //     return `${hrs}h ${mins}m`;
+// //   };
+
+// //   useEffect(() => {
+// //     const timer = setInterval(() => {
+// //       setRemainingTime((t) => Math.max(t - 1, 0));
+// //     }, 60000); // decrease every minute
+// //     return () => clearInterval(timer);
+// //   }, []);
+
+//   return (
+//     <motion.div
+//       initial={{ opacity: 0 }}
+//       animate={{ opacity: 1 }}
+//       exit={{ opacity: 0 }}
+//       className="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-black/70 backdrop-blur-sm"
+//       onClick={onClose}
+//     >
+//       <motion.div
+//         initial={{ scale: 0.9, opacity: 0 }}
+//         animate={{ scale: 1, opacity: 1 }}
+//         exit={{ scale: 0.9, opacity: 0 }}
+//         transition={{ duration: 0.3, ease: "easeInOut" }}
+//         className="relative w-full max-w-3xl bg-neutral-900 border border-neutral-700 rounded-2xl shadow-2xl overflow-hidden"
+//         onClick={(e) => e.stopPropagation()}
+//       >
+//         <button
+//           onClick={onClose}
+//           className="absolute top-4 right-4 text-gray-400 hover:text-white z-20"
+//           aria-label="Close modal"
+//         >
+//           <CloseIcon />
+//         </button>
+
+//         <div className="grid grid-cols-1 md:grid-cols-2">
+//           <div className="p-6 md:p-8 flex flex-col justify-center">
+//             <div className="w-12 h-12 bg-[#b1ff32]/10 border-2 border-[#b1ff32]/30 rounded-full flex items-center justify-center mb-3">
+//               <SparkleIcon />
+//             </div>
+//             <p className="font-semibold text-[#b1ff32] mb-2">
+//               LIMITED TIME OFFER!
+//             </p>
+//             <div className="flex items-center text-gray-400 text-sm mb-3">
+//               <ClockIcon />
+//               <span>
+//                 Offer ends in:{" "}
+//                 <strong className="text-white">
+//                   {formatTime(remainingTime)}
+//                 </strong>
+//               </span>
+//             </div>
+//             <h3 className="text-3xl lg:text-4xl font-bold text-white mb-3">
+//               Get 30% Off Your First Project
+//             </h3>
+//             <p className="text-gray-400 mb-5">
+//               Sign up now to claim your exclusive one-time discount.
+//             </p>
+//             <form
+//               onSubmit={(e) => e.preventDefault()}
+//               className="flex flex-col gap-3"
+//             >
+//               <input
+//                 type="text"
+//                 placeholder="Enter your name"
+//                 className="w-full bg-neutral-800 border border-neutral-700 text-white px-4 py-3 rounded-md focus:outline-none focus:border-[#b1ff32]"
+//               />
+//               <input
+//                 type="email"
+//                 placeholder="Enter your email"
+//                 className="w-full bg-neutral-800 border border-neutral-700 text-white px-4 py-3 rounded-md focus:outline-none focus:border-[#b1ff32]"
+//               />
+//               <input
+//                 type="tel"
+//                 placeholder="Enter your contact number"
+//                 className="w-full bg-neutral-800 border border-neutral-700 text-white px-4 py-3 rounded-md focus:outline-none focus:border-[#b1ff32]"
+//               />
+//               <button
+//                 type="submit"
+//                 className="w-full bg-[#b1ff32] text-black font-bold text-lg px-6 py-3 rounded-lg hover:scale-105 transition-transform duration-300 mt-1"
+//               >
+//                 Claim My 30% Discount
+//               </button>
+//             </form>
+//           </div>
+
+//           <div className="hidden md:block w-full h-full">
+//             <img
+//               src="https://images.unsplash.com/photo-1556761175-577380e3c8b4?auto=format&fit=crop&q=80&w=800&h=1000"
+//               alt="Special Offer"
+//               className="w-full h-full object-cover"
+//               onError={(e) =>
+//                 (e.currentTarget.src =
+//                   "https://placehold.co/800x1000/1a1a1a/b1ff32?text=Offer+Image")
+//               }
+//             />
+//           </div>
+//         </div>
+//       </motion.div>
+//     </motion.div>
+//   );
+// };
 // ============================================================
 //   Offer Modal Component
 // ============================================================
 
 
 const OfferModal: React.FC<{ onClose: () => void }> = ({ onClose }) => {
-  // Initialize state in seconds (459 seconds = 7m 39s)
-  const [remainingTime, setRemainingTime] = useState(27540);
+  const [remainingTime, setRemainingTime] = useState(27540); // 7h 39m in seconds
+  const [submitStatus, setSubmitStatus] = useState("");
 
-  /**
-   * Convert total seconds into a formatted H:M:S string.
-   */
   const formatTime = (totalSeconds: number): string => {
     const hrs = Math.floor(totalSeconds / 3600);
     const mins = Math.floor((totalSeconds % 3600) / 60);
     const secs = totalSeconds % 60;
-
-    // Optional: Add leading zeros for consistent display (e.g., 01h 05m 03s)
-    const pad = (num: number) => num.toString().padStart(2, '0');
-
-    // Only display hours if they exist
-    if (hrs > 0) {
-        return `${pad(hrs)}h ${pad(mins)}m ${pad(secs)}s`;
-    } else {
-        return `${pad(mins)}m ${pad(secs)}s`;
-    }
+    const pad = (n: number) => n.toString().padStart(2, "0");
+    return hrs > 0
+      ? `${pad(hrs)}h ${pad(mins)}m ${pad(secs)}s`
+      : `${pad(mins)}m ${pad(secs)}s`;
   };
 
-  /**
-   * Effect hook to manage the countdown timer.
-   */
   useEffect(() => {
-    // Only run the timer if time is greater than 0
     if (remainingTime <= 0) return;
-
     const timer = setInterval(() => {
-      setRemainingTime((prevTime) => {
-        // Stop the timer if we hit zero on this tick
-        if (prevTime <= 1) {
-          clearInterval(timer);
-          // Optional: automatically close the modal when time runs out
-          // onClose(); 
-          return 0;
-        }
-        return prevTime - 1; // Decrement by one second
-      });
-    }, 1000); // Decrease every 1000ms (1 second)
-
-    // Cleanup function to clear the interval when the component unmounts
+      setRemainingTime((prev) => (prev <= 1 ? 0 : prev - 1));
+    }, 1000);
     return () => clearInterval(timer);
-  }, [remainingTime, onClose]); // Depend on remainingTime to check if it's zero
+  }, [remainingTime]);
 
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setSubmitStatus("");
 
-// const OfferModal: React.FC<{ onClose: () => void }> = ({ onClose }) => {
-//   const [remainingTime, setRemainingTime] = useState(459); // in minutes
+    const form = e.target as HTMLFormElement;
+    const name = (form[0] as HTMLInputElement).value;
+    const email = (form[1] as HTMLInputElement).value;
+    const phone = (form[2] as HTMLInputElement).value;
 
-//   // Convert minutes to hours and minutes
-//   const formatTime = (minutes: number) => {
-//     const hrs = Math.floor(minutes / 60);
-//     const mins = minutes % 60;
-//     return `${hrs}h ${mins}m`;
-//   };
+    const res = await fetch("/api/contact/home-lead", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ name, email, phone }),
+    });
 
-//   useEffect(() => {
-//     const timer = setInterval(() => {
-//       setRemainingTime((t) => Math.max(t - 1, 0));
-//     }, 60000); // decrease every minute
-//     return () => clearInterval(timer);
-//   }, []);
+    if (res.ok) {
+      setSubmitStatus("Discount Claimed! We'll contact you soon.");
+      form.reset();
+    } else {
+      setSubmitStatus("Something went wrong. Try again.");
+    }
+  };
 
   return (
     <motion.div
@@ -551,7 +692,6 @@ const OfferModal: React.FC<{ onClose: () => void }> = ({ onClose }) => {
         <button
           onClick={onClose}
           className="absolute top-4 right-4 text-gray-400 hover:text-white z-20"
-          aria-label="Close modal"
         >
           <CloseIcon />
         </button>
@@ -561,49 +701,56 @@ const OfferModal: React.FC<{ onClose: () => void }> = ({ onClose }) => {
             <div className="w-12 h-12 bg-[#b1ff32]/10 border-2 border-[#b1ff32]/30 rounded-full flex items-center justify-center mb-3">
               <SparkleIcon />
             </div>
-            <p className="font-semibold text-[#b1ff32] mb-2">
-              LIMITED TIME OFFER!
-            </p>
+
+            <p className="font-semibold text-[#b1ff32] mb-2">LIMITED TIME OFFER!</p>
+
             <div className="flex items-center text-gray-400 text-sm mb-3">
               <ClockIcon />
               <span>
                 Offer ends in:{" "}
-                <strong className="text-white">
-                  {formatTime(remainingTime)}
-                </strong>
+                <strong className="text-white">{formatTime(remainingTime)}</strong>
               </span>
             </div>
+
             <h3 className="text-3xl lg:text-4xl font-bold text-white mb-3">
               Get 30% Off Your First Project
             </h3>
             <p className="text-gray-400 mb-5">
               Sign up now to claim your exclusive one-time discount.
             </p>
-            <form
-              onSubmit={(e) => e.preventDefault()}
-              className="flex flex-col gap-3"
-            >
+
+            <form onSubmit={handleSubmit} className="flex flex-col gap-3">
               <input
                 type="text"
                 placeholder="Enter your name"
                 className="w-full bg-neutral-800 border border-neutral-700 text-white px-4 py-3 rounded-md focus:outline-none focus:border-[#b1ff32]"
+                required
               />
               <input
                 type="email"
                 placeholder="Enter your email"
                 className="w-full bg-neutral-800 border border-neutral-700 text-white px-4 py-3 rounded-md focus:outline-none focus:border-[#b1ff32]"
+                required
               />
               <input
                 type="tel"
                 placeholder="Enter your contact number"
                 className="w-full bg-neutral-800 border border-neutral-700 text-white px-4 py-3 rounded-md focus:outline-none focus:border-[#b1ff32]"
+                required
               />
+
               <button
                 type="submit"
                 className="w-full bg-[#b1ff32] text-black font-bold text-lg px-6 py-3 rounded-lg hover:scale-105 transition-transform duration-300 mt-1"
               >
                 Claim My 30% Discount
               </button>
+
+              {submitStatus && (
+                <p className="text-center text-[#b1ff32] font-semibold mt-2">
+                  {submitStatus}
+                </p>
+              )}
             </form>
           </div>
 
@@ -623,6 +770,8 @@ const OfferModal: React.FC<{ onClose: () => void }> = ({ onClose }) => {
     </motion.div>
   );
 };
+
+
 
 // ============================================================
 //   Main Floating Action Bar
