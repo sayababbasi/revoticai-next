@@ -42,7 +42,7 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import ServiceGrid from "@/components/sections/Services/ServiceGrid";
-
+import ProjectsGallery from "@/components/sections/Portfolio/ProjectsGallery";
 // ------------------ ICONS ------------------
 const ArrowRightIcon = () => (
   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"
@@ -240,7 +240,7 @@ const PortfolioPage: React.FC = () => {
           )}
         </div>
       </section>
-
+      <ProjectsGallery />
       <CTASection />
       <ServiceGrid />
     </main>

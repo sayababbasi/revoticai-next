@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import { motion } from "framer-motion";
+import emailjs from "@emailjs/nodejs";
 
 import OurClients from "@/components/sections/Home/Clients";
 import ServiceGrid from "@/components/sections/Services/ServiceGrid";
@@ -127,30 +128,142 @@ const ContactPage: React.FC = () => {
     });
   };
 
+  // const handleSubmit = async (e: React.FormEvent) => {
+  //   e.preventDefault();
+  //   setStatus("loading");
+
+  //   try {
+  //     // This is the API route you specified in your project plan
+  //     const response = await fetch("/contact/api/send-message", {
+  //       method: "POST",
+  //       headers: { "Content-Type": "application/json" },
+  //       body: JSON.stringify(formData),
+  //     });
+
+  //     if (response.ok) {
+  //       setStatus("success");
+  //       setFormData({ // Reset form
+  //         name: "", email: "", phone: "", company: "", services: [], message: "",
+  //       });
+  //     } else {
+  //       throw new Error("Failed to send message");
+  //     }
+  //   } catch (error) {
+  //     setStatus("error");
+  //   }
+  // };
+
   const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setStatus("loading");
+  e.preventDefault();
+  setStatus("loading");
 
-    try {
-      // This is the API route you specified in your project plan
-      const response = await fetch("/contact/api/send-message", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(formData),
+  try {
+    const response = await fetch("/api/contact/send-message", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(formData),
+    });
+
+    if (response.ok) {
+      setStatus("success");
+      setFormData({
+        name: "",
+        email: "",
+        phone: "",
+        company: "",
+        services: [],
+        message: "",
       });
-
-      if (response.ok) {
-        setStatus("success");
-        setFormData({ // Reset form
-          name: "", email: "", phone: "", company: "", services: [], message: "",
-        });
-      } else {
-        throw new Error("Failed to send message");
-      }
-    } catch (error) {
-      setStatus("error");
+    } else {
+      throw new Error("Failed to send message");
     }
-  };
+  } catch (error) {
+    setStatus("error");
+  }
+};
+
+
+// const handleSubmit = async (e: React.FormEvent) => {
+//   e.preventDefault();
+//   setStatus("loading");
+
+//   try {
+//     const payload = {
+//       ...formData,
+//       // ensure services are sent as array or comma string (match what your template expects)
+//       services: Array.isArray(formData.services) ? formData.services : formData.services ? String(formData.services).split(",").map(s=>s.trim()) : [],
+//     };
+
+//     console.log("🔵 FRONTEND: sending payload to /api/contact/send-message:", payload);
+
+//     const response = await fetch("/api/contact/send-message", {
+//       method: "POST",
+//       headers: { "Content-Type": "application/json" },
+//       body: JSON.stringify(payload),
+//     });
+
+//     console.log("🔵 FRONTEND: got status", response.status);
+
+//     let data: any;
+//     const contentType = response.headers.get("content-type") || "";
+//     if (contentType.includes("application/json")) {
+//       data = await response.json();
+//     } else {
+//       data = await response.text();
+//     }
+
+//     console.log("🔵 FRONTEND: response body:", data);
+
+//     if (!response.ok) {
+//       // show a descriptive message for debugging
+//       const msg = data?.emailjs_response ?? data?.error ?? String(data);
+//       setStatus(`Error: ${msg}`);
+//       return;
+//     }
+
+//     setStatus("Message sent successfully ✅");
+//     setFormData({ name: "", email: "", phone: "", company: "", services: [], message: "" });
+//   } catch (error) {
+//     console.error("🔴 FRONTEND ERROR:", error);
+//     setStatus("Something went wrong. Check server logs.");
+//   }
+// };
+
+
+//   const handleSubmit = async (e: React.FormEvent) => {
+//   e.preventDefault();
+//   setStatus("loading");
+
+//   try {
+//     const response = await fetch("/api/contact/send-message", { // ✅ correct endpoint
+//       method: "POST",
+//       headers: { "Content-Type": "application/json" },
+//       body: JSON.stringify(formData),
+//     });
+
+//     if (!response.ok) {
+//       const err = await response.text();
+//       console.log("SERVER ERROR:", err);
+//       setStatus("error");
+//       return;
+//     }
+
+//     // success
+//     setStatus("success");
+//     setFormData({
+//       name: "",
+//       email: "",
+//       phone: "",
+//       company: "",
+//       services: [],
+//       message: "",
+//     });
+
+//   } catch (error) {
+//     console.log("CLIENT ERROR:", error);
+//     setStatus("error");
+//   }
+// };
 
   const breadcrumbs = [
     { name: "Home", href: "/" },

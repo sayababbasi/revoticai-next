@@ -10,6 +10,8 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@emailjs/browser": "^4.4.1",
+    "@emailjs/nodejs": "^5.0.2",
     "@types/node": "^20.11.19",
     "@types/react": "^18.2.41",
     "@types/react-dom": "^18.2.17",
@@ -17,12 +19,14 @@
     "framer-motion": "^11.0.0",
     "lucide-react": "^0.552.0",
     "next": "14.2.13",
+    "nodemailer": "^7.0.10",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "swiper": "^11.2.10",
     "typescript": "^5.3.3"
   },
   "devDependencies": {
+    "@types/nodemailer": "^7.0.3",
     "autoprefixer": "^10.4.21",
     "eslint": "^8.57.0",
     "eslint-config-next": "14.2.13",
