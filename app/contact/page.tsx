@@ -3,6 +3,9 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 
+import OurClients from "@/components/sections/Home/Clients";
+import ServiceGrid from "@/components/sections/Services/ServiceGrid";
+
 // --- START: INLINED ICONS (to prevent build errors) ---
 const MailIcon = () => (
   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-6 h-6 text-[#b1ff32]">
@@ -280,8 +283,13 @@ const ContactPage: React.FC = () => {
           </div>
         </div>
       </section>
+
+      <OurClients />
+      <ServiceGrid />
     </main>
   );
+
+  
 };
 
 export default ContactPage;
