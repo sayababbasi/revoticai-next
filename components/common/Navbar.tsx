@@ -75,7 +75,7 @@ const Navbar: React.FC = () => {
               </Link>
             ))}
             <Link
-              href="/quote"
+              href="/contact"
               className="bg-[#facc15] text-[#0a0a0a] px-4 lg:px-5 py-2 rounded-full hover:bg-[#e5b900] transition"
             >
               Book A Free Call
