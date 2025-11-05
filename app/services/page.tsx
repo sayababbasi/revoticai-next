@@ -2,6 +2,7 @@
 
 import React from "react";
 import { motion } from "framer-motion";
+import LeadGenForm from "@/components/sections/Home/LeadGenForm";
 
 // --- START: INLINED ICONS (to prevent build errors) ---
 
@@ -767,10 +768,12 @@ const ServicesPage: React.FC = () => {
       />
 
       {/* 2. Services Grid (Inlined from Home/ServicesOverview.tsx) */}
+      <CoreExpertiseSection />
       <ServicesOverview />
+      <LeadGenForm />
+      
 
       {/* 3. Core Expertise Grid (Inlined from Services/OurCoreExpertise.tsx) */}
-      <CoreExpertiseSection />
 
       {/* 4. Working Process (Inlined from Home/WorkingProcess.tsx) */}
       <WorkingProcessSection />
