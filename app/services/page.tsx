@@ -258,31 +258,30 @@ const processSteps = [
   },
 ];
 const workImages = [
-  { title: "AI Dashboards", src: "https://placehold.co/200x150/1a1a1a/b1ff32?text=Dashboard" },
-  { title: "E-Commerce", src: "https://placehold.co/200x150/2a2a2a/b1ff32?text=E-Commerce" },
-  { title: "Web Development", src: "https://placehold.co/200x150/1a1a1a/b1ff32?text=Web+Dev" },
-  { title: "App Development", src: "https://placehold.co/200x150/2a2a2a/b1ff32?text=App+Dev" },
-  { title: "AI/ML Model", src: "https://placehold.co/200x150/1a1a1a/b1ff32?text=AI+Model" },
-  { title: "SAAS Product", src: "https://placehold.co/200x150/2a2a2a/b1ff32?text=SAAS" },
-  { title: "Automation Bot", src: "https://placehold.co/200x150/1a1a1a/b1ff32?text=RPA+Bot" },
-  { title: "CRM Platform", src: "https://placehold.co/200x150/2a2a2a/b1ff32?text=CRM" },
+  { title: "AI Dashboards", src: "images/sliderproduct/dash-img-333.png" },
+  { title: "E-Commerce", src: "images/sliderproduct/mext.jpg" },
+  { title: "Web Development", src: "images/sliderproduct/web-dev-2.webp" },
+  { title: "App Development", src: "images/sliderproduct/product.webp" },
+  { title: "AI/ML Model", src: "images/sliderproduct/fweb-3.jpg" },
+  { title: "SAAS Product", src: "images/sliderproduct/product-dev-2.webp" },
+  { title: "CRM Platform", src: "images/sliderproduct/hhuiu.webp" },
 ];
 const allWorkImages = [...workImages, ...workImages];
 const clientsRow1 = [
-  { name: "LUSH", logo: "https://placehold.co/150x60/f00/fff?text=LUSH&font=montserrat" },
-  { name: "Huda Beauty", logo: "https://placehold.co/150x60/000/fff?text=hudabeauty&font=lora" },
-  { name: "Retailo", logo: "https://placehold.co/150x60/e64420/fff?text=retailo&font=lato" },
-  { name: "Revotic", logo: "https://placehold.co/150x60/000/fff?text=REVO&font=oswald" },
-  { name: "Client 5", logo: "https://placehold.co/150x60/111/fff?text=Client+Five" },
-  { name: "Client 6", logo: "https://placehold.co/150x60/222/fff?text=Client+Six" },
+  { name: "LUSH", logo: "/images/clients/lusd.png" },
+  { name: "Huda Beauty", logo: "/images/clients/huda.png" },
+  { name: "Retailo", logo: "/images/clients/retailo.png" },
+  { name: "Revotic", logo: "/images/clients/logo.png" },
+  { name: "Client 5", logo: "/images/clients/slock.png" },
+  { name: "Client 6", logo: "/images/clients/revolut.png" },
 ];
 const clientsRow2 = [
-  { name: "Tajir", logo: "https://placehold.co/150x60/4f46e5/fff?text=Tajir&font=lato" },
-  { name: "Toms", logo: "https://placehold.co/150x60/d00/fff?text=TOMS&font=times" },
-  { name: "Warby Parker", logo: "https://placehold.co/150x60/574938/fff?text=WARBY+PARKER" },
-  { name: "Replika", logo: "https://placehold.co/150x60/f472b6/fff?text=replika" },
-  { name: "Client 9", logo: "https://placehold.co/150x60/333/fff?text=Client+Nine" },
-  { name: "Client 10", logo: "https://placehold.co/150x60/444/fff?text=Client+Ten" },
+  { name: "Tajir", logo: "/images/clients/tajir.png" },
+  { name: "Toms", logo: " /images/clients/toms.png" },
+  { name: "Warby Parker", logo: "/images/clients/warby.png" },
+  { name: "Replika", logo: "/images/clients/dawaai.png" },
+  { name: "Client 9", logo: "/images/clients/shave.png" },
+  { name: "Client 10", logo: "/images/clients/logo.png" },
 ];
 const allClients1 = [...clientsRow1, ...clientsRow1];
 const allClients2 = [...clientsRow2, ...clientsRow2];

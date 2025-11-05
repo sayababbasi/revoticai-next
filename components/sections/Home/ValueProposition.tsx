@@ -100,7 +100,7 @@ const ValueProposition: React.FC = () => {
             Your design: https://i.imgur.com/image_927861.png
           */}
           <img
-            src="https://placehold.co/400x300/ffffff/000000?text=Your+3D+Graphic+Here&font=inter"
+            src="\images\product\bg-home-sec.png"
             alt="No hidden costs"
             className="w-64 md:w-80 lg:w-96 rounded-lg shadow-2xl"
           />

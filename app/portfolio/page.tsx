@@ -97,11 +97,11 @@ const BarChart3Icon = () => (
 // ------------------ DATA ------------------
 const allProjects = [
   { id: 1, title: "Intelligent Lead Platform", category: "AI & ML", tags: ['AI', 'SaaS', 'Sales'], image: "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&w=600&q=80", link: "#" },
-  { id: 2, title: "Custom E-commerce API", category: "Web Development", tags: ['Backend', 'E-commerce', 'API'], image: "https://images.unsplash.com/photo-1550009154-1596e48c081e?auto=format&fit=crop&w=600&q=80", link: "#" },
-  { id: 3, title: "Finance Automation Bot", category: "Automation", tags: ['RPA', 'FinTech'], image: "https://images.unsplash.com/photo-1550592704-586f328127f0?auto=format&fit=crop&w=600&q=80", link: "#" },
-  { id: 4, title: "Predictive Analytics Dashboard", category: "Data & Analytics", tags: ['DataViz', 'ML', 'Python'], image: "https://images.unsplash.com/photo-1507721999963-c7af99342502?auto=format&fit=crop&w=600&q=80", link: "#" },
-  { id: 5, title: "Logistics Tracking App", category: "App Development", tags: ['Mobile', 'Flutter', 'IoT'], image: "https://images.unsplash.com/photo-1556910609-843338870196?auto=format&fit=crop&w=600&q=80", link: "#" },
-  { id: 6, title: "Healthcare AI Assistant", category: "AI & ML", tags: ['GenAI', 'Healthcare', 'NLP'], image: "https://images.unsplash.com/photo-1576091160550-21735c03c58b?auto=format&fit=crop&w=600&q=80", link: "#" },
+  { id: 2, title: "Custom E-commerce API", category: "Web Development", tags: ['Backend', 'E-commerce', 'API'], image: "/images/sliderproduct/web-dev-2.webp", link: "#" },
+  { id: 3, title: "Finance Automation Bot", category: "Automation", tags: ['RPA', 'FinTech'], image: "/images/product/dashb-dev-3.jpg", link: "#" },
+  { id: 4, title: "Predictive Analytics Dashboard", category: "Data & Analytics", tags: ['DataViz', 'ML', 'Python'], image: "/images/sliderproduct/dash-img-333.png", link: "#" },
+  { id: 5, title: "Logistics Tracking App", category: "App Development", tags: ['Mobile', 'Flutter', 'IoT'], image: "/images/product/yt1.webp", link: "#" },
+  { id: 6, title: "Healthcare AI Assistant", category: "AI & ML", tags: ['GenAI', 'Healthcare', 'NLP'], image: "/images/blogs/aiinhealth.jpeg", link: "#" },
 ];
 
 const categories = [

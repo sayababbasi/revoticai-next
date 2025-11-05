@@ -104,7 +104,7 @@ const DiscoverSection: React.FC = () => {
             onClick={() => setIsModalOpen(true)}
           >
             <img
-              src="https://placehold.co/1200x700/1a1a1a/333?text=Revotic+AI+Office"
+              src="\images\product\revoticai-office.webp"
               alt="Revotic AI Office"
               className="w-full h-full object-cover"
             />

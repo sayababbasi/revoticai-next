@@ -3,21 +3,21 @@
     "tag": "AI & Fintech",
     "title": "Intelligent Automation for FinEdge",
     "description": "How we built a scalable, AI-powered platform to automate risk analysis and data processing, improving efficiency by 40%.",
-    "image": "https://placehold.co/1000x800/1a1a1a/b1ff32?text=FinEdge+Project",
+    "image": "/images/casestudies/case1.jpg",
     "link": "/case-studies/finedge-automation"
   },
   {
     "tag": "Web & E-commerce",
     "title": "AI-Powered E-commerce for RetailCo",
     "description": "Developed a full-stack web app with a personalized recommendation engine, increasing user engagement and conversion rates.",
-    "image": "https://placehold.co/1000x800/0a0a0a/b1ff32?text=RetailCo+App",
+    "image": "/images/casestudies/case2.jpg",
     "link": "/case-studies/retailco-ecommerce"
   },
   {
     "tag": "SaaS & Healthcare",
     "title": "Telehealth SaaS Platform",
     "description": "Designed and built a multi-tenant SaaS platform for telehealth providers, ensuring HIPAA compliance and a seamless user experience.",
-    "image": "https://placehold.co/1000x800/1a1a1a/b1ff32?text=Telehealth+SaaS",
+    "image": "/images/casestudies/case3.jpeg",
     "link": "/case-studies/telehealth-saas"
   }
 ]

@@ -8,12 +8,12 @@ const teamMembers = [
   {
     name: "SAYAB GULFARAZ",
     title: "Founder & Chief Executive Officer",
-    image: "/images/experts/test.jpg", // Ensure this path is correct in your public folder
+    image: "/images/experts/ceo.png", // Ensure this path is correct in your public folder
   },
   {
     name: "Hasaan Farooq",
     title: "Co-founder & Chief Information Officer",
-    image: "/images/experts/test.jpg", // Placeholder if you don't have an image
+    image: "/images/experts/Cofounder-bg.jpg", // Placeholder if you don't have an image
   },
   {
     name: "Maria Hanif",
@@ -23,32 +23,92 @@ const teamMembers = [
   {
     name: "Jahanzaib Ali",
     title: "Chief Operating Officer",
-    image: "/images/experts/test.jpg",
+    image: "/images/experts/Coo.jpg",
   },
   {
     name: "Asad Minhas",
-    title: "Head of Sales & Project Manager",
-    image: "/images/experts/test.jpg",
+    title: "Head of Sales",
+    image: "/images/experts/Sales.jpg",
   },
   {
     name: "Anas Faisal",
-    title: "Operation Manager",
-    image: "/images/experts/test.jpg",
+    title: "Operational Manager",
+    image: "/images/experts/OperationalManager.jpg",
   },
   {
     name: "Zain Ali",
     title: "Business Developer",
-    image: "/images/experts/test.jpg",
+    image: "/images/experts/BusinessDeveloper.png",
+  },
+    {
+    name: "Zawad Ahmad",
+    title: "Business Developer",
+    image: "/images/experts/bd.png",
   },
   {
     name: "Subhan Ali",
     title: "HR Manager",
     image: "/images/experts/test.jpg",
   },
+    {
+    name: "Zubiya Khan",
+    title: "Team Leader & Shift Incharge",
+    image: "/images/experts/test.jpg",
+  },
+    {
+    name: "Nimra Ansari",
+    title: "Project Supervisor",
+    image: "/images/experts/test.jpg",
+  },
+    {
+    name: "Ahsan Khan",
+    title: "Full Stack Developer",
+    image: "/images/experts/test.jpg",
+  },
+    {
+    name: "Hamza Zubair",
+    title: "Full Stack Developer",
+    image: "/images/experts/test.jpg",
+  },
+      {
+    name: "Aleesha Zafar",
+    title: "AI Developer",
+    image: "/images/experts/test.jpg",
+  },
+      {
+    name: "Muhammad Saleh",
+    title: "AI Developer",
+    image: "/images/experts/test.jpg",
+  },
+        {
+    name: "Zahid Hussain",
+    title: "DevOps Engineer",
+    image: "/images/experts/test.jpg",
+  },
+        {
+    name: "Muhammad Ahad",
+    title: "Graphic Designer & Video Editor",
+    image: "/images/experts/test.jpg",
+  },
+  
+        {
+    name: "Uzair Ahmad",
+    title: "Quality Assurance",
+    image: "/images/experts/test.jpg",
+  },
+  
+  
+  
   // Add more members as needed, using generic placeholders for now if no images
-  { name: "Expert 10", title: "Role", image: "/images/experts/test.png" },
-  { name: "Expert 11", title: "Role", image: "/images/experts/test.png" },
-  { name: "Expert 12", title: "Role", image: "/images/experts/test.png" },
+  // { name: "Expert 10", title: "Role", image: "/images/experts/test.png" },
+  // { name: "Expert 11", title: "Role", image: "/images/experts/test.png" },
+  // { name: "Expert 12", title: "Role", image: "/images/experts/test.png" },
+  //   { name: "Expert 13", title: "Role", image: "/images/experts/test.png" },
+  //     { name: "Expert 14", title: "Role", image: "/images/experts/test.png" },
+  //       { name: "Expert 15", title: "Role", image: "/images/experts/test.png" },
+  //         { name: "Expert 16", title: "Role", image: "/images/experts/test.png" },
+  //           { name: "Expert 17", title: "Role", image: "/images/experts/test.png" },
+
 ];
 
 const containerVariants = {
