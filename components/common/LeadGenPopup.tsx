@@ -654,7 +654,7 @@ const LeadGenPopup: React.FC = () => {
               {/* Right Side */}
               <div className="hidden md:block w-full h-full">
                 <img
-                  src="https://images.unsplash.com/photo-1556761175-577380e3c8b4?auto=format&fit=crop&q=80&w=800&h=1000"
+                  src="\images\popup.jpg"
                   alt="Special Offer"
                   className="w-full h-full object-cover"
                   onError={(e) =>
