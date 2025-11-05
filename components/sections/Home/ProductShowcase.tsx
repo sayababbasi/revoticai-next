@@ -68,7 +68,7 @@ const products = [
       "Sentiment Analysis",
     ],
     image:
-      "https://placehold.co/600x500/1a1a1a/b1ff32?text=AI+CRM+Platform",
+      "/images/product/dashb-dev-3.jpg",
   },
   {
     id: "bms",
@@ -82,7 +82,7 @@ const products = [
       "Smart Resource Allocation",
     ],
     image:
-      "https://placehold.co/600x500/2a2a2a/b1ff32?text=Intelligent+BMS",
+      "/images/product/dashb-dev-3.jpg",
   },
   {
     id: "automation",
@@ -96,7 +96,7 @@ const products = [
       "Scalable Cloud Infrastructure",
     ],
     image:
-      "https://placehold.co/600x500/1a1a1a/b1ff32?text=Automation+Tools",
+      "/images/product/automation-tool1.png",
   },
   {
     id: "ecommerce",
@@ -110,7 +110,7 @@ const products = [
       "Automated Inventory Sync",
     ],
     image:
-      "https://placehold.co/600x500/2a2a2a/b1ff32?text=E-commerce+AI",
+      "/images/product/web-dev-1.webp",
   },
 ];
 

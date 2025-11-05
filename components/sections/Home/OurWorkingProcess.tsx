@@ -55,14 +55,13 @@ const processSteps = [
 // --- Inlined Data for the Image Scroller ---
 // (Duplicates are added to create the seamless loop)
 const workImages = [
-  { title: "AI Dashboards", src: "https://placehold.co/200x150/1a1a1a/b1ff32?text=Dashboard" },
-  { title: "E-Commerce", src: "https://placehold.co/200x150/2a2a2a/b1ff32?text=E-Commerce" },
-  { title: "Web Development", src: "https://placehold.co/200x150/1a1a1a/b1ff32?text=Web+Dev" },
-  { title: "App Development", src: "https://placehold.co/200x150/2a2a2a/b1ff32?text=App+Dev" },
-  { title: "AI/ML Model", src: "https://placehold.co/200x150/1a1a1a/b1ff32?text=AI+Model" },
-  { title: "SAAS Product", src: "https://placehold.co/200x150/2a2a2a/b1ff32?text=SAAS" },
-  { title: "Automation Bot", src: "https://placehold.co/200x150/1a1a1a/b1ff32?text=RPA+Bot" },
-  { title: "CRM Platform", src: "https://placehold.co/200x150/2a2a2a/b1ff32?text=CRM" },
+  { title: "AI Dashboards", src: "images/sliderproduct/dash-img-333.png" },
+  { title: "E-Commerce", src: "images/sliderproduct/mext.jpg" },
+  { title: "Web Development", src: "images/sliderproduct/web-dev-2.webp" },
+  { title: "App Development", src: "images/sliderproduct/product.webp" },
+  { title: "AI/ML Model", src: "images/sliderproduct/fweb-3.jpg" },
+  { title: "SAAS Product", src: "images/sliderproduct/product-dev-2.webp" },
+  { title: "CRM Platform", src: "images/sliderproduct/hhuiu.webp" },
 ];
 const allWorkImages = [...workImages, ...workImages]; // Duplicate for seamless loop
 

@@ -18,7 +18,7 @@ export const blogPosts: BlogPost[] = [
     author: "Dr. Ayesha Khan",
     date: "Oct 28, 2025",
     image:
-      "https://images.unsplash.com/photo-1677756128695-af1de72c5057?auto=format&fit=crop&w=600&q=80",
+      "/images/product/frblog.jpg",
     link: "/blog/future-of-gen-ai",
   },
   {
@@ -28,7 +28,7 @@ export const blogPosts: BlogPost[] = [
     author: "Omar Sharif",
     date: "Oct 22, 2025",
     image:
-      "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=600&q=80",
+      "/images/product/frblog6.jpg",
     link: "/blog/ai-powered-web-apps",
   },
   {
@@ -38,7 +38,7 @@ export const blogPosts: BlogPost[] = [
     author: "Sara Malik",
     date: "Oct 18, 2025",
     image:
-      "https://images.unsplash.com/photo-1669047359000-cb2893f6a1bb?auto=format&fit=crop&w=600&q=80",
+      "/images/product/frblog3.jpg",
     link: "/blog/top-ai-tools-2025",
   },
   {
@@ -48,7 +48,7 @@ export const blogPosts: BlogPost[] = [
     author: "Ali Raza",
     date: "Oct 14, 2025",
     image:
-      "https://images.unsplash.com/photo-1604147706283-d7119b5b63de?auto=format&fit=crop&w=600&q=80",
+      "/images/product/frblog4.jpg",
     link: "/blog/ui-ux-design-systems",
   },
   {
@@ -58,7 +58,7 @@ export const blogPosts: BlogPost[] = [
     author: "Hamza Ahmed",
     date: "Oct 10, 2025",
     image:
-      "https://images.unsplash.com/photo-1681204899671-9f7f63b3dbd9?auto=format&fit=crop&w=600&q=80",
+      "/images/product/frblog5.jpg",
     link: "/blog/rag-chatbot-guide",
   },
   {
@@ -68,7 +68,7 @@ export const blogPosts: BlogPost[] = [
     author: "Marium Tariq",
     date: "Oct 5, 2025",
     image:
-      "https://images.unsplash.com/photo-1504805572947-34fad45aed93?auto=format&fit=crop&w=600&q=80",
+      "/images/product/frblog2.jpg",
     link: "/blog/nextjs-modern-web",
   },
   {
@@ -78,7 +78,7 @@ export const blogPosts: BlogPost[] = [
     author: "Zain Ul Abideen",
     date: "Oct 2, 2025",
     image:
-      "https://images.unsplash.com/photo-1639322537504-6427a16b7a32?auto=format&fit=crop&w=600&q=80",
+      "/images/product/frblog7.jpg",
     link: "/blog/business-automation-2025",
   },
   {
@@ -88,7 +88,7 @@ export const blogPosts: BlogPost[] = [
     author: "Revotic AI Team",
     date: "Sep 28, 2025",
     image:
-      "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=600&q=80",
+      "/images/product/frblog8.jpg",
     link: "/blog/revotic-ai-inside-story",
   },
 ];

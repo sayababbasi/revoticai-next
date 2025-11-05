@@ -109,22 +109,23 @@ const ArrowRightIcon = () => (
 
 // --- Inlined Client Data (Row 1) ---
 const clientsRow1 = [
-  { name: "LUSH", logo: "https://placehold.co/150x60/f00/fff?text=LUSH&font=montserrat" },
-  { name: "Huda Beauty", logo: "https://placehold.co/150x60/000/fff?text=hudabeauty&font=lora" },
-  { name: "Retailo", logo: "https://placehold.co/150x60/e64420/fff?text=retailo&font=lato" },
-  { name: "Revotic", logo: "https://placehold.co/150x60/000/fff?text=REVO&font=oswald" },
-  { name: "Client 5", logo: "https://placehold.co/150x60/111/fff?text=Client+Five" },
-  { name: "Client 6", logo: "https://placehold.co/150x60/222/fff?text=Client+Six" },
+  { name: "LUSH", logo: "/images/clients/lusd.png" },
+  { name: "Huda Beauty", logo: "/images/clients/huda.png" },
+  { name: "Retailo", logo: "/images/clients/retailo.png" },
+  { name: "Revotic", logo: "/images/clients/logo.png" },
+  { name: "Client 5", logo: "/images/clients/slock.png" },
+  { name: "Client 6", logo: "/images/clients/revolut.png" },
 ];
+
 
 // --- Inlined Client Data (Row 2) ---
 const clientsRow2 = [
-  { name: "Tajir", logo: "https://placehold.co/150x60/4f46e5/fff?text=Tajir&font=lato" },
-  { name: "Toms", logo: "https://placehold.co/150x60/d00/fff?text=TOMS&font=times" },
-  { name: "Warby Parker", logo: "https://placehold.co/150x60/574938/fff?text=WARBY+PARKER" },
-  { name: "Replika", logo: "https://placehold.co/150x60/f472b6/fff?text=replika" },
-  { name: "Client 9", logo: "https://placehold.co/150x60/333/fff?text=Client+Nine" },
-  { name: "Client 10", logo: "https://placehold.co/150x60/444/fff?text=Client+Ten" },
+  { name: "Tajir", logo: "/images/clients/tajir.png" },
+  { name: "Toms", logo: " /images/clients/toms.png" },
+  { name: "Warby Parker", logo: "/images/clients/warby.png" },
+  { name: "Replika", logo: "/images/clients/dawaai.png" },
+  { name: "Client 9", logo: "/images/clients/shave.png" },
+  { name: "Client 10", logo: "/images/clients/logo.png" },
 ];
 
 // Duplicate for seamless loop

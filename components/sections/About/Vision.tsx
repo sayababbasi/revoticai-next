@@ -73,7 +73,7 @@ const VisionSection: React.FC = () => {
             transition={{ duration: 0.8, ease: "easeOut" }}
           >
             <img 
-              src="https://placehold.co/800x500/1a1a1a/b1ff32?text=AI+Future+Vision"
+              src= "/images/blogs/aiinhealth.jpeg"
               alt="Future Vision"
               className="w-full max-w-lg h-auto rounded-xl shadow-2xl border border-neutral-800"
               onError={(e) => (e.currentTarget.src = 'https://placehold.co/800x500/1a1a1a/b1ff32?text=Future+Vision')}

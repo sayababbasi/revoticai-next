@@ -92,7 +92,7 @@ const AboutPageHeader: React.FC<AboutPageHeaderProps> = () => {
             transition={{ duration: 0.6 }}
           >
             <img 
-              src="https://placehold.co/900x600/f0f0f0/333?text=AI+Strategy+Illustration"
+              src="\images\product\ai_dashboard.png"
               alt="Team strategy meeting with AI dashboard"
               className="w-full h-auto rounded-xl shadow-2xl border border-gray-100"
               onError={(e) => e.currentTarget.src = 'https://placehold.co/900x600/f0f0f0/333?text=About+Image'}
