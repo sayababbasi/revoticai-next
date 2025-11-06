@@ -108,7 +108,7 @@
 //   return (
 //     <html lang="en">
 //       <body className={`${inter.className} bg-white text-gray-900`}>
-//         {/* ✅ Global Maintenance Banner + Floating Ball */}
+//         {/* Global Maintenance Banner + Floating Ball */}
 //         <MaintenanceNotice />
 
 //         <Topbar />
@@ -134,14 +134,14 @@ import Navbar from "@/components/common/Navbar";
 import TopFooter from "@/components/common/TopFooter";
 import Footer from "@/components/common/Footer";
 import ClientWrapper from "@/components/common/ClientWrapper";
-import MaintenanceNotice from "@/components/common/MaintenanceNotice"; // ✅ Client Component
+import MaintenanceNotice from "@/components/common/MaintenanceNotice"; 
 
 export const metadata: Metadata = {
   title: "RevoticAI — Revolutionizing Businesses with Artificial Intelligence",
   description:
     "RevoticAI provides AI, ML, and automation solutions to help businesses scale and innovate faster.",
   icons: {
-    icon: "/favicon.ico",
+    icon: "/favicon-black.png",
     apple: "/apple-touch-icon.png",
   },
   openGraph: {

@@ -325,6 +325,7 @@ const footerLinks = {
     { name: "Terms & Conditions", href: "/legal/terms-and-conditions" },
     { name: "Privacy Policy", href: "/legal/privacy-policy" },
     { name: "Cookie Policy", href: "/legal/cookie-policy" },
+    { name: "Certificate Virification", href: "/verify" },
   ],
 };
 

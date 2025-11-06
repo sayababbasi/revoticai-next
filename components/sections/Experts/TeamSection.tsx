@@ -8,7 +8,7 @@ const teamMembers = [
   {
     name: "SAYAB GULFARAZ",
     title: "Founder & Chief Executive Officer",
-    image: "/images/experts/ceo.png", // Ensure this path is correct in your public folder
+    image: "/images/experts/sayab.png", // Ensure this path is correct in your public folder
   },
   {
     name: "Hasaan Farooq",
@@ -18,7 +18,7 @@ const teamMembers = [
   {
     name: "Maria Hanif",
     title: "Chief Technology Officer",
-    image: "/images/experts/test.png", // Generic placeholder for now
+    image: "/images/experts/female.jpg", // Generic placeholder for now
   },
   {
     name: "Jahanzaib Ali",
@@ -48,53 +48,53 @@ const teamMembers = [
   {
     name: "Subhan Ali",
     title: "HR Manager",
-    image: "/images/experts/test.jpg",
+    image: "/images/experts/male.png",
   },
     {
     name: "Zubiya Khan",
     title: "Team Leader & Shift Incharge",
-    image: "/images/experts/test.jpg",
+    image: "/images/experts/female.jpg",
   },
     {
     name: "Nimra Ansari",
     title: "Project Supervisor",
-    image: "/images/experts/test.jpg",
+    image: "/images/experts/female.jpg",
   },
     {
     name: "Ahsan Khan",
     title: "Full Stack Developer",
-    image: "/images/experts/test.jpg",
+    image: "/images/experts/male.png",
   },
     {
     name: "Hamza Zubair",
     title: "Full Stack Developer",
-    image: "/images/experts/test.jpg",
+    image: "/images/experts/male.png",
   },
       {
     name: "Aleesha Zafar",
     title: "AI Developer",
-    image: "/images/experts/test.jpg",
+    image: "/images/experts/female.jpg",
   },
       {
     name: "Muhammad Saleh",
     title: "AI Developer",
-    image: "/images/experts/test.jpg",
+    image: "/images/experts/male.png",
   },
         {
     name: "Zahid Hussain",
     title: "DevOps Engineer",
-    image: "/images/experts/test.jpg",
+    image: "/images/experts/male.png",
   },
         {
     name: "Muhammad Ahad",
     title: "Graphic Designer & Video Editor",
-    image: "/images/experts/test.jpg",
+    image: "/images/experts/male.png",
   },
   
         {
     name: "Uzair Ahmad",
     title: "Quality Assurance",
-    image: "/images/experts/test.jpg",
+    image: "/images/experts/male.png",
   },
   
   
@@ -161,8 +161,8 @@ const TeamSection: React.FC = () => {
                   onError={(e) => {
                     // Fallback to generic image based on type if primary fails
                     e.currentTarget.src = member.name.includes("Maria Hanif") || member.name.includes("Expert 10") || member.name.includes("Expert 12")
-                      ? '/images/experts/test.png' // Generic female placeholder
-                      : '/images/experts/test.png'; // Generic male placeholder
+                      ? '/images/experts/female' // Generic female placeholder
+                      : '/images/experts/male'; // Generic male placeholder
                     e.currentTarget.onerror = null; // Prevent infinite loops
                   }}
                 />
