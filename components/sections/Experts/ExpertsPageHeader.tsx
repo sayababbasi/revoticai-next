@@ -95,7 +95,7 @@ const ExpertsPageHeader: React.FC<ExpertsPageHeaderProps> = ({
                         transition={{ duration: 0.6 }}
                     >
                         <img 
-                            src="https://placehold.co/900x700/1a1a1a/b1ff32?text=Experts+Graphic"
+                            src="/images/experts/experts-hero.avif"
                             alt="AI Expert Illustration"
                             className="w-full h-auto rounded-xl border border-neutral-800 opacity-90"
                             onError={(e) => e.currentTarget.src = 'https://placehold.co/900x700/1a1a1a/b1ff32?text=Experts+Graphic'}

@@ -89,7 +89,7 @@ const InputField: React.FC<InputFieldProps> = ({
         id={name}
         name={name}
         type="text"
-        className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-[#b1ff32] focus:ring-2 focus:ring-[#b1ff32]/50 sm:text-sm"
+        className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-[#b1ff32] focus:ring-2 focus:ring-[#b1ff32]/50 sm:text-sm px-3 py-2"
         {...(props as React.InputHTMLAttributes<HTMLInputElement>)}
       />
     )}

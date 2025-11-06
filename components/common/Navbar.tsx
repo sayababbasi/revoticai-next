@@ -1,4 +1,5 @@
 "use client";
+
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
@@ -7,6 +8,7 @@ import { Menu, X } from "lucide-react";
 const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isHydrated, setIsHydrated] = useState(false); 
 
   const navItems = [
     "Home",
@@ -25,6 +27,10 @@ const Navbar: React.FC = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+   useEffect(() => {
+    setIsHydrated(true);
+  }, []);
+  
   useEffect(() => {
     if (!isOpen) return;
     const handleEsc = (e: KeyboardEvent) => e.key === "Escape" && setIsOpen(false);

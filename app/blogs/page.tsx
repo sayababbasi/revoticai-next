@@ -1,6 +1,6 @@
 // "use client";
 
-import { blogs } from "@/data/BlogDetails";
+import { blogs } from "@/data/BlogDetail";
 import BlogCard from "@/components/cards/BlogCard";
 
 export default function BlogsPage() {

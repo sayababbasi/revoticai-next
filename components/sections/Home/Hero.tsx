@@ -196,6 +196,7 @@
 // };
 
 // export default Hero;
+
 "use client";
 
 import React from "react";
@@ -292,65 +293,72 @@ const Hero: React.FC = () => {
 
       {/* --- UPDATED STYLES --- */}
       <style jsx global>{`
-        .swiper-pagination {
-          bottom: 40px !important; /* Raised position from bottom */
-          text-align: center; /* Centered pagination */
-          width: 100%;
-        }
-        .swiper-pagination-bullet {
-          background: #999 !important;
-          opacity: 0.6;
-          width: 8px !important;
-          height: 8px !important;
-          transition: all 0.3s ease !important;
-        }
-        .swiper-pagination-bullet-active {
-          background: #b1ff32 !important; /* Your accent color */
-          opacity: 1;
-          width: 16px !important; /* Active bullet is wider */
-          border-radius: 6px !important;
-        }
+  .swiper-pagination {
+    bottom: 40px !important;
+    text-align: center;
+    width: 100%;
+  }
 
-        /* --- DECREASED ICON SIZE --- */
-        .swiper-button-prev,
-        .swiper-button-next {
-          color: #fff !important;
-          width: 40px !important; /* Was 45px */
-          height: 40px !important; /* Was 45px */
-          background: rgba(255, 255, 255, 0.1);
-          border-radius: 50%;
-          transition: all 0.3s ease;
-        }
-        .swiper-button-prev:after,
-        .swiper-button-next:after {
-          font-size: 16px !important; /* Makes the arrow inside smaller */
-        }
+  .swiper-pagination-bullet {
+    background: #999 !important;
+    opacity: 0.6;
+    width: 8px !important;
+    height: 8px !important;
+    transition: all 0.3s ease !important;
+  }
 
-        .swiper-button-prev:hover,
-        .swiper-button-next:hover {
-          background: rgba(255, 255, 255, 0.25);
-        }
-        .swiper-button-prev {
-          left: 2% !important;
-        }
-        .swiper-button-next {
-          right: 2% !important;
-        }
+  .swiper-pagination-bullet-active {
+    background: #b1ff32 !important;
+    opacity: 1;
+    width: 16px !important;
+    border-radius: 6px !important;
+  }
 
-        /* Responsive adjustments for pagination */
-        @media (max-width: 768px) {
-          .swiper-pagination {
-            /* Puts pagination over the text area on mobile */
-            bottom: 30px !important;
-            text-align: left;
-            padding-left: 24px; /* Matches content padding */
-          }
-          .swiper-button-prev,
-          .swiper-button-next {
-            display: none !important; /* Hides arrows on mobile */
-          }
-        }
-      `}</style>
+  /* --- ARROWS CENTERED --- */
+  .swiper-button-prev,
+  .swiper-button-next {
+    color: #fff !important;
+    width: 45px !important;
+    height: 45px !important;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    transition: all 0.3s ease;
+    top: 50% !important; /* Center vertically */
+    transform: translateY(-50%) !important; /* Align perfect center */
+  }
+
+  .swiper-button-prev:after,
+  .swiper-button-next:after {
+    font-size: 18px !important;
+    font-weight: bold;
+  }
+
+  .swiper-button-prev:hover,
+  .swiper-button-next:hover {
+    background: rgba(255, 255, 255, 0.25);
+  }
+
+  .swiper-button-prev {
+    left: 2% !important; /* Left arrow */
+  }
+
+  .swiper-button-next {
+    right: 3% !important; /* Right arrow */
+  }
+
+  @media (max-width: 768px) {
+    .swiper-pagination {
+      bottom: 30px !important;
+      text-align: left;
+      padding-left: 24px;
+    }
+    .swiper-button-prev,
+    .swiper-button-next {
+      display: none !important; /* Hide arrows on mobile */
+    }
+  }
+`}</style>
+
     </section>
   );
 };

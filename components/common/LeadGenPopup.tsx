@@ -163,7 +163,7 @@
 //                 <p className="font-semibold text-[#b1ff32] mb-2">
 //                   LIMITED TIME OFFER!
 //                 </p>
-                
+
 //                 {/* Timer (No Box) */}
 //                 <div className="flex items-center text-gray-400 text-sm mb-4">
 //                   <ClockIcon />
@@ -884,7 +884,7 @@ const LeadGenPopup: React.FC = () => {
     const h = Math.floor(seconds / 3600);
     const m = Math.floor((seconds % 3600) / 60);
     const s = Math.floor(seconds % 60);
-    return `${String(h).padStart(2,"0")}:${String(m).padStart(2,"0")}:${String(s).padStart(2,"0")}`;
+    return `${String(h).padStart(2, "0")}:${String(m).padStart(2, "0")}:${String(s).padStart(2, "0")}`;
   };
 
   useEffect(() => {
@@ -959,8 +959,16 @@ const LeadGenPopup: React.FC = () => {
                 </form>
               </div>
 
-              <div className="hidden md:block w-full h-full">
-                <img src="https://images.unsplash.com/photo-1556761175-577380e3c8b4?auto=format&fit=crop&q=80&w=800&h=1000" alt="Special Offer" className="w-full h-full object-cover" onError={(e) => (e.currentTarget.src = "https://placehold.co/800x1000/1a1a1a/b1ff32?text=Offer+Image")} />
+              <div className="md:w-full w-full flex justify-center mt-6 md:mt-0">
+                <img
+                  src="/images/contact-us.webp"
+                  alt="Special Offer"
+                  className="w-[250px] md:w-full h-full object-contain"
+                  onError={(e) =>
+                  (e.currentTarget.src =
+                    'https://placehold.co/800x1000/1a1a1a/b1ff32?text=Offer+Image')
+                  }
+                />
               </div>
             </div>
           </motion.div>

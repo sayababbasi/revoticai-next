@@ -753,16 +753,16 @@ const OfferModal: React.FC<{ onClose: () => void }> = ({ onClose }) => {
             </form>
           </div>
 
-          <div className="hidden md:block w-full h-full">
-            <img
-              src="https://images.unsplash.com/photo-1556761175-577380e3c8b4?auto=format&fit=crop&q=80&w=800&h=1000"
-              alt="Special Offer"
-              className="w-full h-full object-cover"
-              onError={(e) =>
-                (e.currentTarget.src =
-                  "https://placehold.co/800x1000/1a1a1a/b1ff32?text=Offer+Image")
-              }
-            />
+          <div className="md:w-full w-full flex justify-center mt-6 md:mt-0">
+                <img
+                  src="/images/contact-us.webp"
+                  alt="Special Offer"
+                  className="w-[250px] md:w-full h-full object-contain"
+                  onError={(e) =>
+                  (e.currentTarget.src =
+                    'https://placehold.co/800x1000/1a1a1a/b1ff32?text=Offer+Image')
+                  }
+                />
           </div>
         </div>
       </motion.div>
