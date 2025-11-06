@@ -19,7 +19,7 @@ export const blogPosts: BlogPost[] = [
     date: "Oct 28, 2025",
     image:
       "/images/product/frblog.jpg",
-    link: "/blog/future-of-gen-ai",
+    link: "/blogs/future-of-gen-ai",
   },
   {
     id: 2,
@@ -29,7 +29,7 @@ export const blogPosts: BlogPost[] = [
     date: "Oct 22, 2025",
     image:
       "/images/product/frblog6.jpg",
-    link: "/blog/ai-powered-web-apps",
+    link: "/blogs/ai-powered-web-apps",
   },
   {
     id: 3,
@@ -39,7 +39,7 @@ export const blogPosts: BlogPost[] = [
     date: "Oct 18, 2025",
     image:
       "/images/product/frblog3.jpg",
-    link: "/blog/top-ai-tools-2025",
+    link: "/blogs/top-ai-tools-2025",
   },
   {
     id: 4,
@@ -49,7 +49,7 @@ export const blogPosts: BlogPost[] = [
     date: "Oct 14, 2025",
     image:
       "/images/product/frblog4.jpg",
-    link: "/blog/ui-ux-design-systems",
+    link: "/blogs/ui-ux-design-systems",
   },
   {
     id: 5,
@@ -59,7 +59,7 @@ export const blogPosts: BlogPost[] = [
     date: "Oct 10, 2025",
     image:
       "/images/product/frblog5.jpg",
-    link: "/blog/rag-chatbot-guide",
+    link: "/blogs/rag-chatbot-guide",
   },
   {
     id: 6,
@@ -69,7 +69,7 @@ export const blogPosts: BlogPost[] = [
     date: "Oct 5, 2025",
     image:
       "/images/product/frblog2.jpg",
-    link: "/blog/nextjs-modern-web",
+    link: "/blogs/nextjs-modern-web",
   },
   {
     id: 7,
@@ -79,7 +79,7 @@ export const blogPosts: BlogPost[] = [
     date: "Oct 2, 2025",
     image:
       "/images/product/frblog7.jpg",
-    link: "/blog/business-automation-2025",
+    link: "/blogs/business-automation-2025",
   },
   {
     id: 8,
@@ -89,7 +89,7 @@ export const blogPosts: BlogPost[] = [
     date: "Sep 28, 2025",
     image:
       "/images/product/frblog8.jpg",
-    link: "/blog/revotic-ai-inside-story",
+    link: "/blogs/revotic-ai-inside-story",
   },
 ];
 

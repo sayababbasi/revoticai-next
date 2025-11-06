@@ -627,7 +627,6 @@ const ActionButton: React.FC<ActionButtonProps> = ({
 //   Offer Modal Component
 // ============================================================
 
-
 const OfferModal: React.FC<{ onClose: () => void }> = ({ onClose }) => {
   const [remainingTime, setRemainingTime] = useState(27540); // 7h 39m in seconds
   const [submitStatus, setSubmitStatus] = useState("");
