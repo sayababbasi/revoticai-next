@@ -9,11 +9,8 @@ export default function ClientWrapper() {
 
   return (
     <>
-      <FloatingActionBar onOfferClick={() => setIsLeadPopupOpen(true)} />
-      <LeadGenPopup
-        isOpen={isLeadPopupOpen}
-        setIsOpen={setIsLeadPopupOpen}
-      />
+      <FloatingActionBar {...({ onOfferClick: () => setIsLeadPopupOpen(true) } as any)} />
+      <LeadGenPopup {...({ isOpen: isLeadPopupOpen, setIsOpen: setIsLeadPopupOpen } as any)} />
     </>
   );
 }

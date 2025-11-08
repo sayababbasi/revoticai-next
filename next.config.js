@@ -2,7 +2,7 @@
 const nextConfig = {
   reactStrictMode: true,
   webpack(config) {
-    // Ensure code splitting is aggressive
+    // ✅ Ensure code splitting is aggressive
     config.optimization.splitChunks = {
       chunks: 'all',
       maxSize: 2000000, // ~2 MB chunks

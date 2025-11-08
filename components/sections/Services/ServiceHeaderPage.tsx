@@ -109,7 +109,19 @@
 
 import React from "react";
 import { motion } from "framer-motion";
-import { ArrowRightIcon } from "./Icons"; // import any icons you need
+
+const ArrowRightIcon: React.FC<{ className?: string }> = ({ className }) => (
+  <svg
+    className={className ?? "ml-3 w-5 h-5"}
+    xmlns="http://www.w3.org/2000/svg"
+    fill="none"
+    viewBox="0 0 24 24"
+    stroke="currentColor"
+    aria-hidden="true"
+  >
+    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+  </svg>
+);
 
 // --- Animation Variants ---
 const itemVariants = {

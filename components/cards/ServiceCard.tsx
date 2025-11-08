@@ -14,7 +14,7 @@ import {
 } from "lucide-react";
 
 // An icon map to dynamically render icons based on the string from JSON
-const iconMap: { [key: string]: LucideIcon } = {
+const iconMap: { [key: string]: React.ComponentType<any> } = {
   Brain,
   Globe,
   Zap,

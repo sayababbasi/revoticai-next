@@ -1,5 +1,6 @@
 // E:\Business\Website\Revotic-AI-Website\Test_Web\revoticai\app\page.tsx
 "use client";
+import Image from "next/image";
 
 import Hero from "@/components/sections/Home/Hero";
 import ServicesOverview from "@/components/sections/Home/ServicesOverview"
