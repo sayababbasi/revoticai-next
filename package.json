@@ -2,36 +2,33 @@
   "name": "revoticai",
   "version": "1.0.0",
   "private": true,
-  "description": "RevoticAi - AI-driven software development and automation solutions",
+  "description": "RevoticAi - Revolutionizing Businesses with AI-driven software development and automation solutions",
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
+    "build": "next build && npx @cloudflare/next-on-pages",
+    "deploy": "npx wrangler pages deploy .vercel/output/static --commit-dirty=true"
   },
   "dependencies": {
-    "@emailjs/browser": "^4.4.1",
-    "@emailjs/nodejs": "^5.0.2",
-    "@types/node": "^20.11.19",
-    "@types/react": "^18.2.41",
-    "@types/react-dom": "^18.2.17",
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
+    "next": "14.2.0-canary.41",
+    "framer-motion": "11.18.2",
+    "lucide-react": "0.552.0",
     "clsx": "^2.1.1",
-    "framer-motion": "^11.0.0",
-    "lucide-react": "^0.552.0",
-    "next": "^15.1.2",
-    "nodemailer": "^7.0.10",
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1",
     "swiper": "^11.2.10",
-    "typescript": "^5.3.3"
+    "nodemailer": "^7.0.10",
+    "@emailjs/browser": "^4.4.1",
+    "@emailjs/nodejs": "^5.0.2"
   },
   "devDependencies": {
-    "@cloudflare/next-on-pages": "^1.13.16",
-    "@types/nodemailer": "^7.0.3",
-    "autoprefixer": "^10.4.21",
-    "eslint": "^8.57.0",
-    "eslint-config-next": "14.2.13",
-    "postcss": "^8.5.6",
-    "tailwindcss": "^3.4.18"
-  }
+  "typescript": "^5.3.3",
+  "@types/react": "18.3.26",
+  "@types/react-dom": "18.3.7",
+  "@types/node": "^20.11.19",
+  "@cloudflare/next-on-pages": "1.12.0",
+  "autoprefixer": "^10.4.21",
+  "postcss": "^8.5.6",
+  "tailwindcss": "^3.3.3",
+  "eslint": "^9.12.0"
+}
 }

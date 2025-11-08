@@ -112,7 +112,6 @@ const clientsRow1 = [
   { name: "LUSH", logo: "/images/clients/lusd.png" },
   { name: "Huda Beauty", logo: "/images/clients/huda.png" },
   { name: "Retailo", logo: "/images/clients/retailo.png" },
-  { name: "Revotic", logo: "/images/clients/logo.png" },
   { name: "Client 5", logo: "/images/clients/slock.png" },
   { name: "Client 6", logo: "/images/clients/revolut.png" },
 ];
@@ -125,7 +124,6 @@ const clientsRow2 = [
   { name: "Warby Parker", logo: "/images/clients/warby.png" },
   { name: "Replika", logo: "/images/clients/dawaai.png" },
   { name: "Client 9", logo: "/images/clients/shave.png" },
-  { name: "Client 10", logo: "/images/clients/logo.png" },
 ];
 
 // Duplicate for seamless loop
@@ -169,12 +167,22 @@ const OurClients: React.FC = () => {
               key={`r1-${index}`}
               className="flex-shrink-0 w-64 h-36 mx-4 bg-gray-50 rounded-xl shadow-sm border border-gray-100 flex items-center justify-center p-6"
             >
-              <img
+              {/* <img
                 src={client.logo}
                 alt={client.name}
                 className="max-w-full max-h-12 object-contain"
                 onError={(e) => (e.currentTarget.src = 'https://placehold.co/150x60/f00/fff?text=Logo+Error')}
-              />
+              /> */}
+              <img
+  src={client.logo}
+  alt={client.name}
+  className="max-w-full max-h-20 md:max-h-24 object-contain transition-transform duration-300 hover:scale-105"
+  onError={(e) =>
+    (e.currentTarget.src =
+      "https://placehold.co/200x80/f00/fff?text=Logo+Error")
+  }
+/>
+
             </div>
           ))}
         </div>
@@ -186,12 +194,22 @@ const OurClients: React.FC = () => {
               key={`r2-${index}`}
               className="flex-shrink-0 w-64 h-36 mx-4 bg-gray-50 rounded-xl shadow-sm border border-gray-100 flex items-center justify-center p-6"
             >
-              <img
+              {/* <img
                 src={client.logo}
                 alt={client.name}
                 className="max-w-full max-h-12 object-contain"
                 onError={(e) => (e.currentTarget.src = 'https://placehold.co/150x60/f00/fff?text=Logo+Error')}
+              /> */}
+              <img
+                src={client.logo}
+                alt={client.name}
+                className="max-w-full max-h-16 md:max-h-18 object-contain transition-transform duration-300 hover:scale-105"
+                onError={(e) =>
+                (e.currentTarget.src =
+                  "https://placehold.co/200x80/f00/fff?text=Logo+Error")
+                }
               />
+
             </div>
           ))}
         </div>

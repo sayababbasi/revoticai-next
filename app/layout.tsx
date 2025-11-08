@@ -137,6 +137,7 @@ import ClientWrapper from "@/components/common/ClientWrapper";
 import MaintenanceNotice from "@/components/common/MaintenanceNotice"; 
 
 export const metadata: Metadata = {
+   metadataBase: new URL("https://revoticai.com"),
   title: "RevoticAI — Revolutionizing Businesses with Artificial Intelligence",
   description:
     "RevoticAI provides AI, ML, and automation solutions to help businesses scale and innovate faster.",
