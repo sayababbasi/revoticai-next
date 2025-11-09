@@ -5,9 +5,9 @@
   "description": "RevoticAi - Revolutionizing Businesses with AI-driven software development and automation solutions",
   "scripts": {
     "dev": "next dev",
-    "build": "next build && npx opennext build --adapter @opennextjs/cloudflare --experimental-app",
-    "deploy": "npx opennext deploy --adapter @opennextjs/cloudflare"
-  },
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"},
   "dependencies": {
     "@emailjs/browser": "^4.4.1",
     "@emailjs/nodejs": "^5.0.2",
