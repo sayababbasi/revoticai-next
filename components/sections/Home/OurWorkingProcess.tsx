@@ -56,10 +56,10 @@ const processSteps = [
 // (Duplicates are added to create the seamless loop)
 const workImages = [
   { title: "AI Dashboards", src: "images/sliderproduct/dash-img-333.png" },
-  { title: "E-Commerce", src: "images/sliderproduct/mext.jpg" },
+  { title: "E-Commerce", src: "images/sliderproduct/MEXT.jpg" },
   { title: "Web Development", src: "images/sliderproduct/web-dev-2.webp" },
   { title: "App Development", src: "images/sliderproduct/product.webp" },
-  { title: "AI/ML Model", src: "images/sliderproduct/fweb-3.jpg" },
+  { title: "AI/ML Model", src: "images/sliderproduct/ai.webp" },
   { title: "SAAS Product", src: "images/sliderproduct/product-dev-2.webp" },
   { title: "CRM Platform", src: "images/sliderproduct/hhuiu.webp" },
 ];

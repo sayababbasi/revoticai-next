@@ -1,21 +1,18 @@
+// /** @type {import('next').NextConfig} */
+// const nextConfig = {
+//   // output: 'export', // REMOVE or comment this out
+//   images: {
+//     unoptimized: true, // keep this if you don't want next/image optimization
+//   },
+// };
+
+// module.exports = nextConfig;
+
+
+// next.config.js
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  reactStrictMode: true,
-  webpack(config) {
-    // ✅ Ensure code splitting is aggressive
-    config.optimization.splitChunks = {
-      chunks: 'all',
-      maxSize: 2000000, // ~2 MB chunks
-    };
-
-    // Enable gzip compression (for smaller uploads)
-    config.performance = {
-      maxAssetSize: 25000000,
-      maxEntrypointSize: 25000000,
-    };
-
-    return config;
-  },
+  output: "export", // ← this enables static export
+  images: { unoptimized: true },
 };
-
 module.exports = nextConfig;

@@ -128,7 +128,6 @@
 import "../styles/globals.css";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-
 import Topbar from "@/components/common/Topbar";
 import Navbar from "@/components/common/Navbar";
 import TopFooter from "@/components/common/TopFooter";
@@ -137,18 +136,18 @@ import ClientWrapper from "@/components/common/ClientWrapper";
 import MaintenanceNotice from "@/components/common/MaintenanceNotice"; 
 
 export const metadata: Metadata = {
-   metadataBase: new URL("https://revoticai.com"),
+  metadataBase: new URL("https://revoticai.com"),
   title: "RevoticAI — Revolutionizing Businesses with Artificial Intelligence",
   description:
-    "RevoticAI provides AI, ML, and automation solutions to help businesses scale and innovate faster.",
+  "RevoticAI provides AI, ML, and automation solutions to help businesses scale and innovate faster.",
   icons: {
     icon: "/favicon-black.png",
     apple: "/apple-touch-icon.png",
   },
   openGraph: {
-    title: "RevoticAI — AI & Automation Experts",
+    title: "RevoticAI — Revolutionizing Businesses with Artificial Intelligence",
     description:
-      "Leading provider of AI and automation solutions for businesses worldwide.",
+    "RevoticAI provides AI, ML, and automation solutions to help businesses scale and innovate faster.",
     url: "https://revoticai.com",
     siteName: "RevoticAI",
     images: [

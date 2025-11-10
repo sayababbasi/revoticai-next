@@ -427,42 +427,42 @@ const Footer: React.FC = () => {
             </form>
             <div className="flex flex-wrap gap-4 mt-6">
               <a
-                href="#"
+                href="https://youtube.com/revoticai"
                 className="hover:text-white transition-colors"
                 aria-label="YouTube"
               >
                 <YoutubeIcon />
               </a>
               <a
-                href="#"
+                href="https://linkedin.com/company/revoticai"
                 className="hover:text-white transition-colors"
                 aria-label="LinkedIn"
               >
                 <LinkedinIcon />
               </a>
               <a
-                href="#"
+                href="https://github.com/sayababbasi"
                 className="hover:text-white transition-colors"
                 aria-label="GitHub"
               >
                 <GithubIcon />
               </a>
               <a
-                href="#"
+                href="https://x.com/revoticai"
                 className="hover:text-white transition-colors"
                 aria-label="X / Twitter"
               >
                 <XIcon />
               </a>
               <a
-                href="#"
+                href="https://instagram.com/revoticai"
                 className="hover:text-white transition-colors"
-                aria-label="Facebook"
+                aria-label="Ins"
               >
                 <FacebookIcon />
               </a>
               <a
-                href="#"
+                href="https://instagram.com/revoticai"
                 className="hover:text-white transition-colors"
                 aria-label="Instagram"
               >

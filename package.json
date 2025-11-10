@@ -5,14 +5,19 @@
   "description": "RevoticAi - Revolutionizing Businesses with AI-driven software development and automation solutions",
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "next build ",
+    "export": "next export",
     "start": "next start",
-    "lint": "next lint"},
+    "lint": "next lint"
+  },
   "dependencies": {
     "@emailjs/browser": "^4.4.1",
     "@emailjs/nodejs": "^5.0.2",
     "clsx": "^2.1.1",
+    "email-js": "^2.0.3",
+    "emailjs-com": "^3.2.0",
     "framer-motion": "11.18.2",
+    "googleapis": "^165.0.0",
     "lucide-react": "0.552.0",
     "next": "14.2.0-canary.41",
     "nodemailer": "^7.0.10",
@@ -22,6 +27,7 @@
   },
   "devDependencies": {
     "@opennextjs/cloudflare": "^1.11.1",
+    "@tailwindcss/typography": "^0.5.19",
     "@types/node": "^20.11.19",
     "@types/nodemailer": "^7.0.3",
     "@types/react": "18.3.26",
