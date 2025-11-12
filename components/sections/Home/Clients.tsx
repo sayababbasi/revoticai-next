@@ -111,8 +111,8 @@ const ArrowRightIcon = () => (
 const clientsRow1 = [
   { name: "LUSH", logo: "/images/clients/lusd.png" },
   { name: "Huda Beauty", logo: "/images/clients/huda.png" },
+  { name: "Bangash", logo: "/images/clients/bangashcontainers.jpg" },
   { name: "Retailo", logo: "/images/clients/retailo.png" },
-  { name: "Client 5", logo: "/images/clients/slock.png" },
   { name: "Client 6", logo: "/images/clients/revolut.png" },
 ];
 

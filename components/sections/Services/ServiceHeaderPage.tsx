@@ -155,14 +155,14 @@ const ServiceHeaderPage: React.FC<PageHeaderProps> = ({
   button,
 }) => {
   const words = title.split(" ");
-  const emphasizedTitle =
+  const emphasizedTitle = 3
     emphasizeWord !== undefined && words[emphasizeWord] ? (
       <div className="inline">
         {words.map((word, index) => (
           <span
             key={index}
             className={
-              index === emphasizeWord
+              index === emphasizeWord 
                 ? "text-[#b1ff32] mr-2 inline-block leading-none"
                 : ""
             }

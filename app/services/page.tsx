@@ -270,8 +270,8 @@ const allWorkImages = [...workImages, ...workImages];
 const clientsRow1 = [
   { name: "LUSH", logo: "/images/clients/lusd.png" },
   { name: "Huda Beauty", logo: "/images/clients/huda.png" },
+  { name: "Bangash", logo: "/images/clients/bangashcontainers.jpg" },
   { name: "Retailo", logo: "/images/clients/retailo.png" },
-  { name: "Revotic", logo: "/images/clients/logo.png" },
   { name: "Client 5", logo: "/images/clients/slock.png" },
   { name: "Client 6", logo: "/images/clients/revolut.png" },
 ];
@@ -281,7 +281,6 @@ const clientsRow2 = [
   { name: "Warby Parker", logo: "/images/clients/warby.png" },
   { name: "Replika", logo: "/images/clients/dawaai.png" },
   { name: "Client 9", logo: "/images/clients/shave.png" },
-  { name: "Client 10", logo: "/images/clients/logo.png" },
 ];
 const allClients1 = [...clientsRow1, ...clientsRow1];
 const allClients2 = [...clientsRow2, ...clientsRow2];
@@ -684,7 +683,7 @@ const OurClientsSection: React.FC = () => (
             <img
               src={client.logo}
               alt={client.name}
-              className="max-w-full max-h-12 object-contain"
+              className="max-w-full max-h-24 object-contain"
               onError={(e) => (e.currentTarget.src = 'https://placehold.co/150x60/f00/fff?text=Logo+Error')}
             />
           </div>

@@ -1,0 +1,3 @@
+;/*FB_PKG_DELIM*/
+
+__d("useIsReadOnlyFeatureLimitedOffMsysQuery$Parameters",["useIsReadOnlyFeatureLimitedOffMsysQuery_instagramRelayOperation"],(function(t,n,r,o,a,i){"use strict";var e={kind:"PreloadableConcreteRequest",params:{id:n("useIsReadOnlyFeatureLimitedOffMsysQuery_instagramRelayOperation"),metadata:{},name:"useIsReadOnlyFeatureLimitedOffMsysQuery",operationKind:"query",text:null}};a.exports=e}),null);

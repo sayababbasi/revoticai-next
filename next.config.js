@@ -8,11 +8,8 @@
 
 // module.exports = nextConfig;
 
-
-// next.config.js
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: "export", // ← this enables static export
-  images: { unoptimized: true },
+  reactStrictMode: true,
 };
 module.exports = nextConfig;

@@ -25,12 +25,12 @@ const itemVariants = {
 
 // Demo project thumbnails (replace with your images)
 const projectImages = [
-  { src: "/projects/project-1.png", alt: "UI Layout Exploration" },
-  { src: "/projects/project-2.png", alt: "Mobile App Screens" },
-  { src: "/projects/project-3.png", alt: "Finance Dashboard Design" },
-  { src: "/projects/project-4.png", alt: "Analytics Admin UI" },
-  { src: "/projects/project-5.png", alt: "Travel App Interface" },
-  { src: "/projects/project-6.png", alt: "Ecommerce Platform Redesign" },
+  { src: "/images/product/app-dev-13.png", alt: "UI Layout Exploration" },
+  { src: "/images/product/app-dev-8.webp", alt: "Mobile App Screens" },
+  { src: "/images/product/dashboard images.webp", alt: "Finance Dashboard Design" },
+  { src: "/images/product/hhuiu.webp", alt: "Analytics Admin UI" },
+  { src: "/images/product/travel-website.jpg", alt: "Travel App Interface" },
+  { src: "/images/product/web-dev-2.webp", alt: "Ecommerce Platform Redesign" },
 ];
 
 const RecentProjectsSection: React.FC = () => {

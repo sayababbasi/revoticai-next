@@ -150,7 +150,7 @@ const ExpertsPageHeader: React.FC<ExpertsPageHeaderProps> = ({
         <span
           key={index}
           className={
-            index === emphasizeWord - 1
+            index === emphasizeWord 
               ? "text-[#b1ff32] mr-2 inline-block leading-none drop-shadow-md"
               : "mr-2 inline-block leading-none"
           }

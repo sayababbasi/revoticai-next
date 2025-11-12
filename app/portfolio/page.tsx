@@ -96,8 +96,8 @@ const BarChart3Icon = () => (
 
 // ------------------ DATA ------------------
 const allProjects = [
-  { id: 1, title: "Intelligent Lead Platform", category: "AI & ML", tags: ['AI', 'SaaS', 'Sales'], image: "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&w=600&q=80", link: "#" },
-  { id: 2, title: "Custom E-commerce API", category: "Web Development", tags: ['Backend', 'E-commerce', 'API'], image: "/images/sliderproduct/web-dev-2.webp", link: "#" },
+  { id: 1, title: "Intelligent Lead Platform", category: "AI & ML", tags: ['AI', 'SaaS', 'Sales'], image: "/images/sliderproduct/ai.webp", link: "#" },
+  { id: 2, title: "Custom E-commerce Web App", category: "Web Development", tags: ['Backend', 'E-commerce', 'API'], image: "/images/sliderproduct/MEXT.jpg", link: "#" },
   { id: 3, title: "Finance Automation Bot", category: "Automation", tags: ['RPA', 'FinTech'], image: "/images/product/dashb-dev-3.jpg", link: "#" },
   { id: 4, title: "Predictive Analytics Dashboard", category: "Data & Analytics", tags: ['DataViz', 'ML', 'Python'], image: "/images/sliderproduct/dash-img-333.png", link: "#" },
   { id: 5, title: "Logistics Tracking App", category: "App Development", tags: ['Mobile', 'Flutter', 'IoT'], image: "/images/product/yt1.webp", link: "#" },

@@ -23,7 +23,7 @@ const teamMembers = [
   {
     name: "Jahanzaib Ali",
     title: "Chief Operating Officer",
-    image: "/images/experts/Coo.jpg",
+    image: "/images/experts/COO.jpg",
   },
   {
     name: "Asad Minhas",
@@ -40,9 +40,14 @@ const teamMembers = [
     title: "Business Developer",
     image: "/images/experts/BusinessDeveloper.png",
   },
+      {
+    name: "Hassam Malik",
+    title: "Business Developer",
+    image: "/images/experts/fsd-dev1.jpg",
+  },
     {
     name: "Zawad Ahmad",
-    title: "Business Developer",
+    title: "Sales Executive",
     image: "/images/experts/bd.png",
   },
   {
@@ -60,20 +65,20 @@ const teamMembers = [
     title: "Project Supervisor",
     image: "/images/experts/female.jpg",
   },
-    {
-    name: "Ahsan Khan",
-    title: "Full Stack Developer",
-    image: "/images/experts/male.png",
+  {
+    name: "Muhammad Hamza Ali",
+    title: "AI Research Analyst",
+    image: "/images/experts/researcher.jpeg",
   },
     {
-    name: "Hamza Zubair",
+    name: "Arfeen Malik",
     title: "Full Stack Developer",
-    image: "/images/experts/male.png",
+    image: "/images/experts/arfeen-fsd-dev.jpeg",
   },
-      {
-    name: "Aleesha Zafar",
-    title: "AI Developer",
-    image: "/images/experts/female.jpg",
+    {
+    name: "Hammad Raza",
+    title: "Full Stack Developer",
+    image: "/images/experts/fsd-dev-2.png",
   },
       {
     name: "Muhammad Saleh",

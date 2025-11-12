@@ -102,7 +102,7 @@ const ValueProposition: React.FC = () => {
           <img
             src="\images\product\bg-home-sec.png"
             alt="No hidden costs"
-            className="w-64 md:w-80 lg:w-96 rounded-lg shadow-2xl"
+            className="w-64 md:w-80 lg:w-96 rounded-lg"
           />
 
           {/* --- Annotation for Mobile --- */}

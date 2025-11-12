@@ -30,7 +30,7 @@ const reviews = [
   {
     "name": "Michael Chen",
     "title": "CTO, FinTech Corp",
-    "image": "https://images.unsplash.com/photo-1560250097-0b73528c311a?auto=format&fit=crop&q=80&w=100&h=100",
+    "image": "/images/user.png",
     "rating": 5,
     "review": "A highly professional team. They delivered a complex AI dashboard on time and on budget. Will work with them again."
   },
@@ -51,7 +51,7 @@ const reviews = [
   {
     "name": "Sarah Jenkins",
     "title": "SaaS Product Owner",
-    "image": "https://images.unsplash.com/photo-1589571894960-98492066-5080?auto=format&fit=crop&q=80&w=100&h=100",
+    "image": "/images/user.png",
     "rating": 5,
     "review": "Working with Revotic to integrate GenAI into our platform was seamless. Their expertise is top-notch."
   },
@@ -65,7 +65,7 @@ const reviews = [
   {
     "name": "Laura Bianchi",
     "title": "Healthcare Admin",
-    "image": "https://images.unsplash.com/photo-1599566150163-f25903967b0a?auto=format&fit=crop&q=80&w=100&h=100",
+    "image": "/images/user.png",
     "rating": 5,
     "review": "The new patient intake automation saves our staff hours every day. Secure, compliant, and incredibly efficient."
   }

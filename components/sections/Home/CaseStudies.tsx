@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-// import Link from "next/link"; // Replaced with <a> tag
+import Link from "next/link"; // Replaced with <a> tag
 import CaseStudyCard from "@/components/cards/CaseStudyCard";
 import caseStudies from "@/data/case-studies.json";
 

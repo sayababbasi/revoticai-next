@@ -15,7 +15,7 @@ const projects = [
     description: "Custom AI chatbot trained on business data to automate support.",
     tech: ["Next.js", "Python", "OpenAI API"],
     image:
-      "https://images.unsplash.com/photo-1676299081847-34a2c1f70f45?auto=format&fit=crop&w=800&q=80",
+      "/images/product/ai.webp",
   },
   {
     id: 2,
@@ -25,7 +25,7 @@ const projects = [
       "A real-time analytics dashboard for online store performance tracking.",
     tech: ["React", "Node.js", "MongoDB"],
     image:
-      "https://images.unsplash.com/photo-1581093588401-22db0b36e5cc?auto=format&fit=crop&w=800&q=80",
+      "images/sliderproduct/ecommerce-dashboard.png",
   },
   {
     id: 3,
@@ -35,7 +35,7 @@ const projects = [
       "An ML-based image classification system for product tagging automation.",
     tech: ["TensorFlow", "Flask", "React"],
     image:
-      "https://images.unsplash.com/photo-1581091215367-59ab6b5c8de7?auto=format&fit=crop&w=800&q=80",
+      "images/sliderproduct/img.webp",
   },
   {
     id: 4,
@@ -45,7 +45,7 @@ const projects = [
       "Modernized interface for a finance startup to enhance user engagement.",
     tech: ["Figma", "Tailwind CSS", "Next.js"],
     image:
-      "https://images.unsplash.com/photo-1556761175-4b46a572b786?auto=format&fit=crop&w=800&q=80",
+      "images/sliderproduct/uiux-finance.jpg",
   },
   {
     id: 5,
@@ -55,7 +55,7 @@ const projects = [
       "Comprehensive branding and visual identity for a SaaS company.",
     tech: ["Illustrator", "Photoshop"],
     image:
-      "https://images.unsplash.com/photo-1590608897129-79da98d1590d?auto=format&fit=crop&w=800&q=80",
+      "/images/sliderproduct/product-dev-2.webp",
   },
 ];
 
