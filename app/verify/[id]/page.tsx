@@ -642,6 +642,16 @@ interface Intern {
 const internData: Intern[] = [
   {
     id: "REV-AUG-03",
+    name: "M. SAAD MASOOD",
+    department: "AI/ML",
+    duration: "2 Months",
+    remarks: "Excellent",
+    certificate: "/certificates/REV-AUG-03-internship.pdf",
+    offerLetter: "/certificates/REV-AUG-03-offer.pdf",
+    experienceLetter: "/certificates/REV-AUG-03-experience.pdf",
+  },
+  {
+    id: "REV-DEMO",
     name: "Sayab Abbasi",
     department: "AI/ML",
     duration: "2 Months",
@@ -652,9 +662,9 @@ const internData: Intern[] = [
   },
   {
     id: "REV-INT-AUG01",
-    name: "Ali Khan",
-    department: "Web Dev",
-    duration: "3 Months",
+    name: "Ayesha Noman",
+    department: "AI/ML Dev",
+    duration: "1 Months",
     remarks: "Good",
     certificate: "/certificates/REV-INT-AUG01-internship.pdf",
     offerLetter: "/certificates/REV-INT-AUG01-offer.pdf",

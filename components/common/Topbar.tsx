@@ -3,6 +3,30 @@ import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import { MapPin, Facebook, Instagram, Linkedin } from "lucide-react";
 
+export const XIcon = ({ size = 15 }: { size?: number }) => (
+  <svg
+    width={size}
+    height={size}
+    viewBox="0 0 24 24"
+    fill="currentColor"
+    aria-hidden="true"
+  >
+    <path d="M18.244 2H21.56l-7.233 8.26L22 22h-6.828l-5.35-6.99L3.882 22H.56l7.73-8.835L2 2h7.01l4.835 6.44L18.244 2z" />
+  </svg>
+);
+
+export const YouTubeIcon = ({ size = 15 }: { size?: number }) => (
+  <svg
+    width={size}
+    height={size}
+    viewBox="0 0 24 24"
+    fill="currentColor"
+    aria-hidden="true"
+  >
+    <path d="M23.498 6.186a2.974 2.974 0 0 0-2.095-2.1C19.505 3.5 12 3.5 12 3.5s-7.505 0-9.403.586a2.974 2.974 0 0 0-2.095 2.1A31.24 31.24 0 0 0 0 12a31.24 31.24 0 0 0 .502 5.814 2.974 2.974 0 0 0 2.095 2.1C4.495 20.5 12 20.5 12 20.5s7.505 0 9.403-.586a2.974 2.974 0 0 0 2.095-2.1A31.24 31.24 0 0 0 24 12a31.24 31.24 0 0 0-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
+  </svg>
+);
+
 const TOPBAR_HIDE_SCROLL = 150; // px
 
 const Topbar: React.FC = () => {
@@ -38,14 +62,17 @@ const Topbar: React.FC = () => {
 
       {/* Middle Section - Social Icons */}
       <div className="flex justify-center items-center gap-4">
-        <Link href="https://facebook.com" target="_blank" className="hover:text-[#facc15] transition">
-          <Facebook size={15} />
+        <Link href="https://x.com/revoticai" target="_blank" className="hover:text-[#facc15] transition">
+          <XIcon  size={15} />
         </Link>
-        <Link href="https://instagram.com" target="_blank" className="hover:text-[#facc15] transition">
+        <Link href="https://instagram.com/revoticai" target="_blank" className="hover:text-[#facc15] transition">
           <Instagram size={15} />
         </Link>
-        <Link href="https://linkedin.com" target="_blank" className="hover:text-[#facc15] transition">
+        <Link href="https://linkedin.com/company/revoticai" target="_blank" className="hover:text-[#facc15] transition">
           <Linkedin size={15} />
+        </Link>
+        <Link href="https://youtube.com/revoticai" target="_blank" className="hover:text-[#facc15] transition">
+          <YouTubeIcon  size={15} />
         </Link>
       </div>
 

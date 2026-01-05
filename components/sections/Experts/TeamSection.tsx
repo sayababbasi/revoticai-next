@@ -13,7 +13,7 @@ const teamMembers = [
   {
     name: "Hasaan Farooq",
     title: "Co-founder & Chief Information Officer",
-    image: "/images/experts/Cofounder-bg.jpg", // Placeholder if you don't have an image
+    image: "/images/experts/Cofounder1.png", // Placeholder if you don't have an image
   },
   {
     name: "Maria Hanif",
@@ -53,7 +53,7 @@ const teamMembers = [
   {
     name: "Subhan Ali",
     title: "HR Manager",
-    image: "/images/experts/male.png",
+    image: "/images/experts/hr.jpg",
   },
     {
     name: "Zubiya Khan",

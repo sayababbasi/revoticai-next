@@ -1,0 +1,39 @@
+##############################################
+# Netlify Configuration for Next.js v16
+##############################################
+
+[build]
+  command = "npm run build"
+  publish = ".next"
+  environment = { NODE_VERSION = "18" }
+
+##############################################
+# Functions (API Routes)
+##############################################
+
+[functions]
+  node_bundler = "esbuild"
+  external_node_modules = ["sharp"]  # add if using sharp
+
+##############################################
+# Next.js Plugin (Required)
+##############################################
+
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
+
+##############################################
+# Blobs (Disable to avoid upload errors)
+##############################################
+
+[blobs]
+  enabled = false
+
+##############################################
+# Redirects (Optional - auto handled by plugin)
+##############################################
+
+# [[redirects]]
+#   from = "/*"
+#   to = "/index.html"
+#   status = 200
