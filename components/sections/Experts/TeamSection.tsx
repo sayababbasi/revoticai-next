@@ -163,7 +163,7 @@ const TeamSection: React.FC = () => {
                   src={member.image}
                   alt={member.name}
                   className="w-full h-full object-cover"
-                  onError={(e) => {
+                  onError={(e: React.SyntheticEvent<HTMLImageElement, Event>) => {
                     // Fallback to generic image based on type if primary fails
                     e.currentTarget.src = member.name.includes("Maria Hanif") || member.name.includes("Expert 10") || member.name.includes("Expert 12")
                       ? '/images/experts/female' // Generic female placeholder
