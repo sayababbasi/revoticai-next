@@ -5,7 +5,7 @@
 [build]
   command = "npm run build"
   publish = ".next"
-  environment = { NODE_VERSION = "18" }
+  environment = { NODE_VERSION = "20" }
 
 ##############################################
 # Functions (API Routes)
