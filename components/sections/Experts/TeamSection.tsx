@@ -40,27 +40,27 @@ const teamMembers = [
     title: "Business Developer",
     image: "/images/experts/BusinessDeveloper.png",
   },
-      {
+  {
     name: "Hassam Malik",
     title: "Business Developer",
     image: "/images/experts/fsd-dev1.jpg",
   },
-    {
+  {
     name: "Zawad Ahmad",
     title: "Sales Executive",
-    image: "/images/experts/bd.png",
+    image: "/images/experts/buisness-dev.png",
   },
   {
     name: "Subhan Ali",
     title: "HR Manager",
     image: "/images/experts/hr.jpg",
   },
-    {
+  {
     name: "Zubiya Khan",
     title: "Team Leader & Shift Incharge",
     image: "/images/experts/female.jpg",
   },
-    {
+  {
     name: "Nimra Ansari",
     title: "Project Supervisor",
     image: "/images/experts/female.jpg",
@@ -70,40 +70,40 @@ const teamMembers = [
     title: "AI Research Analyst",
     image: "/images/experts/researcher.jpeg",
   },
-    {
+  {
     name: "Arfeen Malik",
     title: "Full Stack Developer",
     image: "/images/experts/arfeen-fsd-dev.jpeg",
   },
-    {
+  {
     name: "Hammad Raza",
     title: "Full Stack Developer",
     image: "/images/experts/fsd-dev-2.png",
   },
-      {
+  {
     name: "Muhammad Saleh",
     title: "AI Developer",
     image: "/images/experts/male.png",
   },
-        {
+  {
     name: "Zahid Hussain",
     title: "DevOps Engineer",
     image: "/images/experts/male.png",
   },
-        {
+  {
     name: "Muhammad Ahad",
     title: "Graphic Designer & Video Editor",
     image: "/images/experts/male.png",
   },
-  
-        {
+
+  {
     name: "Uzair Ahmad",
     title: "Quality Assurance",
     image: "/images/experts/male.png",
   },
-  
-  
-  
+
+
+
   // Add more members as needed, using generic placeholders for now if no images
   // { name: "Expert 10", title: "Role", image: "/images/experts/test.png" },
   // { name: "Expert 11", title: "Role", image: "/images/experts/test.png" },
@@ -135,7 +135,7 @@ const TeamSection: React.FC = () => {
   return (
     <section className="bg-white py-16 md:py-24">
       <div className="container mx-auto px-6 max-w-7xl">
-        <motion.h2 
+        <motion.h2
           className="text-center text-4xl md:text-5xl font-extrabold text-black mb-16"
           initial={{ opacity: 0, y: -30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -145,7 +145,7 @@ const TeamSection: React.FC = () => {
           Meet Our Experts
         </motion.h2>
 
-        <motion.div 
+        <motion.div
           className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-4 gap-y-12 gap-x-8 justify-items-center"
           initial="hidden"
           whileInView="visible"
@@ -153,8 +153,8 @@ const TeamSection: React.FC = () => {
           variants={containerVariants}
         >
           {teamMembers.map((member, index) => (
-            <motion.div 
-              key={index} 
+            <motion.div
+              key={index}
               className="flex flex-col items-center text-center"
               variants={itemVariants}
             >
