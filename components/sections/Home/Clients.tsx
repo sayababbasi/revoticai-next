@@ -110,7 +110,7 @@ const ArrowRightIcon = () => (
 // --- Inlined Client Data (Row 1) ---
 const clientsRow1 = [
   { name: "LUSH", logo: "/images/clients/lusd.png" },
-  { name: "Huda Beauty", logo: "/images/clients/huda.png" },
+  { name: "Alisha E-Shop", logo: "/images/clients/alishaeshop.png" },
   { name: "Bangash", logo: "/images/clients/bangashcontainers.jpg" },
   { name: "Retailo", logo: "/images/clients/retailo.png" },
   { name: "Client 6", logo: "/images/clients/revolut.png" },
