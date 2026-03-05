@@ -232,6 +232,7 @@ const Hero: React.FC = () => {
   return (
     <section className="relative top-[0] w-full h-[90vh] overflow-hidden bg-black text-white">
       <Swiper
+        id="hero-slider"
         modules={[Autoplay, Pagination, Navigation, EffectFade]}
         autoplay={{ delay: 5000, disableOnInteraction: false }}
         pagination={{ clickable: true }}
@@ -314,36 +315,38 @@ const Hero: React.FC = () => {
     border-radius: 6px !important;
   }
 
-  /* --- ARROWS CENTERED --- */
-  .swiper-button-prev,
-  .swiper-button-next {
+  /* --- ARROWS AT BOTTOM --- */
+  #hero-slider .swiper-button-prev,
+  #hero-slider .swiper-button-next {
     color: #fff !important;
     width: 45px !important;
     height: 45px !important;
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 50%;
-    transition: all 0.3s ease;
-    top: 50% !important; /* Center vertically */
-    transform: translateY(-50%) !important; /* Align perfect center */
+    background: rgba(255, 255, 255, 0.1) !important;
+    border-radius: 50% !important;
+    transition: all 0.3s ease !important;
+    top: auto !important; 
+    bottom: 22px !important; /* Align with pagination */
+    transform: none !important; 
+    margin-top: 0 !important; /* Fix for Swiper default margin */
   }
 
-  .swiper-button-prev:after,
-  .swiper-button-next:after {
+  #hero-slider .swiper-button-prev:after,
+  #hero-slider .swiper-button-next:after {
     font-size: 18px !important;
     font-weight: bold;
   }
 
-  .swiper-button-prev:hover,
-  .swiper-button-next:hover {
-    background: rgba(255, 255, 255, 0.25);
+  #hero-slider .swiper-button-prev:hover,
+  #hero-slider .swiper-button-next:hover {
+    background: rgba(255, 255, 255, 0.25) !important;
   }
 
-  .swiper-button-prev {
-    left: 2% !important; /* Left arrow */
+  #hero-slider .swiper-button-prev {
+    left: calc(50% - 100px) !important;
   }
 
-  .swiper-button-next {
-    right: 3% !important; /* Right arrow */
+  #hero-slider .swiper-button-next {
+    right: calc(50% - 100px) !important;
   }
 
   @media (max-width: 768px) {

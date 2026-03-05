@@ -222,7 +222,7 @@ const services = [
     href: "/services/ui-ux",
   },
   {
-    icon: <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-[#b1ff32]"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/><path d="M12 8v8"/><path d="M8 12h8"/></svg>,
+    icon: <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-[#b1ff32]"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z" /><path d="M12 8v8" /><path d="M8 12h8" /></svg>,
     title: "AI SaaS Products",
     description: "Launch your own AI-powered software products with our end-to-end development partnership.",
     href: "/products",
@@ -268,19 +268,21 @@ const workImages = [
 ];
 const allWorkImages = [...workImages, ...workImages];
 const clientsRow1 = [
-  { name: "LUSH", logo: "/images/clients/lusd.png" },
-  { name: "Huda Beauty", logo: "/images/clients/huda.png" },
-  { name: "Bangash", logo: "/images/clients/bangashcontainers.jpg" },
-  { name: "Retailo", logo: "/images/clients/retailo.png" },
-  { name: "Client 5", logo: "/images/clients/slock.png" },
-  { name: "Client 6", logo: "/images/clients/revolut.png" },
+  { name: "Alisha E-Shop", logo: "/images/clients/alishaeshop.png" },
+  { name: "La Mosaik", logo: "/images/clients/lamosaik.webp" },
+  { name: "Minzay", logo: "/images/clients/minzay.avif" },
+  { name: "Astoud", logo: "/images/clients/astoud.webp" },
+  { name: "Koala Eco", logo: "/images/clients/KoalaEco-Logo.svg" },
+  { name: "Haryali Store", logo: "/images/clients/haryalistore.webp" },
+  { name: "Pak Style", logo: "/images/clients/pakstyle.avif" },
 ];
 const clientsRow2 = [
-  { name: "Tajir", logo: "/images/clients/tajir.png" },
-  { name: "Toms", logo: " /images/clients/toms.png" },
-  { name: "Warby Parker", logo: "/images/clients/warby.png" },
-  { name: "Replika", logo: "/images/clients/dawaai.png" },
-  { name: "Client 9", logo: "/images/clients/shave.png" },
+  { name: "Feature Learn", logo: "/images/clients/futurelearn.svg" },
+  { name: "Bangash", logo: "/images/clients/bangashcontainers.jpg" },
+  { name: "Go Flour", logo: " /images/clients/goflour.webp" },
+  { name: "Qisaaye", logo: "/images/clients/qisaaye.webp" },
+  { name: "Xcessories Hub", logo: "/images/clients/xcessorieshub.webp" },
+  { name: "Loaf", logo: "/images/clients/loaf.png" },
 ];
 const allClients1 = [...clientsRow1, ...clientsRow1];
 const allClients2 = [...clientsRow2, ...clientsRow2];
@@ -369,8 +371,8 @@ const PageHeader: React.FC<PageHeaderProps> = ({
       <div className="inline">
         {words.map((word, index) => (
           <span
-          key={index}
-          className={
+            key={index}
+            className={
               index === emphasizeWord
                 ? "text-[#b1ff32] mr-2 inline-block leading-none"
                 : ""
@@ -383,9 +385,9 @@ const PageHeader: React.FC<PageHeaderProps> = ({
     ) : (
       title
     );
-    
-    return (
-      <section className="bg-black text-white pt-[150px] pb-16 md:pb-24 overflow-hidden">
+
+  return (
+    <section className="bg-black text-white pt-[150px] pb-16 md:pb-24 overflow-hidden">
       <motion.div
         className="container mx-auto px-6 text-center"
         initial="hidden"
@@ -436,7 +438,7 @@ const PageHeader: React.FC<PageHeaderProps> = ({
             >
               {button.text}
               <ArrowRightIcon />
-              
+
             </a>
           </motion.div>
         )}
@@ -534,11 +536,10 @@ const CoreExpertiseSection: React.FC = () => (
           <motion.div
             key={item.title}
             variants={itemVariants}
-            className={`rounded-xl transition-all duration-300 ${
-              item.isCta
+            className={`rounded-xl transition-all duration-300 ${item.isCta
                 ? "bg-[#b1ff32] text-black p-8 flex flex-col justify-between"
                 : "bg-neutral-900 border border-neutral-800 p-8 hover:border-[#b1ff32]/50"
-            }`}
+              }`}
           >
             {item.isCta ? (
               <div className="group">
@@ -568,8 +569,8 @@ const CoreExpertiseSection: React.FC = () => (
                 <div className="flex flex-wrap gap-2">
                   {item.tags.map((tag) => (
                     <span
-                    key={tag}
-                    className="text-xs bg-neutral-800 text-gray-300 px-3 py-1 rounded-full font-medium"
+                      key={tag}
+                      className="text-xs bg-neutral-800 text-gray-300 px-3 py-1 rounded-full font-medium"
                     >
                       {tag}
                     </span>
@@ -769,7 +770,7 @@ const ServicesPage: React.FC = () => {
       <CoreExpertiseSection />
       <ServicesOverview />
       <LeadGenForm />
-      
+
 
       {/* 3. Core Expertise Grid (Inlined from Services/OurCoreExpertise.tsx) */}
 

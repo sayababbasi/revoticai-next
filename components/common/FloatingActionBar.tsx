@@ -171,7 +171,7 @@
 // //              >
 // //                <CloseIcon />
 // //              </button>
- 
+
 // //              {/* Grid Layout: 2 Columns */}
 // //              <div className="grid grid-cols-1 md:grid-cols-2">
 // //                {/* --- Left Side: Form --- */}
@@ -235,7 +235,7 @@
 // //                    </button>
 // //                  </form>
 // //                </div>
- 
+
 // //                {/* --- Right Side: Image --- */}
 // //                <div className="hidden md:block w-full h-full">
 // //                  <img
@@ -1292,17 +1292,18 @@ interface ActionButtonProps {
   tooltip: React.ReactNode;
   children: React.ReactNode;
   ariaLabel: string;
+  className?: string;
 }
 
-const ActionButton: React.FC<ActionButtonProps> = ({ href, onClick, tooltip, children, ariaLabel }) => (
-  <div className="relative group">
+const ActionButton: React.FC<ActionButtonProps> = ({ href, onClick, tooltip, children, ariaLabel, className = "" }) => (
+  <div className="relative group flex">
     <a
       href={href}
       onClick={onClick}
       target={href ? "_blank" : undefined}
       rel={href ? "noopener noreferrer" : undefined}
       aria-label={ariaLabel}
-      className="flex items-center justify-center w-12 h-12 bg-neutral-800 text-white transition-all duration-300 hover:bg-[#b1ff32] hover:text-black"
+      className={`flex items-center justify-center w-12 h-12 bg-neutral-800 text-white transition-all duration-300 hover:bg-[#b1ff32] hover:text-black ${className}`}
     >
       {children}
     </a>
@@ -1316,14 +1317,53 @@ const ActionButton: React.FC<ActionButtonProps> = ({ href, onClick, tooltip, chi
 // ============================================================
 //  Offer Modal with EmailJS logic
 // ============================================================
+// Total countdown duration: 7h 50m = 28200s
+const TOTAL_DURATION_IN_SECONDS = 7 * 3600 + 50 * 60;
+
 const OfferModal: React.FC<{ onClose: () => void }> = ({ onClose }) => {
-  const [remainingTime, setRemainingTime] = useState(1800); // 30min
+  const [remainingTime, setRemainingTime] = useState(TOTAL_DURATION_IN_SECONDS);
   const [submitStatus, setSubmitStatus] = useState<"" | "ok" | "error">("");
 
   useEffect(() => {
-    const timer = setInterval(() => setRemainingTime((t) => Math.max(t - 1, 0)), 1000);
-    return () => clearInterval(timer);
+    const initializeExpiry = () => {
+      const now = Date.now();
+      const storedExpiry = localStorage.getItem("offerExpiryTime");
+      const expiry = storedExpiry ? Number(storedExpiry) : NaN;
+
+      if (!expiry || isNaN(expiry)) {
+        const newExpiry = now + TOTAL_DURATION_IN_SECONDS * 1000;
+        localStorage.setItem("offerExpiryTime", String(newExpiry));
+        return newExpiry;
+      }
+      return expiry;
+    };
+
+    let expiryTime = initializeExpiry();
+
+    const tick = () => {
+      let remaining = Math.floor((expiryTime - Date.now()) / 1000);
+
+      if (remaining <= 0) {
+        expiryTime = Date.now() + TOTAL_DURATION_IN_SECONDS * 1000;
+        localStorage.setItem("offerExpiryTime", String(expiryTime));
+        remaining = TOTAL_DURATION_IN_SECONDS;
+      }
+
+      setRemainingTime(remaining);
+    };
+
+    tick(); // Update immediately on mount
+    const interval = setInterval(tick, 1000);
+
+    return () => clearInterval(interval);
   }, []);
+
+  const formatTime = (seconds: number): string => {
+    const h = Math.floor(seconds / 3600);
+    const m = Math.floor((seconds % 3600) / 60);
+    const s = Math.floor(seconds % 60);
+    return `${String(h).padStart(2, "0")}:${String(m).padStart(2, "0")}:${String(s).padStart(2, "0")}`;
+  };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -1417,11 +1457,11 @@ const OfferModal: React.FC<{ onClose: () => void }> = ({ onClose }) => {
           </div>
 
           {/* Right Side Image */}
-          <div className="hidden md:block w-full h-full">
+          <div className="hidden md:flex justify-center items-center bg-neutral-950">
             <img
-              src="https://images.unsplash.com/photo-1556761175-577380e3c8b4?auto=format&fit=crop&q=80&w=800&h=1000"
+              src="/images/contact-us.webp"
               alt="Special Offer"
-              className="w-full h-full object-cover"
+              className="w-full h-full object-contain"
               onError={(e) => (e.currentTarget.src = 'https://placehold.co/800x1000/1a1a1a/b1ff32?text=Offer+Image')}
             />
           </div>
@@ -1443,9 +1483,10 @@ const FloatingActionBar: React.FC = () => {
         initial={{ x: 100, opacity: 0 }}
         animate={{ x: 0, opacity: 1 }}
         transition={{ delay: 1.5, duration: 0.5 }}
-        className="fixed top-1/2 -translate-y-1/2 right-0 z-40 flex flex-col shadow-2xl rounded-l-lg overflow-hidden"
+        className="fixed top-1/2 -translate-y-1/2 right-0 z-40 flex flex-col shadow-2xl"
       >
         <ActionButton
+          className="rounded-tl-lg"
           href="tel:+923160513841"
           ariaLabel="Customer Service"
           tooltip={<div><p className="font-semibold">Customer Support</p><p className="text-gray-300 text-sm">+92 316 0513841</p></div>}
@@ -1457,15 +1498,15 @@ const FloatingActionBar: React.FC = () => {
           tooltip={<div><p className="font-semibold">Special Offer</p><p className="text-gray-300 text-sm">Get 30% off your first project!</p></div>}
         ><OfferIcon /></ActionButton>
 
-        <ActionButton href="mailto:contact@revoticai.com" ariaLabel="Contact Us"
-          tooltip={<div><p className="font-semibold">Contact Us</p><p className="text-gray-300 text-sm">contact@revoticai.com</p></div>}
+        <ActionButton href="mailto:contact@revoticai.com" ariaLabel="Email"
+          tooltip={<div><p className="font-semibold">Email</p><p className="text-gray-300 text-sm">contact@revoticai.com</p></div>}
         ><MailIcon /></ActionButton>
 
-        <ActionButton href="https://wa.me/923160513841" ariaLabel="WhatsApp"
-          tooltip={<div><p className="font-semibold">WhatsApp</p><p className="text-gray-300 text-sm">Chat with us directly</p></div>}
+        <ActionButton href="https://wa.me/923160513841" ariaLabel="Contact"
+          tooltip={<div><p className="font-semibold">Contact</p><p className="text-gray-300 text-sm">Chat with us directly</p></div>}
         ><WhatsAppIcon /></ActionButton>
 
-        <ActionButton href="https://www.linkedin.com/company/revoticai/" ariaLabel="LinkedIn"
+        <ActionButton className="rounded-bl-lg" href="https://www.linkedin.com/company/revoticai/" ariaLabel="LinkedIn"
           tooltip={<div><p className="font-semibold">LinkedIn</p><p className="text-gray-300 text-sm">Follow our company</p></div>}
         ><LinkedinIcon /></ActionButton>
       </motion.div>

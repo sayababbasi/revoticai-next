@@ -109,21 +109,24 @@ const ArrowRightIcon = () => (
 
 // --- Inlined Client Data (Row 1) ---
 const clientsRow1 = [
-  { name: "LUSH", logo: "/images/clients/lusd.png" },
   { name: "Alisha E-Shop", logo: "/images/clients/alishaeshop.png" },
-  { name: "Bangash", logo: "/images/clients/bangashcontainers.jpg" },
-  { name: "Retailo", logo: "/images/clients/retailo.png" },
-  { name: "Client 6", logo: "/images/clients/revolut.png" },
+  { name: "La Mosaik", logo: "/images/clients/lamosaik.webp" },
+  { name: "Minzay", logo: "/images/clients/minzay.avif" },
+  { name: "Astoud", logo: "/images/clients/astoud.webp" },
+  { name: "Koala Eco", logo: "/images/clients/KoalaEco-Logo.svg" },
+  { name: "Haryali Store", logo: "/images/clients/haryalistore.webp" },
+  { name: "Pak Style", logo: "/images/clients/pakstyle.avif" },
 ];
 
 
 // --- Inlined Client Data (Row 2) ---
 const clientsRow2 = [
-  { name: "Tajir", logo: "/images/clients/tajir.png" },
-  { name: "Toms", logo: " /images/clients/toms.png" },
-  { name: "Warby Parker", logo: "/images/clients/warby.png" },
-  { name: "Replika", logo: "/images/clients/dawaai.png" },
-  { name: "Client 9", logo: "/images/clients/shave.png" },
+  { name: "Feature Learn", logo: "/images/clients/futurelearn.svg" },
+  { name: "Bangash", logo: "/images/clients/bangashcontainers.jpg" },
+  { name: "Go Flour", logo: " /images/clients/goflour.webp" },
+  { name: "Qisaaye", logo: "/images/clients/qisaaye.webp" },
+  { name: "Xcessories Hub", logo: "/images/clients/xcessorieshub.webp" },
+  { name: "Loaf", logo: "/images/clients/loaf.png" },
 ];
 
 // Duplicate for seamless loop
@@ -174,14 +177,14 @@ const OurClients: React.FC = () => {
                 onError={(e) => (e.currentTarget.src = 'https://placehold.co/150x60/f00/fff?text=Logo+Error')}
               /> */}
               <img
-  src={client.logo}
-  alt={client.name}
-  className="max-w-full max-h-20 md:max-h-24 object-contain transition-transform duration-300 hover:scale-105"
-  onError={(e) =>
-    (e.currentTarget.src =
-      "https://placehold.co/200x80/f00/fff?text=Logo+Error")
-  }
-/>
+                src={client.logo}
+                alt={client.name}
+                className="max-w-full max-h-20 md:max-h-24 object-contain transition-transform duration-300 hover:scale-105"
+                onError={(e) =>
+                (e.currentTarget.src =
+                  "https://placehold.co/200x80/f00/fff?text=Logo+Error")
+                }
+              />
 
             </div>
           ))}

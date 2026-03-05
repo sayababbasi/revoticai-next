@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://revoticai.com"),
   title: "RevoticAI | Revolutionizing Businesses with Artificial Intelligence",
   description:
-  "RevoticAI provides AI, ML, and automation solutions to help businesses scale and innovate faster.",
+    "RevoticAI provides AI, ML, and automation solutions to help businesses scale and innovate faster.",
   icons: {
     icon: "/favicon-black.png",
     apple: "/apple-touch-icon.png",
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "RevoticAI | Revolutionizing Businesses with Artificial Intelligence",
     description:
-    "RevoticAI provides AI, ML, and automation solutions to help businesses scale and innovate faster.",
+      "RevoticAI provides AI, ML, and automation solutions to help businesses scale and innovate faster.",
     url: "https://revoticai.com",
     siteName: "RevoticAI",
     images: [
@@ -45,8 +45,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
-      <body className={`${inter.className} bg-white text-gray-900`}>
+    <html lang="en" suppressHydrationWarning>
+      <body className={`${inter.className} bg-white text-gray-900`} suppressHydrationWarning>
         {/* Maintenance bar + glowing ball */}
 
         {/* Website Layout */}

@@ -96,7 +96,7 @@ const products = [
       "Scalable Cloud Infrastructure",
     ],
     image:
-      "/images/product/automation-tool1.png",
+      "/images/product/robotic-process.png",
   },
   {
     id: "ecommerce",
@@ -172,7 +172,7 @@ const ProductShowcase: React.FC = () => {
               transition={{ duration: 0.4, ease: "easeInOut" }}
             >
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
-                
+
                 {/* --- Left Side (Image) --- */}
                 <div className="w-full h-80 md:h-96 rounded-xl overflow-hidden shadow-lg">
                   <img
@@ -245,9 +245,8 @@ const ProductShowcase: React.FC = () => {
               <button
                 key={i}
                 onClick={() => setCurrentIndex(i)}
-                className={`w-2 h-2 rounded-full transition-all ${
-                  i === currentIndex ? "bg-[#b1ff32] w-4" : "bg-gray-300"
-                }`}
+                className={`w-2 h-2 rounded-full transition-all ${i === currentIndex ? "bg-[#b1ff32] w-4" : "bg-gray-300"
+                  }`}
                 aria-label={`Go to slide ${i + 1}`}
               />
             ))}

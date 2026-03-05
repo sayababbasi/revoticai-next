@@ -960,9 +960,9 @@ const Footer: React.FC = () => {
           <p>
             &copy; {new Date().getFullYear()} All rights reserved by{" "}
             <a href="#" className="font-semibold text-white hover:text-[#b1ff32] transition-colors">
-              Revotic AI
+              Revotic AI Pvt. Ltd.
             </a>{" "}
-            | Developed by Revotic AI Team With Love
+            | Developed by Revotic AI Team
           </p>
         </div>
       </motion.div>

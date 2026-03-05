@@ -1467,8 +1467,8 @@ const CloseIcon = () => (
   </svg>
 );
 
-// Total countdown duration: 7h 39m = 27540s
-const TOTAL_DURATION_IN_SECONDS = 7 * 3600 + 39 * 60;
+// Total countdown duration: 7h 50m = 28200s
+const TOTAL_DURATION_IN_SECONDS = 7 * 3600 + 50 * 60;
 
 const LeadGenPopup: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -1476,26 +1476,55 @@ const LeadGenPopup: React.FC = () => {
   const [submitStatus, setSubmitStatus] = useState<"" | "ok" | "error">("");
 
   useEffect(() => {
-    // Show popup after 10 seconds
-    const timer = setTimeout(() => setIsOpen(true), 10000);
-    return () => clearTimeout(timer);
+    // Show popup after 10 seconds, only once a day per user
+    const lastSeen = localStorage.getItem("revoticPopupLastSeen");
+    const now = Date.now();
+
+    // 24 hours in milliseconds = 24 * 60 * 60 * 1000 = 86400000
+    if (!lastSeen || (now - Number(lastSeen)) > 86400000) {
+      const timer = setTimeout(() => {
+        setIsOpen(true);
+        localStorage.setItem("revoticPopupLastSeen", String(now));
+      }, 10000);
+      return () => clearTimeout(timer);
+    }
   }, []);
 
-  // Countdown logic
+  // Countdown logic with persistence and auto-reset
   useEffect(() => {
-    if (!isOpen) return; // Only start when popup is open
-    const interval = setInterval(() => {
-      setRemainingTime((prev) => {
-        if (prev <= 1) {
-          clearInterval(interval);
-          return 0;
-        }
-        return prev - 1;
-      });
-    }, 1000);
+    const initializeExpiry = () => {
+      const now = Date.now();
+      const storedExpiry = localStorage.getItem("offerExpiryTime");
+      const expiry = storedExpiry ? Number(storedExpiry) : NaN;
+
+      if (!expiry || isNaN(expiry)) {
+        const newExpiry = now + TOTAL_DURATION_IN_SECONDS * 1000;
+        localStorage.setItem("offerExpiryTime", String(newExpiry));
+        return newExpiry;
+      }
+      return expiry;
+    };
+
+    let expiryTime = initializeExpiry();
+
+    const tick = () => {
+      let remaining = Math.floor((expiryTime - Date.now()) / 1000);
+
+      // Reset to start timer automatically when it hits 0
+      if (remaining <= 0) {
+        expiryTime = Date.now() + TOTAL_DURATION_IN_SECONDS * 1000;
+        localStorage.setItem("offerExpiryTime", String(expiryTime));
+        remaining = TOTAL_DURATION_IN_SECONDS;
+      }
+
+      setRemainingTime(remaining);
+    };
+
+    tick(); // Update immediately on mount
+    const interval = setInterval(tick, 1000);
 
     return () => clearInterval(interval);
-  }, [isOpen]);
+  }, []);
 
   const formatTime = (seconds: number): string => {
     const h = Math.floor(seconds / 3600);
