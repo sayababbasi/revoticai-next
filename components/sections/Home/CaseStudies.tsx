@@ -15,19 +15,19 @@ const CaseStudies: React.FC = () => {
           {/* Left Side: Title and Subtitle */}
           <div className="md:w-1/2 mb-8 md:mb-0">
             <p className="text-sm uppercase tracking-wider text-[#b1ff32] font-semibold mb-3">
-              Our Work
+              Proven Results
             </p>
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
-              Featured Case Studies
+              Real Results for Real Businesses
             </h2>
           </div>
 
           {/* Right Side: Description and Button */}
           <div className="md:w-1/2 md:pl-12">
             <p className="text-lg text-gray-400 mb-8 max-w-lg md:ml-auto">
-              See how we've transformed businesses with intelligent automation,
-              AI-powered applications, and modern digital solutions that deliver
-              real, measurable results.
+              Discover how we've helped businesses cut costs by 40%, increase
+              conversions by 25%, and automate critical workflows, delivering
+              ROI-driven solutions that scale.
             </p>
             <div className="md:text-left">
               {/* Use <a> tag for now */}
@@ -35,7 +35,7 @@ const CaseStudies: React.FC = () => {
                 href="/case-studies"
                 className="inline-block bg-[#b1ff32] text-black px-7 py-3 rounded-md font-medium hover:bg-white transition-colors"
               >
-                View All Case Studies
+                See Our Client Results
               </a>
             </div>
           </div>

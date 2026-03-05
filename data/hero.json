@@ -1,52 +1,52 @@
 [
   {
-    "tag": "AI & ML Automation",
-    "title": "Intelligent Automation Solutions",
-    "description": "Transform your business operations with our cutting edge AI powered automation, designed to boost efficiency and reduce costs.",
+    "tag": "AI Automation & Agents",
+    "title": "Eliminate Manual Work. Scale with AI.",
+    "description": "Deploy intelligent AI agents and automation systems that streamline your operations, reduce overhead, and free your team to focus on what drives revenue.",
     "image": "/images/hero/test-hero11.png",
-    "button1Text": "Explore Services",
-    "button1Link": "/services/ai-ml",
-    "button2Text": "Our Process",
+    "button1Text": "Book a Free Strategy Call",
+    "button1Link": "/contact",
+    "button2Text": "Explore Solutions",
+    "button2Link": "/services/ai-ml"
+  },
+  {
+    "tag": "Custom SaaS Development",
+    "title": "Your Vision. Our Platform. Built to Scale.",
+    "description": "We architect and build custom SaaS platforms that generate recurring revenue, delight users, and scale effortlessly from MVP to enterprise.",
+    "image": "/images/hero/web-hero-211.webp",
+    "button1Text": "Get a Custom Proposal",
+    "button1Link": "/contact",
+    "button2Text": "View Case Studies",
+    "button2Link": "/case-studies"
+  },
+  {
+    "tag": "Smart Business Dashboards",
+    "title": "Real-Time Intelligence. Smarter Decisions.",
+    "description": "Turn raw data into actionable business intelligence with AI-powered dashboards that help you spot trends, forecast outcomes, and make decisions faster.",
+    "image": "/images/hero/hero-dash-1.png",
+    "button1Text": "Schedule a Demo",
+    "button1Link": "/contact",
+    "button2Text": "Our Approach",
     "button2Link": "/about#process"
   },
   {
-    "tag": "Full Stack Development",
-    "title": "AI-Powered Web & Mobile Apps",
-    "description": "We build high-performance, intelligent websites and applications that deliver seamless user experiences and scalable growth.",
-    "image": "/images/hero/web-hero-211.webp",
-    "button1Text": "View Portfolio",
-    "button1Link": "/portfolio",
-    "button2Text": "Get a Quote",
-    "button2Link": "/contact"
-  },
-  {
-    "tag": "AI SaaS Products",
-    "title": "Custom AI SaaS Solutions",
-    "description": "Leverage our expertise to build custom-built AI SaaS products designed to solve your unique real-world business challenges.",
+    "tag": "AI Chatbots & Conversational AI",
+    "title": "24/7 Customer Engagement. Zero Downtime.",
+    "description": "Deploy AI-powered chatbots and virtual assistants that qualify leads, resolve support queries, and deliver personalized experiences around the clock.",
     "image": "/images/hero/web-hero.png",
-    "button1Text": "Our Products",
-    "button1Link": "/products",
-    "button2Text": "Book a Call",
-    "button2Link": "/contact"
-  },
-  {
-    "tag": "Data & Analytics",
-    "title": "Personalized AI Dashboards",
-    "description": "Unlock actionable insights with smart, personalized AI-powered dashboards that help you make data-driven decisions faster.",
-    "image": "/images/hero/hero-dash-1.png",
-    "button1Text": "Case Studies",
-    "button1Link": "/case-studies",
-    "button2Text": "Learn More",
-    "button2Link": "/services"
-  },
-  {
-    "tag": "Revotic AI",
-    "title": "Smarter. Faster. Future-Ready.",
-    "description": "We help startups and enterprises scale fast through smart, data-driven technologies. Transform your business with Revotic AI.",
-    "image": "/images/hero/future-hero-22.webp",
-    "button1Text": "Contact Us",
+    "button1Text": "Start Your AI Project",
     "button1Link": "/contact",
-    "button2Text": "About Revotic",
+    "button2Text": "See Our Products",
+    "button2Link": "/products"
+  },
+  {
+    "tag": "Revotic AI - Your AI Partner",
+    "title": "Smarter. Faster. Future-Ready.",
+    "description": "We partner with ambitious businesses to design, build, and deploy AI-powered systems that drive measurable growth. From strategy to deployment, we deliver results.",
+    "image": "/images/hero/future-hero-22.webp",
+    "button1Text": "Book a Free Strategy Call",
+    "button1Link": "/contact",
+    "button2Text": "About Revotic AI",
     "button2Link": "/about"
   }
 ]

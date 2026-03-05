@@ -1,38 +1,38 @@
 [
   {
     "icon": "Brain",
-    "title": "AI & ML Automation",
-    "description": "Leverage our expertise in AI to automate complex processes and unlock data-driven insights.",
+    "title": "AI Automation & Agents",
+    "description": "Intelligent systems that reduce manual work, increase operational efficiency, and scale your business processes autonomously.",
     "link": "/services/ai-ml"
   },
   {
     "icon": "Globe",
-    "title": "AI-Powered Web Apps",
-    "description": "We build high-performance, intelligent websites and apps that deliver scalable growth.",
+    "title": "AI-Powered SaaS Development",
+    "description": "Scalable cloud platforms built for performance, growth, and recurring revenue, from concept to launch and beyond.",
     "link": "/services/web-app"
   },
   {
     "icon": "Zap",
-    "title": "Intelligent Automation",
-    "description": "Transform your business operations with cutting-edge automation that boosts efficiency.",
+    "title": "Business Process Automation",
+    "description": "End-to-end workflow optimization that eliminates bottlenecks, cuts costs, and transforms how your organization operates.",
     "link": "/services/automation"
   },
   {
-    "icon": "Gamepad2",
-    "title": "Custom Game Development",
-    "description": "Create immersive and engaging experiences with our end-to-end game development services.",
-    "link": "/services/game-dev"
-  },
-  {
     "icon": "Sparkles",
-    "title": "Generative AI Solutions",
-    "description": "Harness the power of GenAI to create novel solutions, from content generation to smart chatbots.",
+    "title": "AI Chatbots & Conversational AI",
+    "description": "Deploy intelligent virtual assistants that engage customers 24/7, qualify leads, and deliver personalized support at scale.",
     "link": "/services/ai-ml"
   },
   {
+    "icon": "Gamepad2",
+    "title": "Smart Business Dashboards",
+    "description": "Real-time analytics and decision intelligence systems that turn your data into actionable business insights.",
+    "link": "/services/game-dev"
+  },
+  {
     "icon": "PenTool",
-    "title": "Modern UI/UX Design",
-    "description": "Our design team creates intuitive and beautiful interfaces that delight users and drive engagement.",
+    "title": "Full-Stack Web Applications",
+    "description": "High-performance platforms tailored to your business goals, built with modern architecture for speed, security, and scale.",
     "link": "/services/ui-ux"
   }
 ]

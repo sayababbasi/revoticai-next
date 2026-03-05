@@ -15,26 +15,26 @@ const ServicesOverview: React.FC = () => {
           {/* Left Side: Title and Subtitle */}
           <div className="md:w-1/2 mb-8 md:mb-0">
             <p className="text-sm uppercase tracking-wider text-grey-700 font-semibold mb-3">
-              Our Services
+              What We Deliver
             </p>
             <h2 className="text-4xl md:text-5xl font-bold text-black mb-4">
-              Smarter, Faster, Future-Ready Solutions
+              AI-Driven Solutions That Grow Your Business
             </h2>
           </div>
 
           {/* Right Side: Description and Button */}
           <div className="md:w-1/2 md:pl-12">
             <p className="text-lg text-gray-700 mb-8 max-w-lg md:ml-auto">
-              From AI-powered automation to full-stack development, we create
-              intelligent products designed to make technology smarter, faster,
-              and more personalized for your users.
+              We help businesses automate operations, build scalable platforms,
+              and leverage AI to drive efficiency, reduce costs, and accelerate
+              growth, delivering measurable results from day one.
             </p>
             <div className="md:text-left">
               <Link
                 href="/services"
                 className="inline-block bg-black text-white px-7 py-3 rounded-md font-medium hover:bg-gray-800 transition-colors"
               >
-                View All Services
+                Explore All Solutions
               </Link>
             </div>
           </div>

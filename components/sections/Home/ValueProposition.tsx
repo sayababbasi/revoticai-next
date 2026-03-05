@@ -44,7 +44,7 @@ const fadeUp = {
 
 // --- Scrolling Text Data ---
 const backgroundText =
-  "Transforming Ideas into Intelligent Reality ✦ Innovate with AI ✦ ";
+  "Automating Businesses. Accelerating Growth. ✦ Your AI Partner ✦ ";
 // Duplicate for seamless loop
 const allBackgroundText = [
   backgroundText,
@@ -85,10 +85,10 @@ const ValueProposition: React.FC = () => {
           <div className="hidden md:flex items-center">
             <div className="text-right max-w-[200px] mr-2">
               <h4 className="font-semibold text-gray-800">
-                At Revotic AI, we deliver powerful solutions with
+                Enterprise-grade AI solutions delivered with
               </h4>
               <p className="text-sm text-gray-500">
-                no hidden costs or limitations.
+                transparent pricing and guaranteed results.
               </p>
             </div>
             <ArrowCurveIcon />
@@ -108,10 +108,10 @@ const ValueProposition: React.FC = () => {
           {/* --- Annotation for Mobile --- */}
           <div className="block md:hidden text-center max-w-xs mt-6">
             <h4 className="font-semibold text-gray-800">
-              At Revotic AI, we deliver powerful solutions with
+              Enterprise-grade AI solutions delivered with
             </h4>
             <p className="text-sm text-gray-500">
-              no hidden costs or limitations.
+              transparent pricing and guaranteed results.
             </p>
           </div>
         </div>

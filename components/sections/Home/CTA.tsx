@@ -44,18 +44,19 @@ const CTA: React.FC = () => {
           {/* Content */}
           <div className="relative z-10 max-w-2xl mx-auto">
             <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
-              Let's Build Your AI-Powered Future
+              Ready to Automate, Scale & Accelerate?
             </h2>
             <p className="text-lg text-gray-400 mb-10">
-              Ready to transform your business with intelligent automation and
-              smarter applications? Our team is here to help you scale.
+              Get a free strategy consultation with our AI experts. Discover how
+              intelligent automation can cut costs, streamline operations, and
+              drive measurable growth for your business.
             </p>
             {/* Using <a> tag as a fallback to avoid Link error */}
             <a
               href="/contact"
               className="group inline-flex items-center justify-center px-8 py-4 bg-[#b1ff32] text-black font-bold rounded-full text-lg transition-transform duration-300 hover:scale-105"
             >
-              Book a Free Call
+              Book a Free Strategy Call
               {/* Using component, but fallback is defined above */}
               <ArrowRight
                 className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform"

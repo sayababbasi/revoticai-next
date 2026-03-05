@@ -4,7 +4,7 @@
 //     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
 //     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
 //     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
-//     "./src/styles/**/*.{css}",
+//     "./src/styles/**/*.css",
 //   ],
 //   theme: {
 //     extend: {
@@ -35,7 +35,7 @@ module.exports = {
   content: [
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
-    "./styles/**/*.{css}",
+    "./styles/**/*.css",
   ],
   theme: {
     extend: {

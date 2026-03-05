@@ -147,15 +147,15 @@ const ProductShowcase: React.FC = () => {
         <div className="max-w-3xl mx-auto text-center mb-16">
           <p className="text-sm uppercase tracking-wider font-semibold mb-3">
             <span className="bg-[#b1ff32] text-black px-2 py-1 rounded">
-              Our Products
+              Our Solutions
             </span>
           </p>
           <h2 className="text-4xl md:text-5xl font-bold text-black mb-4">
-            Explore Our AI-Powered Solutions
+            Enterprise Solutions Built to Scale
           </h2>
           <p className="text-lg text-gray-600">
-            From smart CRMs to full-scale automation, our products are built to
-            solve real-world business challenges and drive growth.
+            From intelligent CRMs to full-scale automation platforms, every
+            solution is built to solve real business challenges and drive growth.
           </p>
         </div>
 
@@ -209,7 +209,7 @@ const ProductShowcase: React.FC = () => {
                       href="/contact"
                       className="group inline-flex items-center justify-center px-6 py-3 bg-[#b1ff32] text-black font-bold rounded-lg text-base transition-transform duration-300 hover:scale-105"
                     >
-                      Request a Demo
+                      Schedule a Demo
                     </a>
                     <a
                       href="/products"

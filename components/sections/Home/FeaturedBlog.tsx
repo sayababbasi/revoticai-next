@@ -118,14 +118,14 @@ const FeaturedBlog: React.FC = () => {
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-16">
           <div className="max-w-xl mb-6 md:mb-0">
             <p className="text-sm uppercase tracking-wider text-gray-500 font-semibold mb-3">
-              Our Insights
+              Industry Intelligence
             </p>
             <h2 className="text-4xl md:text-5xl font-bold text-black mb-4">
-              Latest from the Blog
+              Insights & Thought Leadership
             </h2>
             <p className="text-lg text-gray-600">
-              Explore our latest articles on AI, automation, and modern
-              development.
+              Expert analysis on AI automation, business growth, and digital
+              transformation.
             </p>
           </div>
 
@@ -142,7 +142,7 @@ const FeaturedBlog: React.FC = () => {
         {/* --- Featured Blog Grid --- */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {featuredPosts.map((post) => (
-            <BlogCard key={post.id} post={post} /> 
+            <BlogCard key={post.id} post={post} />
           ))}
         </div>
       </div>

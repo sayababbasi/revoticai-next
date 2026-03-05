@@ -202,7 +202,7 @@ const techStack = [
     title: "AI Agents",
     subtitle: "Intelligent Automation",
   },
-    {
+  {
     imgSrc: "/images/tech/chatbot.png",
     title: "Chatbots",
     subtitle: "Conversational AI",
@@ -264,7 +264,7 @@ const techStack = [
   },
   // --- New Items ---
 
-  
+
 
 ];
 
@@ -293,14 +293,14 @@ const TechStack: React.FC = () => {
         <div className="max-w-3xl mx-auto text-center mb-16">
           <p className="text-sm uppercase tracking-wider font-semibold mb-3">
             <span className="bg-[#b1ff32] text-black px-2 py-1 rounded">
-              Powerful Features
+              Our Technology
             </span>
           </p>
           <h2 className="text-4xl md:text-5xl font-bold text-black mb-4">
-            Our Core Technology Stack
+            Built with Industry-Leading Technology
           </h2>
           <p className="text-lg text-gray-600">
-            We use a modern, scalable, and secure stack to build high-performance AI-powered applications.
+            Enterprise-grade tools and frameworks powering every solution we deliver.
           </p>
         </div>
 

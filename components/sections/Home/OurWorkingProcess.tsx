@@ -21,33 +21,33 @@ const CheckIcon = () => (
 // --- Inlined Data for the 3 Process Cards ---
 const processSteps = [
   {
-    title: "Discovery & Research",
+    title: "Discovery & Strategy",
     description:
-      "We begin by understanding your business needs, current workflow, and goals to align AI solutions effectively.",
+      "We start by understanding your business goals, pain points, and growth targets to define a clear AI strategy with measurable ROI.",
     points: [
-      "Analyze existing systems & pain points",
-      "Identify opportunities for automation or AI",
-      "Define use-case & success metrics",
+      "Deep-dive into your business operations & goals",
+      "Identify high-impact automation opportunities",
+      "Define success metrics & expected ROI",
     ],
   },
   {
-    title: "Solution Architecture",
+    title: "Architecture & Development",
     description:
-      "Our AI experts create a tailored strategy combining AI/ML models, data pipelines, and user experience flow.",
+      "Our expert team designs and builds your custom AI solution, from data pipelines and ML models to polished user interfaces.",
     points: [
-      "Design data flow and processing pipeline",
-      "Select appropriate AI/ML models",
-      "Design user experience around automation",
+      "Tailored solution architecture & system design",
+      "AI model development & API integration",
+      "Intuitive interfaces designed for your users",
     ],
   },
   {
-    title: "Development & Deployment",
+    title: "Deployment & Ongoing Support",
     description:
-      "We build, train, and deploy your AI solution with real-time monitoring and continuous improvement support.",
+      "We deploy to production, monitor performance, and continuously optimize, providing dedicated support as your business scales.",
     points: [
-      "Model training and API integration",
-      "Deploy to scalable cloud infrastructure",
-      "Monitor results and optimize iteratively",
+      "Scalable cloud deployment & infrastructure",
+      "Real-time performance monitoring & alerts",
+      "Ongoing optimization & priority support",
     ],
   },
 ];
@@ -78,7 +78,7 @@ const WorkingProcess: React.FC = () => {
           <span className="w-8 h-px bg-gray-600 ml-3"></span>
         </h3>
         <h2 className="text-3xl md:text-4xl font-bold text-white">
-          Transforming Ideas into Intelligent AI Solutions
+          From Discovery to Deployment
         </h2>
       </div>
 

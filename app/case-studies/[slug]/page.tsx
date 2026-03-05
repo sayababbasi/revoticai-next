@@ -154,9 +154,10 @@ export async function generateStaticParams() {
   }));
 }
 
-export default function CaseStudyDetail({ params }: { params: { slug: string } }) {
+export default async function CaseStudyDetail({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params;
   const study: CaseStudy | undefined = (caseStudies as any).find(
-    (item: any) => item.slug === params.slug
+    (item: any) => item.slug === slug
   );
 
   if (!study) notFound();

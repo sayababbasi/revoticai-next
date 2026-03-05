@@ -87,14 +87,14 @@ const DiscoverSection: React.FC = () => {
           {/* --- Section Header (New Heading) --- */}
           <div className="max-w-3xl mx-auto text-center mb-12">
             <p className="text-sm uppercase tracking-wider text-gray-500 font-semibold mb-3">
-              Discover Revotic AI
+              Why Leading Businesses Choose Us
             </p>
             <h2 className="text-4xl md:text-5xl font-bold text-black mb-4">
-              Welcome to Our World of Innovation
+              Your Trusted Partner for AI Transformation
             </h2>
             <p className="text-lg text-gray-600">
-              A glimpse into our work, culture, and the future we're building
-              with intelligent automation.
+              A glimpse into our expertise, culture, and the intelligent
+              solutions we build for businesses worldwide.
             </p>
           </div>
 
@@ -118,7 +118,7 @@ const DiscoverSection: React.FC = () => {
 
           {/* --- Caption --- */}
           <p className="text-center text-gray-500 italic max-w-2xl mx-auto mt-8">
-            One platform. Endless possibilities. Empowering businesses with AI,
+            One partner. Infinite possibilities. Powering your business with AI,
             automation & innovation.
           </p>
         </div>
@@ -132,8 +132,8 @@ const DiscoverSection: React.FC = () => {
             New
           </span>
           <span className="font-medium text-sm">
-            We're constantly adding smarter tools & features. Stay tuned for
-            what's next!
+            New AI capabilities shipping monthly, built to keep your business
+            ahead of the competition.
           </span>
         </div>
       </div>
@@ -160,12 +160,12 @@ const DiscoverSection: React.FC = () => {
           >
             <div className="aspect-w-16 aspect-h-9 bg-black rounded-lg overflow-hidden shadow-2xl">
               {/* Replace this with your actual video embed URL */}
-              
+
               <iframe
-               width="900" height="506" 
-               src="https://www.youtube.com/embed/aAvDI1qae-U" 
-               title="Revotic AI Marketing Video" 
-               allow="accelerometer; autoplay;"></iframe>
+                width="900" height="506"
+                src="https://www.youtube.com/embed/aAvDI1qae-U"
+                title="Revotic AI Marketing Video"
+                allow="accelerometer; autoplay;"></iframe>
             </div>
           </div>
         </div>

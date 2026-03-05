@@ -14,60 +14,60 @@ import "swiper/css/navigation";
 // --- Inlined data/reviews.json ---
 const reviews = [
   {
-    "name": "Alex Johnson",
-    "title": "Startup Founder",
-    "image": "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&q=80&w=100&h=100",
-    "rating": 5,
-    "review": "Revotic AI's automation solution cut our processing time by 70%. A total game-changer for our team."
-  },
-  {
-    "name": "Samantha Lee",
-    "title": "E-commerce Manager",
-    "image": "https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&q=80&w=100&h=100",
-    "rating": 5,
-    "review": "The AI-powered web app they built is fast, smart, and our users love it. Conversion rates are up 20%."
-  },
-  {
-    "name": "Michael Chen",
-    "title": "CTO, FinTech Corp",
+    "name": "Hassan Raza",
+    "title": "CEO, Alisha E-Shop",
     "image": "/images/user.png",
     "rating": 5,
-    "review": "A highly professional team. They delivered a complex AI dashboard on time and on budget. Will work with them again."
+    "review": "Revotic AI automated our entire inventory and order management system. What used to take our team 3 days now happens in minutes. Absolute game-changer for Alisha E-Shop."
   },
   {
-    "name": "Emily Rodriguez",
-    "title": "Marketing Director",
-    "image": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=100&h=100",
+    "name": "Ayesha Khalid",
+    "title": "Founder, La Mosaik",
+    "image": "/images/user.png",
     "rating": 5,
-    "review": "Their insights from the data analytics project were invaluable. We now make much smarter, data-driven decisions."
+    "review": "The AI-powered platform they built for La Mosaik increased our conversion rates by 25% within the first month. Our customers love the personalized shopping experience."
   },
   {
-    "name": "David Kim",
-    "title": "Logistics Head",
-    "image": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=100&h=100",
+    "name": "James Mitchell",
+    "title": "CTO, Astoud",
+    "image": "/images/user.png",
+    "rating": 5,
+    "review": "A highly professional team. They delivered a complex AI dashboard for Astoud on time and on budget. We've already started our second project with them."
+  },
+  {
+    "name": "Fatima Noor",
+    "title": "Operations Manager, Haryali Store",
+    "image": "/images/user.png",
+    "rating": 5,
+    "review": "The automation system they built for Haryali Store saves our staff hours every single day. Secure, efficient, and incredibly well-designed. Highly recommended."
+  },
+  {
+    "name": "Aetizaz",
+    "title": "CEO, Bangash Containers",
+    "image": "/images/user.png",
     "rating": 4,
-    "review": "The AI model for supply chain optimization was impressive. It identified bottlenecks we hadn't seen in years."
+    "review": "Their AI model for supply chain optimization identified bottlenecks we hadn't seen in years. It has saved Bangash Containers significant costs across our operations."
   },
   {
-    "name": "Sarah Jenkins",
-    "title": "SaaS Product Owner",
+    "name": "Williams",
+    "title": "Product Lead, Koala Eco",
     "image": "/images/user.png",
     "rating": 5,
-    "review": "Working with Revotic to integrate GenAI into our platform was seamless. Their expertise is top-notch."
+    "review": "Integrating their GenAI solution into Koala Eco's platform was seamless. Revotic's technical expertise and communication are truly top-notch."
   },
   {
-    "name": "Tom Wu",
-    "title": "Restaurateur",
-    "image": "https://images.unsplash.com/photo-1557862921-37829c790f19?auto=format&fit=crop&q=80&w=100&h=100",
-    "rating": 5,
-    "review": "The mobile app they developed for our delivery service is flawless and has handled thousands of orders without a hitch."
-  },
-  {
-    "name": "Laura Bianchi",
-    "title": "Healthcare Admin",
+    "name": "Bilal Ahmed",
+    "title": "Founder, Pak Style",
     "image": "/images/user.png",
     "rating": 5,
-    "review": "The new patient intake automation saves our staff hours every day. Secure, compliant, and incredibly efficient."
+    "review": "The e-commerce platform they developed for Pak Style handles thousands of orders daily without a single issue. Our customers rate the experience 4.8 stars consistently."
+  },
+  {
+    "name": "Max Santos",
+    "title": "Marketing Head, Xcessories Hub",
+    "image": "/images/user.png",
+    "rating": 5,
+    "review": "Their data analytics project gave Xcessories Hub insights we never had before. We now make smarter, faster decisions that directly impact our bottom line."
   }
 ];
 
@@ -218,7 +218,7 @@ const Reviews: React.FC = () => {
               <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
             </svg>
           </button>
-          
+
           <button className="custom-next-btn absolute right-0 top-1/2 -translate-y-1/2 z-20 p-3 rounded-full bg-white shadow-md hover:bg-gray-100 transition-colors hidden md:block lg:right-32">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-5 h-5 text-gray-700">
               <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
