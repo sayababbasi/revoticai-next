@@ -24,16 +24,16 @@ export default function Home() {
   return (
     <main> {/* <-- ALL CLASSES REMOVED */}
       <Hero />
-      <ServicesOverview />
-      <CaseStudies />
-      <Testimonials />
       <Clients />
-      <WhyChooseUs />
+      <ServicesOverview />
       <TechStack />
+      <Testimonials />
+      <WhyChooseUs />
       <ValueProposition />
       <CTA />
       <LeadGenForm />
       <ProductShowcase />
+      <CaseStudies />
       <DiscoverSection />
       <FeaturedBlog />
       <Reviews />
