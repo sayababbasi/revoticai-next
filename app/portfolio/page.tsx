@@ -1,41 +1,3 @@
-// "use client";
-
-// import React from 'react';
-// // --- FIX: Using the CORRECTED relative path from /app/portfolio to /components/ ---
-// import PortfolioPageHeader from '@/components/sections/Portfolio/PortfolioPageHeader';
-// import CTA from '@/components/sections/Home/CTA';
-// // NOTE: We will use a dedicated component for the project listing
-// // import PortfolioGrid from '@/components/sections/Portfolio/PortfolioGrid'; 
-// import ServiceGrid from '@/components/sections/Services/ServiceGrid'
-
-// const PortfolioPage: React.FC = () => {
-//   const breadcrumbs = [
-//     { name: 'Home', href: '/' },
-//     { name: 'Portfolio', href: '/portfolio' },
-//   ];
-
-//   return (
-//     <main>
-//       {/* 1. Page Header (The Attractive Hero for this page) */}
-//       <PortfolioPageHeader 
-//         title="Our Digital Legacy"
-//         subtitle="Success Stories and Client Work"
-//         description="Explore the innovative solutions we’ve delivered across AI, machine learning, and full-stack development, driving measurable results for global partners."
-//         breadcrumbs={breadcrumbs}
-//         emphasizeWord={2} // Emphasize 'Digital'
-//       /> 
-      
-//       {/* 2. Portfolio Grid (The main content area) */}
-
-//       {/* 3. Final Call to Action */}
-//       <CTA />
-//       <ServiceGrid />
-//     </main>
-//   );
-// };
-
-// export default PortfolioPage;
-
 
 "use client";
 
@@ -217,11 +179,10 @@ const PortfolioPage: React.FC = () => {
           <div className="flex flex-wrap justify-center gap-3 mb-12">
             {categories.map(cat => (
               <button key={cat.filter} onClick={() => setActiveFilter(cat.filter)}
-                className={`flex items-center px-5 py-2 rounded-full text-sm font-semibold transition-all ${
-                  activeFilter === cat.filter
+                className={`flex items-center px-5 py-2 rounded-full text-sm font-semibold transition-all ${activeFilter === cat.filter
                     ? "bg-[#b1ff32] text-black shadow-md"
                     : "bg-white text-gray-700 hover:bg-gray-100 border border-gray-200"
-                }`}>
+                  }`}>
                 {cat.icon}{cat.name}
               </button>
             ))}

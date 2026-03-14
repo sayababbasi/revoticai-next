@@ -1,39 +1,3 @@
-// // // app/api/uploadResume/route.ts
-// // import { NextRequest, NextResponse } from "next/server";
-
-// // const GITHUB_TOKEN = process.env.GITHUB_TOKEN!;
-// // const REPO = process.env.GITHUB_REPO!;
-// // const BRANCH = process.env.GITHUB_BRANCH!;
-
-// // export async function POST(req: NextRequest) {
-// //   try {
-// //     const { fileName, fileContent } = await req.json();
-
-// //     const response = await fetch(`https://api.github.com/repos/${REPO}/contents/${fileName}`, {
-// //       method: "PUT",
-// //       headers: {
-// //         Authorization: `token ${GITHUB_TOKEN}`,
-// //         "Content-Type": "application/json",
-// //       },
-// //       body: JSON.stringify({
-// //         message: `Upload resume: ${fileName}`,
-// //         content: fileContent,
-// //         branch: BRANCH,
-// //       }),
-// //     });
-
-// //     const data = await response.json();
-
-// //     if (data.content && data.content.download_url) {
-// //       return NextResponse.json({ url: data.content.download_url });
-// //     } else {
-// //       return NextResponse.json({ error: "Failed to upload to GitHub", data }, { status: 500 });
-// //     }
-// //   } catch (err: any) {
-// //     return NextResponse.json({ error: err.message }, { status: 500 });
-// //   }
-// // }
-
 
 import { google } from "googleapis";
 import { NextResponse } from "next/server";

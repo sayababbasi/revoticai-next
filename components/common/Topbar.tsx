@@ -63,7 +63,7 @@ const Topbar: React.FC = () => {
       {/* Middle Section - Social Icons */}
       <div className="flex justify-center items-center gap-4">
         <Link href="https://x.com/revoticai" target="_blank" className="hover:text-[#facc15] transition">
-          <XIcon  size={15} />
+          <XIcon size={15} />
         </Link>
         <Link href="https://instagram.com/revoticai" target="_blank" className="hover:text-[#facc15] transition">
           <Instagram size={15} />
@@ -71,8 +71,8 @@ const Topbar: React.FC = () => {
         <Link href="https://linkedin.com/company/revoticai" target="_blank" className="hover:text-[#facc15] transition">
           <Linkedin size={15} />
         </Link>
-        <Link href="https://youtube.com/revoticai" target="_blank" className="hover:text-[#facc15] transition">
-          <YouTubeIcon  size={15} />
+        <Link href="https://youtube.com/@revoticai" target="_blank" className="hover:text-[#facc15] transition">
+          <YouTubeIcon size={15} />
         </Link>
       </div>
 

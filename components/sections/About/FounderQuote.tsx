@@ -47,7 +47,7 @@ const FounderQuoteSection: React.FC = () => {
             variants={fadeIn}
           >
             <img
-              src="/images/sayab_gulfaraz.png" // Placeholder: You should place your founder's image here
+              src="/images/experts/sayab.png"
               alt="Sayab Gulfaraz, Founder & Chief Executive Officer"
               className="w-24 h-24 rounded-full object-cover mb-4 border-4 border-gray-200 shadow-md"
               onError={(e) => (e.currentTarget.src = 'https://placehold.co/96x96/e0e0e0/333?text=SG')} // Fallback image
