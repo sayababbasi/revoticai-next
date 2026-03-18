@@ -1,9 +1,14 @@
 // app/legal/terms-and-conditions/page.tsx
 import React from 'react';
+import { Metadata } from 'next';
 
-export const metadata = {
-  title: 'Terms and Conditions - Revotic AI',
-  description: 'Read the Terms and Conditions of using Revotic AI services.',
+export const metadata: Metadata = {
+  title: 'Terms and Conditions | RevoticAI',
+  description: 'Read the Terms and Conditions of using RevoticAI services.',
+  robots: {
+    index: true,
+    follow: true
+  }
 };
 
 const TermsAndConditionsPage: React.FC = () => {

@@ -19,7 +19,7 @@ export const blogs: Blog[] = [
     date: "Oct 28, 2025",
     image: "/images/product/frblog.jpg",
     content: `
-<p>Generative AI has evolved from a fascinating experiment into a cornerstone of business transformation. In 2025, organizations are using AI not just for automation — but for creative automation.</p>
+<p>Generative AI has evolved from a fascinating experiment into a cornerstone of business transformation. In 2025, organizations are using AI not just for automation   but for creative automation.</p>
 
 <h2>Generative AI’s Role in Automation</h2>
 <p>Generative AI models like GPT-5 are enabling machines to think creatively, generating text, code, and business workflows. This has reshaped how enterprises handle repetitive work and innovation alike.</p>
@@ -27,7 +27,7 @@ export const blogs: Blog[] = [
 <h2>The Next Step</h2>
 <p>By 2030, over 70% of enterprise automation will be powered by AI-driven systems. From marketing content to intelligent assistants, generative automation is revolutionizing the business landscape.</p>
 
-<strong>In short:</strong> Generative AI isn’t replacing humans — it’s amplifying human creativity.
+<strong>In short:</strong> Generative AI isn’t replacing humans   it’s amplifying human creativity.
 `
   },
   {
@@ -42,12 +42,12 @@ export const blogs: Blog[] = [
 <p>AI-powered web apps are redefining how businesses engage with users. From personalization to automation, integrating AI in web development creates smarter, faster, and more intuitive experiences.</p>
 
 <h2>Smarter User Experiences</h2>
-<p>With machine learning, apps can adapt to user behavior — providing recommendations, automating responses, and predicting needs before users even ask.</p>
+<p>With machine learning, apps can adapt to user behavior   providing recommendations, automating responses, and predicting needs before users even ask.</p>
 
 <h2>Efficiency Meets Innovation</h2>
 <p>AI reduces repetitive backend work, optimizes queries, and enhances performance analytics, freeing developers to focus on innovation.</p>
 
-<p>In 2025, an AI-powered app isn’t just an advantage — it’s the new standard.</p>
+<p>In 2025, an AI-powered app isn’t just an advantage   it’s the new standard.</p>
 `
   },
   {
@@ -86,7 +86,7 @@ export const blogs: Blog[] = [
     date: "Oct 14, 2025",
     image: "/images/product/frblog4.jpg",
     content: `
-<p>Good design is invisible — great design converts. A strong design system ensures consistency, clarity, and user trust across your platform.</p>
+<p>Good design is invisible   great design converts. A strong design system ensures consistency, clarity, and user trust across your platform.</p>
 
 <h2>Building a Scalable System</h2>
 <p>Use reusable components, consistent typography, and accessible color palettes. Every UI element should have a defined purpose.</p>
@@ -118,7 +118,7 @@ export const blogs: Blog[] = [
 <li>Educational Tutors</li>
 </ul>
 
-<p>RAG-based bots bring accuracy and intelligence together — a step toward truly “thinking” AI assistants.</p>
+<p>RAG-based bots bring accuracy and intelligence together   a step toward truly “thinking” AI assistants.</p>
 `
   },
   {
@@ -136,7 +136,7 @@ export const blogs: Blog[] = [
 <p>It simplifies SEO, supports server-side rendering, and integrates beautifully with TypeScript and Tailwind CSS.</p>
 
 <h2>Dynamic is the Future</h2>
-<p>Static websites are outdated. Today’s businesses need apps that fetch live data, render fast, and scale seamlessly — all of which Next.js delivers.</p>
+<p>Static websites are outdated. Today’s businesses need apps that fetch live data, render fast, and scale seamlessly   all of which Next.js delivers.</p>
 `
   },
   {
@@ -156,7 +156,7 @@ export const blogs: Blog[] = [
 <h2>Key Benefit</h2>
 <p>On average, companies using AI automation save 40% in operational costs and increase productivity by 60%.</p>
 
-<p>Automation isn’t the future — it’s the present.</p>
+<p>Automation isn’t the future   it’s the present.</p>
 `
   },
   {
@@ -168,15 +168,15 @@ export const blogs: Blog[] = [
     date: "Sep 28, 2025",
     image: "/images/product/frblog8.jpg",
     content: `
-<p>At Revotic AI, we build AI-powered software solutions that help companies scale intelligently. Our focus is on practical innovation — merging automation, design, and intelligence.</p>
+<p>At Revotic AI, we build AI-powered software solutions that help companies scale intelligently. Our focus is on practical innovation   merging automation, design, and intelligence.</p>
 
 <h2>Our Mission</h2>
-<p>We’re creating tools that make AI accessible for every business — from startups to enterprises.</p>
+<p>We’re creating tools that make AI accessible for every business   from startups to enterprises.</p>
 
 <h2>Our Vision</h2>
 <p>To lead the global shift toward adaptive, data-driven automation systems.</p>
 
-<p>Revotic AI is more than a company — it’s a movement toward smarter technology.</p>
+<p>Revotic AI is more than a company   it’s a movement toward smarter technology.</p>
 `
   }
 ];

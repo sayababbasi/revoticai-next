@@ -5,9 +5,13 @@ import { Metadata } from "next";
 
 // Optional metadata for SEO
 export const metadata: Metadata = {
-  title: "Privacy Policy | Revotic AI",
+  title: "Privacy Policy | RevoticAI",
   description:
-    "Read the Privacy Policy of Revotic AI to understand how we collect, use, and protect your personal data.",
+    "Read the Privacy Policy of RevoticAI to understand how we collect, use, and protect your personal data.",
+  robots: {
+    index: true,
+    follow: true
+  }
 };
 
 const PrivacyPolicyPage: React.FC = () => {

@@ -1,4 +1,4 @@
-globalThis.monorepoPackagePath = "";globalThis.openNextDebug = false;globalThis.openNextVersion = "3.8.5";
+globalThis.monorepoPackagePath = ""; globalThis.openNextDebug = false; globalThis.openNextVersion = "3.8.5";
 var __create = Object.create;
 var __defProp = Object.defineProperty;
 var __getOwnPropDesc = Object.getOwnPropertyDescriptor;
@@ -7,7 +7,7 @@ var __getProtoOf = Object.getPrototypeOf;
 var __hasOwnProp = Object.prototype.hasOwnProperty;
 var __require = /* @__PURE__ */ ((x) => typeof require !== "undefined" ? require : typeof Proxy !== "undefined" ? new Proxy(x, {
   get: (a, b) => (typeof require !== "undefined" ? require : a)[b]
-}) : x)(function(x) {
+}) : x)(function (x) {
   if (typeof require !== "undefined") return require.apply(this, arguments);
   throw Error('Dynamic require of "' + x + '" is not supported');
 });
@@ -560,7 +560,7 @@ var init_source = __esm({
       styles2[model] = {
         get() {
           const { level } = this;
-          return function(...arguments_) {
+          return function (...arguments_) {
             const styler = createStyler(getModelAnsi(model, levelMapping[level], "color", ...arguments_), ansi_styles_default.color.close, this[STYLER]);
             return createBuilder(this, styler, this[IS_EMPTY]);
           };
@@ -570,7 +570,7 @@ var init_source = __esm({
       styles2[bgModel] = {
         get() {
           const { level } = this;
-          return function(...arguments_) {
+          return function (...arguments_) {
             const styler = createStyler(getModelAnsi(model, levelMapping[level], "bgColor", ...arguments_), ansi_styles_default.bgColor.close, this[STYLER]);
             return createBuilder(this, styler, this[IS_EMPTY]);
           };
@@ -786,7 +786,7 @@ var require_dist = __commonJS({
     var pathValueRegExp = /^[\u0020-\u003A\u003D-\u007E]*$/;
     var __toString = Object.prototype.toString;
     var NullObject = /* @__PURE__ */ (() => {
-      const C = function() {
+      const C = function () {
       };
       C.prototype = /* @__PURE__ */ Object.create(null);
       return C;
@@ -1504,9 +1504,9 @@ var OpenNextNodeResponse = class extends Transform {
     globalThis.__openNextAls?.getStore()?.pendingPromiseRunner.add(this.onEnd(this.headers));
     this.streamCreator?.onFinish?.(this.bodyLength);
     if (this.bodyLength === 0 && // We use an env variable here because not all aws account have the same behavior
-    // On some aws accounts the response will hang if the body is empty
-    // We are modifying the response body here, this is not a good practice
-    process.env.OPEN_NEXT_FORCE_NON_EMPTY_RESPONSE === "true") {
+      // On some aws accounts the response will hang if the body is empty
+      // We are modifying the response body here, this is not a good practice
+      process.env.OPEN_NEXT_FORCE_NON_EMPTY_RESPONSE === "true") {
       debug('Force writing "SOMETHING" to the response body');
       this.push("SOMETHING");
     }
@@ -2001,7 +2001,7 @@ function getMiddlewareMatch(middlewareManifest2, functionsManifest) {
   return rootMiddleware.matchers.map(({ regexp }) => new RegExp(regexp));
 }
 var CommonHeaders;
-(function(CommonHeaders2) {
+(function (CommonHeaders2) {
   CommonHeaders2["CACHE_CONTROL"] = "cache-control";
   CommonHeaders2["NEXT_CACHE"] = "x-nextjs-cache";
 })(CommonHeaders || (CommonHeaders = {}));
@@ -2210,7 +2210,7 @@ var nextServer = new NextServer.default({
   conf: {
     ...NextConfig,
     // Next.js compression should be disabled because of a bug in the bundled
-    // `compression` package — https://github.com/vercel/next.js/issues/11669
+    // `compression` package   https://github.com/vercel/next.js/issues/11669
     compress: false,
     // By default, Next.js uses local disk to store ISR cache. We will use
     // our own cache handler to store the cache on S3.

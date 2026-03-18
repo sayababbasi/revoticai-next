@@ -1,4 +1,4 @@
-// app/services/web-development/page.tsx
+// app/services/web-app/page.tsx
 import React from 'react';
 
 export const metadata = {
@@ -8,48 +8,58 @@ export const metadata = {
 
 const WebDevelopmentPage: React.FC = () => {
   return (
-    <main className="max-w-6xl mx-auto px-6 py-12">
-      <section className="text-center mb-16">
-        <h1 className="text-5xl font-bold mb-4">Web Development Services</h1>
-        <p className="text-lg text-gray-700 max-w-3xl mx-auto">
-          Build scalable, secure, and modern websites with Revotic AI. We specialize in full-stack development, e-commerce platforms, and dynamic web applications tailored to your business.
-        </p>
-      </section>
-
-      <section className="grid gap-10 md:grid-cols-2">
-        <div className="p-6 border rounded-lg shadow hover:shadow-lg transition">
-          <h2 className="text-2xl font-semibold mb-2">Full-Stack Web Development</h2>
-          <p>Custom web applications built with the latest frontend and backend technologies.</p>
+    <main>
+      <section className="bg-black text-white pt-[100px] pb-16 md:pb-24 overflow-hidden relative border-b border-white/5">
+        {/* Grid Pattern */}
+        <div className="absolute inset-0 z-0 opacity-20">
+          <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(#ffffff_1px,transparent_1px)] [background-size:40px_40px]" />
         </div>
-
-        <div className="p-6 border rounded-lg shadow hover:shadow-lg transition">
-          <h2 className="text-2xl font-semibold mb-2">E-Commerce Solutions</h2>
-          <p>Dynamic online stores with payment integration, inventory management, and user-friendly UX.</p>
-        </div>
-
-        <div className="p-6 border rounded-lg shadow hover:shadow-lg transition">
-          <h2 className="text-2xl font-semibold mb-2">Website Maintenance & Optimization</h2>
-          <p>Keep your website secure, fast, and optimized for SEO and performance.</p>
-        </div>
-
-        <div className="p-6 border rounded-lg shadow hover:shadow-lg transition">
-          <h2 className="text-2xl font-semibold mb-2">Responsive & Modern UI/UX</h2>
-          <p>Designs that look great on any device and provide seamless user experiences.</p>
+        <div className="container mx-auto px-6 text-center relative z-10">
+          <h1 className="text-5xl md:text-7xl font-extrabold mb-6 tracking-tight uppercase">
+            Web & <span className="text-[#b1ff32]">App Development</span>
+          </h1>
+          <p className="text-xl text-gray-400 max-w-3xl mx-auto leading-relaxed">
+            Build scalable, secure, and modern websites with Revotic AI. We specialize in full-stack development and intelligent applications tailored to your business.
+          </p>
         </div>
       </section>
 
-      <section className="mt-16 text-center">
-        <h2 className="text-3xl font-bold mb-4">Ready to Build Your Website?</h2>
-        <p className="mb-6 text-gray-700 max-w-2xl mx-auto">
-          Partner with Revotic AI to develop modern and scalable web solutions that grow your business.
-        </p>
-        <a
-          href="/contact"
-          className="inline-block bg-blue-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-blue-700 transition"
-        >
-          Start Your Project
-        </a>
-      </section>
+      <div className="max-w-7xl mx-auto px-6 py-24">
+        <section className="grid gap-10 md:grid-cols-2">
+          <div className="p-10 bg-neutral-900 border border-white/5 rounded-3xl shadow-2xl hover:border-[#b1ff32]/30 transition-all group">
+            <h2 className="text-2xl font-bold text-white mb-4 group-hover:text-[#b1ff32] transition-colors">Full-Stack Development</h2>
+            <p className="text-gray-400 leading-relaxed">Custom web applications built with the latest frontend and backend technologies.</p>
+          </div>
+
+          <div className="p-10 bg-neutral-900 border border-white/5 rounded-3xl shadow-2xl hover:border-[#b1ff32]/30 transition-all group">
+            <h2 className="text-2xl font-bold text-white mb-4 group-hover:text-[#b1ff32] transition-colors">E-Commerce Solutions</h2>
+            <p className="text-gray-400 leading-relaxed">Dynamic online stores with payment integration, inventory management, and user-friendly UX.</p>
+          </div>
+
+          <div className="p-10 bg-neutral-900 border border-white/5 rounded-3xl shadow-2xl hover:border-[#b1ff32]/30 transition-all group">
+            <h2 className="text-2xl font-bold text-white mb-4 group-hover:text-[#b1ff32] transition-colors">Performance Optimization</h2>
+            <p className="text-gray-400 leading-relaxed">Keep your website secure, fast, and optimized for SEO and modern web standards.</p>
+          </div>
+
+          <div className="p-10 bg-neutral-900 border border-white/5 rounded-3xl shadow-2xl hover:border-[#b1ff32]/30 transition-all group">
+            <h2 className="text-2xl font-bold text-white mb-4 group-hover:text-[#b1ff32] transition-colors">Responsive UI/UX</h2>
+            <p className="text-gray-400 leading-relaxed">Designs that look great on any device and provide seamless user experiences.</p>
+          </div>
+        </section>
+
+        <section className="mt-24 text-center p-12 bg-[#b1ff32] rounded-[2.5rem]">
+          <h2 className="text-3xl md:text-4xl font-black text-black mb-6 uppercase tracking-tight">Ready to Build?</h2>
+          <p className="mb-10 text-black/70 text-lg font-medium max-w-2xl mx-auto">
+            Partner with Revotic AI to develop modern and scalable web solutions that grow your business.
+          </p>
+          <a
+            href="/contact"
+            className="inline-block bg-black text-[#b1ff32] px-10 py-4 rounded-full text-lg font-black uppercase tracking-widest hover:bg-white hover:text-black transition-all shadow-xl"
+          >
+            Start Your Project
+          </a>
+        </section>
+      </div>
     </main>
   );
 };

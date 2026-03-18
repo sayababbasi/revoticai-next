@@ -46,23 +46,28 @@ const CTA: React.FC = () => {
             <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
               Ready to Automate, Scale & Accelerate?
             </h2>
-            <p className="text-lg text-gray-400 mb-10">
+            <p className="text-lg text-gray-400 mb-8">
               Get a free strategy consultation with our AI experts. Discover how
               intelligent automation can cut costs, streamline operations, and
               drive measurable growth for your business.
             </p>
-            {/* Using <a> tag as a fallback to avoid Link error */}
-            <a
-              href="/contact"
-              className="group inline-flex items-center justify-center px-8 py-4 bg-[#b1ff32] text-black font-bold rounded-full text-lg transition-transform duration-300 hover:scale-105"
-            >
-              Book a Free Strategy Call
-              {/* Using component, but fallback is defined above */}
-              <ArrowRight
-                className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform"
-                strokeWidth={2.5}
-              />
-            </a>
+            
+            <div className="inline-flex flex-col items-center">
+              <a
+                href="/contact"
+                className="group inline-flex items-center justify-center px-8 py-4 bg-[#b1ff32] text-black font-bold rounded-full text-lg transition-transform duration-300 hover:scale-105"
+              >
+                Book a Free Strategy Call
+                <ArrowRight
+                  className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform"
+                  strokeWidth={2.5}
+                />
+              </a>
+              <p className="mt-4 text-sm text-[#b1ff32]/80 font-medium flex items-center">
+                <span className="w-2 h-2 rounded-full bg-[#b1ff32] animate-pulse mr-2"></span>
+                Only 2 strategy sessions available this week
+              </p>
+            </div>
           </div>
         </div>
       </div>

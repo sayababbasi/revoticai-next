@@ -41,7 +41,6 @@ const CaseStudies: React.FC = () => {
           </div>
         </div>
 
-        {/* --- Case Study Grid --- */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
           {/* We use .slice(0, 2) to show 2 featured studies */}
           {caseStudies.slice(0, 2).map((study, index) => (
@@ -51,6 +50,8 @@ const CaseStudies: React.FC = () => {
               title={study.title}
               image={study.image}
               link={study.link}
+              metric={(study as any).metric}
+              metricLabel={(study as any).metricLabel}
             />
           ))}
         </div>

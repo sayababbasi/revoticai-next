@@ -43,9 +43,7 @@ const Topbar: React.FC = () => {
 
   return (
     <div
-      // note z-index lower than navbar (navbar has z-60); topbar z-50
-      className={`fixed top-0 left-0 w-full bg-[#0a0a0a] text-[#f9fafb] text-sm px-4 md:px-10 flex flex-col md:flex-row md:justify-between md:items-center gap-2 md:gap-0 border-b border-[#facc15]/20 z-[50] transition-transform duration-300`}
-      // height controlled by CSS variable --topbar-h (default in globals.css)
+      className={`fixed top-0 left-0 w-full bg-[#0a0a0a] text-[#f9fafb] text-sm px-4 md:px-10 py-3 md:py-0 flex flex-col md:flex-row md:justify-between justify-center items-center gap-2 md:gap-0 border-b border-[#facc15]/20 z-[50] transition-transform duration-300`}
       style={{
         transform: hidden ? "translateY(-100%)" : "translateY(0)",
         height: "var(--topbar-h)",

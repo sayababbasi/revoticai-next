@@ -57,16 +57,39 @@ const OurClients: React.FC = () => {
       <div className="container mx-auto px-6">
         {/* --- Section Header --- */}
         <motion.div
-          className="flex items-center mb-10"
+          className="flex flex-col md:flex-row items-center justify-between mb-10 gap-6"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.3 }}
           transition={{ duration: 0.5 }}
         >
-          <h2 className="text-sm font-semibold text-black uppercase tracking-wider">
-            Our Clients
-          </h2>
-          <ArrowRightIcon />
+          <div className="flex items-center">
+            <h2 className="text-sm font-semibold text-black uppercase tracking-wider">
+              Trusted by 100+ Companies
+            </h2>
+            <ArrowRightIcon />
+          </div>
+
+          {/* --- Metrics & Social Proof --- */}
+          <div className="flex flex-wrap items-center gap-6 md:gap-10 opacity-90">
+            <div className="flex items-center gap-3">
+              <div className="font-bold text-xl md:text-2xl">4.9/5</div>
+              <div className="flex flex-col items-start leading-tight">
+                <span className="text-sm font-semibold">Clutch Rating</span>
+                <span className="text-xs text-gray-500">⭐️⭐️⭐️⭐️⭐️</span>
+              </div>
+            </div>
+            <div className="h-8 w-px bg-gray-300 hidden md:block"></div>
+            <div className="flex flex-col items-start leading-tight">
+              <span className="font-bold text-xl md:text-2xl">100+</span>
+              <span className="text-xs text-gray-500 font-semibold uppercase tracking-wider">Clients Worldwide</span>
+            </div>
+            <div className="h-8 w-px bg-gray-300 hidden md:block"></div>
+            <div className="flex flex-col items-start leading-tight">
+              <span className="font-bold text-xl md:text-2xl">15+</span>
+              <span className="text-xs text-gray-500 font-semibold uppercase tracking-wider">Countries Served</span>
+            </div>
+          </div>
         </motion.div>
       </div>
 

@@ -14,6 +14,7 @@ const Navbar: React.FC = () => {
     "Home",
     "About",
     "Services",
+    "Process",
     "Portfolio",
     "Experts",
     "Blogs",
@@ -53,7 +54,7 @@ const Navbar: React.FC = () => {
     <>
       <nav
         className={`fixed w-full left-0 bg-white transition-all duration-300 z-[59] ${
-          isScrolled ? "top-0 shadow-md py-2" : "top-[40px] py-4"
+          isScrolled ? "top-0 shadow-md py-2" : "top-[var(--topbar-h)] py-4"
         }`}
       >
         <div className="flex justify-between items-center px-4 sm:px-6 md:px-10">
@@ -65,7 +66,7 @@ const Navbar: React.FC = () => {
               width={isScrolled ? 100 : 120}
               height={isScrolled ? 40 : 50}
               priority
-              className="transition-all duration-300"
+              className="transition-all duration-300 w-auto h-auto"
             />
           </Link>
 
@@ -122,6 +123,7 @@ const Navbar: React.FC = () => {
                 alt="RevoticAi Logo"
                 width={100}
                 height={100}
+                className="w-auto h-auto"
               />
             </div>
 

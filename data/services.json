@@ -1,38 +1,38 @@
 [
   {
     "icon": "Brain",
-    "title": "AI Automation & Agents",
-    "description": "Intelligent systems that reduce manual work, increase operational efficiency, and scale your business processes autonomously.",
+    "title": "AI & Automation",
+    "description": "GenAI, RAG, Agentic workflows, LLM integration",
     "link": "/services/ai-ml"
   },
   {
     "icon": "Globe",
-    "title": "AI-Powered SaaS Development",
-    "description": "Scalable cloud platforms built for performance, growth, and recurring revenue, from concept to launch and beyond.",
+    "title": "Web & App Dev",
+    "description": "Next.js, React, FastAPI, full-stack builds",
     "link": "/services/web-app"
   },
   {
-    "icon": "Zap",
-    "title": "Business Process Automation",
-    "description": "End-to-end workflow optimization that eliminates bottlenecks, cuts costs, and transforms how your organization operates.",
-    "link": "/services/automation"
-  },
-  {
-    "icon": "Sparkles",
-    "title": "AI Chatbots & Conversational AI",
-    "description": "Deploy intelligent virtual assistants that engage customers 24/7, qualify leads, and deliver personalized support at scale.",
-    "link": "/services/ai-ml"
+    "icon": "PenTool",
+    "title": "UI/UX Design",
+    "description": "Product design, design systems, Figma",
+    "link": "/services/ui-ux"
   },
   {
     "icon": "Gamepad2",
-    "title": "Smart Business Dashboards",
-    "description": "Real-time analytics and decision intelligence systems that turn your data into actionable business insights.",
+    "title": "Game Development",
+    "description": "Unity, Unreal, story-driven experiences",
     "link": "/services/game-dev"
   },
   {
-    "icon": "PenTool",
-    "title": "Full-Stack Web Applications",
-    "description": "High-performance platforms tailored to your business goals, built with modern architecture for speed, security, and scale.",
-    "link": "/services/ui-ux"
+    "icon": "Video",
+    "title": "Video Editing",
+    "description": "Marketing, corporate, product videos",
+    "link": "/services/video"
+  },
+  {
+    "icon": "BarChart",
+    "title": "Data Analytics",
+    "description": "Dashboards, pipelines, BI solutions",
+    "link": "/services/data"
   }
 ]

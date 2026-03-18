@@ -55,7 +55,7 @@ const RecentProjectsSection: React.FC = () => {
               </h2>
               <p className="text-gray-300 mb-8 text-sm leading-relaxed">
                 We transform innovative ideas into intelligent, scalable
-                solutions — from web and mobile to full-stack and AI systems.
+                solutions   from web and mobile to full-stack and AI systems.
               </p>
             </div>
 
@@ -91,8 +91,8 @@ const RecentProjectsSection: React.FC = () => {
                   alt={project.alt}
                   className="w-full h-full object-cover transform hover:scale-105 transition-transform duration-500"
                   onError={(e) =>
-                    (e.currentTarget.src =
-                      "https://placehold.co/600x400/1a1a1a/b1ff32?text=AI+Project")
+                  (e.currentTarget.src =
+                    "https://placehold.co/600x400/1a1a1a/b1ff32?text=AI+Project")
                   }
                 />
                 <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">

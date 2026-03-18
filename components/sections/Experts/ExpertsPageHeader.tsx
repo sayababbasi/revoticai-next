@@ -50,7 +50,12 @@ const ExpertsPageHeader: React.FC<ExpertsPageHeaderProps> = ({
   );
 
   return (
-    <section className="bg-neutral-900 text-white pt-[150px] pb-24 md:pb-32 overflow-hidden">
+    <section className="bg-neutral-900 text-white pt-[150px] pb-24 md:pb-32 overflow-hidden relative">
+      {/* Grid Pattern */}
+      <div className="absolute inset-0 z-0 opacity-20">
+        <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(#ffffff_1px,transparent_1px)] [background-size:40px_40px]" />
+      </div>
+
       <div className="container mx-auto px-6">
         {/* --- Breadcrumb Navigation --- */}
         {breadcrumbs.length > 0 && (
@@ -71,7 +76,7 @@ const ExpertsPageHeader: React.FC<ExpertsPageHeaderProps> = ({
         <div className="lg:grid lg:grid-cols-12 lg:gap-12 items-center">
           {/* --- Left Side: Content + CTA --- */}
           <motion.div
-            className="lg:col-span-8 mb-12 lg:mb-0 text-center lg:text-left"
+            className="lg:col-span-7 mb-12 lg:mb-0 text-center lg:text-left"
             initial="hidden"
             animate="visible"
             variants={{ visible: { transition: { staggerChildren: 0.15 } } }}
@@ -111,16 +116,16 @@ const ExpertsPageHeader: React.FC<ExpertsPageHeaderProps> = ({
 
           {/* --- Right Side: Decorative Graphic --- */}
           <motion.div
-            className="lg:col-span-4 hidden lg:block"
+            className="lg:col-span-5"
             initial={{ opacity: 0, scale: 0.8 }}
-            whileInView={{ opacity: 1, scale: 1 }}
+            whileInView={{ opacity: 1, scale: 1.1 }}
             viewport={{ once: true, amount: 0.3 }}
             transition={{ duration: 0.6 }}
           >
             <img
               src="/images/experts/experts-hero.avif"
               alt="AI Expert Illustration"
-              className="w-full h-auto rounded-xl border border-neutral-800 opacity-90"
+              className="w-full h-auto rounded-[2rem] border border-neutral-800 opacity-90 transition-transform duration-1000 group-hover:scale-105 shadow-2xl"
               onError={(e) =>
               (e.currentTarget.src =
                 "https://placehold.co/900x700/1a1a1a/b1ff32?text=Experts+Graphic")

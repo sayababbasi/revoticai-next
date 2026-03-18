@@ -25,15 +25,12 @@ const itemVariants = {
 };
 
 const PortfolioPageHeader: React.FC<PortfolioPageHeaderProps> = ({
-    // --- FIX: Provide default empty string values for all string props ---
     title = '',
     subtitle = '',
     description = '',
-    // Provide default values for social proof
     clutchRating = 4.9,
     reviewCount = 52,
 }) => {
-    // Split the title to emphasize the first word ("Our")
     const words = title.split(" ");
     const emphasizedTitle = (
         <div className="inline">
@@ -41,7 +38,7 @@ const PortfolioPageHeader: React.FC<PortfolioPageHeaderProps> = ({
                 <span
                     key={index}
                     className={
-                        index === 0 // Emphasize the first word
+                        index === 1 // Emphasize the second word ("Digital") or first if preferred
                             ? "text-[#b1ff32] mr-2 inline-block leading-none drop-shadow-md"
                             : ""
                     }
@@ -53,12 +50,17 @@ const PortfolioPageHeader: React.FC<PortfolioPageHeaderProps> = ({
     );
 
     return (
-        // Dark background section, fixed height compensation for the Navbar
-        <section className="bg-neutral-900 text-white pt-[150px] pb-24 md:pb-32 overflow-hidden">
-            <div className="container mx-auto px-6">
-                <div className="lg:grid lg:grid-cols-12 lg:gap-12 items-center">
+        <section className="bg-black text-white pt-[80px] pb-24 md:pb-32 overflow-hidden relative border-b border-white/5">
+            {/* Grid Pattern */}
+            <div className="absolute inset-0 z-0 opacity-20">
+                <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(#ffffff_1px,transparent_1px)] [background-size:40px_40px]" />
+            </div>
+            
+            {/* Background Glow */}
+            <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-[#b1ff32]/5 blur-[120px] rounded-full -translate-y-1/2 translate-x-1/2 pointer-events-none" />
 
-                    {/* --- Left Side: Content & Social Proof --- */}
+            <div className="container mx-auto px-6 relative z-10">
+                <div className="lg:grid lg:grid-cols-12 lg:gap-16 items-center">
                     <motion.div
                         className="lg:col-span-7 mb-12 lg:mb-0 text-center lg:text-left"
                         initial="hidden"
@@ -66,64 +68,66 @@ const PortfolioPageHeader: React.FC<PortfolioPageHeaderProps> = ({
                         variants={{ visible: { transition: { staggerChildren: 0.15 } } }}
                     >
                         <motion.p
-                            className="text-sm uppercase tracking-widest font-semibold text-gray-400 mb-4"
+                            className="text-sm uppercase tracking-[0.3em] font-black text-[#b1ff32] mb-6"
                             variants={itemVariants}
                         >
                             {subtitle}
                         </motion.p>
 
                         <motion.h1
-                            className="text-5xl lg:text-7xl font-extrabold mb-6 leading-tight max-w-4xl"
+                            className="text-5xl lg:text-8xl font-black mb-8 leading-[0.9] tracking-tighter uppercase"
                             variants={itemVariants}
                         >
                             {emphasizedTitle}
                         </motion.h1>
 
                         <motion.p
-                            className="text-lg text-gray-400 max-w-xl lg:max-w-none mx-auto lg:mx-0 mb-8"
+                            className="text-lg text-gray-400 max-w-xl mx-auto lg:mx-0 mb-10 leading-relaxed font-medium"
                             variants={itemVariants}
                         >
                             {description}
                         </motion.p>
 
-                        {/* Social Proof (Clutch/Reviews - based on Image 2 design) */}
-                        <motion.div variants={itemVariants} className="flex items-center justify-center lg:justify-start gap-4">
-                            <div className="flex items-center text-sm font-semibold">
-                                <Star className="w-5 h-5 text-yellow-400 fill-yellow-400 mr-2" />
-                                <span>{clutchRating.toFixed(1)} / 5.0 Rating</span>
+                        <motion.div variants={itemVariants} className="flex items-center justify-center lg:justify-start gap-6 mb-12">
+                            <div className="flex items-center text-sm font-black uppercase tracking-widest text-[#b1ff32]">
+                                <Star className="w-5 h-5 text-[#b1ff32] fill-[#b1ff32] mr-2" />
+                                <span>{clutchRating.toFixed(1)} Clutch</span>
                             </div>
-                            <div className="text-sm text-gray-500">
-                                ({reviewCount} Reviews)
+                            <div className="w-px h-4 bg-white/10" />
+                            <div className="text-sm text-gray-500 font-bold uppercase tracking-widest">
+                                {reviewCount} Verified Reviews
                             </div>
                         </motion.div>
 
-                        {/* CTA Button */}
-                        <motion.div variants={itemVariants} className="mt-10">
-                            {/* FIX: Using <a> instead of <Link> */}
+                        <motion.div variants={itemVariants}>
                             <a
                                 href="/contact"
-                                className="inline-flex items-center justify-center px-10 py-4 text-lg font-bold text-black bg-[#b1ff32] rounded-full hover:bg-white transition-all duration-300 shadow-lg group"
+                                className="inline-flex items-center justify-center px-12 py-5 text-xl font-black text-black bg-[#b1ff32] rounded-full hover:bg-white transition-all duration-500 shadow-[0_0_40px_rgba(177,255,50,0.3)] group"
                             >
-                                Get a Project Quote
-                                <ArrowRight className="ml-3 w-6 h-6 transition-transform duration-300 group-hover:translate-x-1" />
+                                START A PROJECT
+                                <ArrowRight className="ml-4 w-6 h-6 transition-transform duration-500 group-hover:translate-x-3" />
                             </a>
                         </motion.div>
                     </motion.div>
 
-                    {/* --- Right Side: Visual Placeholder (Showcasing projects) --- */}
                     <motion.div
-                        className="lg:col-span-5 hidden lg:block"
-                        initial={{ opacity: 0, x: 50 }}
-                        whileInView={{ opacity: 1, x: 0 }}
-                        viewport={{ once: true, amount: 0.3 }}
-                        transition={{ duration: 0.6 }}
+                        className="lg:col-span-5 relative"
+                        initial={{ opacity: 0, x: 50, scale: 0.9 }}
+                        animate={{ opacity: 1, x: 0, scale: 1 }}
+                        transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
                     >
-                        <img
-                            src="https://placehold.co/900x700/1a1a1a/b1ff32?text=Work+Showcase+Visual"
-                            alt="Project Mockup Visual"
-                            className="w-full h-auto rounded-xl shadow-2xl border border-neutral-800"
-                            onError={(e) => e.currentTarget.src = 'https://placehold.co/900x700/1a1a1a/b1ff32?text=Portfolio+Header+Image'}
-                        />
+                        <div className="relative group">
+                            <div className="absolute inset-0 bg-[#b1ff32]/10 blur-[100px] rounded-full opacity-30 group-hover:opacity-60 transition-opacity duration-1000" />
+                            <div className="relative overflow-hidden rounded-[3rem] border border-white/10 shadow-2xl bg-black">
+                                <div className="absolute inset-0 bg-black/40 z-10 pointer-events-none" />
+                                <img
+                                    src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2426&auto=format&fit=crop"
+                                    alt="Work Showcase Visual"
+                                    className="w-full h-auto transition-transform duration-1000 group-hover:scale-110"
+                                    onError={(e) => e.currentTarget.src = 'https://placehold.co/900x700/111/b1ff32?text=Portfolio'}
+                                />
+                            </div>
+                        </div>
                     </motion.div>
                 </div>
             </div>

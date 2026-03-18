@@ -49,12 +49,12 @@ const Hero: React.FC = () => {
           <SwiperSlide key={index}>
             <div className="relative w-full h-full">
               {/* Background Image with Overlay */}
-              <div className="absolute inset-0 z-0">
+              <div className="absolute inset-0 z-0 overflow-hidden">
                 <Image
                   src={slide.image || placeholderImg}
                   alt={slide.title}
                   fill
-                  className="object-cover opacity-90" // Image with opacity
+                  className="object-cover opacity-90 animate-slow-zoom" // Image with opacity and animation
                   priority={index === 0}
                   onError={(e) => (e.currentTarget.src = placeholderImg)}
                 />
@@ -97,6 +97,14 @@ const Hero: React.FC = () => {
 
       {/* --- UPDATED STYLES --- */}
       <style jsx global>{`
+  @keyframes slow-zoom {
+    0% { transform: scale(1); }
+    100% { transform: scale(1.1); }
+  }
+  .animate-slow-zoom {
+    animation: slow-zoom 20s ease-in-out infinite alternate;
+  }
+
   .swiper-pagination {
     bottom: 40px !important;
     text-align: center;

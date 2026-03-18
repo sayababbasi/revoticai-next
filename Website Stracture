@@ -2,9 +2,9 @@
 
 revoticai/
 │
-├── app/                                 # ⚙️ App Router — all routes live here
+├── app/                                 # ⚙️ App Router   all routes live here
 │   ├── layout.tsx                       # Root layout (includes Navbar, Footer, Metadata)
-│   ├── page.tsx                         # Homepage — composed of dynamic sections
+│   ├── page.tsx                         # Homepage   composed of dynamic sections
 │   │
 │   ├── about/
 │   │   └── page.tsx                     # About page

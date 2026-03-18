@@ -57,23 +57,100 @@ const ClockIcon = () => (
 const itemVariants = { hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } } };
 const containerVariants = { hidden: { opacity: 0 }, visible: { opacity: 1, transition: { staggerChildren: 0.1 } } };
 
-// --- Page Header ---
+// --- PAGE HEADER (Split Layout) ---
 const PageHeader: React.FC<{ title: string; subtitle: string; breadcrumbs?: { name: string; href: string }[] }> = ({ title, subtitle, breadcrumbs = [] }) => (
-  <section className="bg-black text-white pt-[150px] pb-16 md:pb-24 overflow-hidden">
-    <motion.div className="container mx-auto px-6 text-center" initial="hidden" animate="visible" variants={containerVariants}>
-      <motion.p className="text-sm uppercase tracking-widest font-semibold text-[#b1ff32] mb-3" variants={itemVariants}>{subtitle}</motion.p>
-      <motion.h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold mb-4" variants={itemVariants}>{title}</motion.h1>
-      {breadcrumbs.length > 0 && (
-        <motion.nav className="text-sm text-gray-400 flex justify-center space-x-2" variants={itemVariants}>
-          {breadcrumbs.map((item, i) => (
-            <React.Fragment key={i}>
-              <a href={item.href} className="hover:text-[#b1ff32]">{item.name}</a>
-              {i < breadcrumbs.length - 1 && <span className="text-gray-600">/</span>}
-            </React.Fragment>
-          ))}
-        </motion.nav>
-      )}
-    </motion.div>
+  <section className="bg-black text-white pt-[80px] pb-20 md:pb-28 overflow-hidden relative border-b border-white/5">
+    {/* Grid Pattern */}
+    <div className="absolute inset-0 z-0 opacity-20">
+      <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(#ffffff_1px,transparent_1px)] [background-size:40px_40px]" />
+    </div>
+
+    {/* Glow Effect */}
+    <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-[#b1ff32]/5 blur-[120px] rounded-full -translate-y-1/2 translate-x-1/2 pointer-events-none" />
+
+    <div className="container mx-auto px-6 relative z-10">
+      <div className="grid lg:grid-cols-12 gap-12 items-center">
+        <div className="lg:col-span-7">
+          <motion.nav
+            className="text-[10px] font-black text-gray-500 flex items-center space-x-2 mb-10 uppercase tracking-[0.3em]"
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+          >
+            {breadcrumbs.map((item, index) => (
+              <React.Fragment key={item.name}>
+                <a href={item.href} className="hover:text-[#b1ff32] transition-colors">
+                  {item.name}
+                </a>
+                {index < breadcrumbs.length - 1 && <span className="text-gray-800">/</span>}
+              </React.Fragment>
+            ))}
+          </motion.nav>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+          >
+            <p className="text-[#b1ff32] text-xs font-black uppercase tracking-[0.4em] mb-6 block">
+              {subtitle}
+            </p>
+            <h1 className="text-5xl md:text-8xl font-black text-white mb-8 uppercase tracking-tighter leading-[0.9]">
+              {title.split(' ')[0]} <br />
+              <span className="text-[#b1ff32]">{title.split(' ').slice(1).join(' ')}_</span>
+            </h1>
+            <p className="text-gray-400 text-lg md:text-xl font-medium max-w-2xl leading-relaxed mb-10">
+              Join a team of visionaries and builders shaping the next generation of AI-powered business excellence.
+            </p>
+
+            <div className="flex flex-wrap gap-4 items-center">
+              <div className="px-6 py-3 bg-white/5 border border-white/10 rounded-full flex items-center space-x-3">
+                <div className="w-2 h-2 rounded-full bg-[#b1ff32] animate-pulse" />
+                <span className="text-[10px] font-black text-white uppercase tracking-widest">Always Hiring Talent</span>
+              </div>
+              <span className="text-[10px] font-bold text-gray-500 uppercase tracking-widest">Global Opportunities</span>
+            </div>
+          </motion.div>
+        </div>
+
+        <div className="lg:col-span-5 hidden lg:block">
+          <motion.div
+            initial={{ opacity: 0, scale: 0.8, rotate: 2 }}
+            animate={{ opacity: 1, scale: 1, rotate: 0 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+            className="relative"
+          >
+            {/* Decorative Glow */}
+            <div className="absolute -inset-4 bg-[#b1ff32]/20 blur-[60px] rounded-[3rem] animate-pulse" />
+
+            {/* Image Container with Border */}
+            <div className="relative rounded-[3rem] overflow-hidden border border-white/10 p-2 bg-neutral-900/50 backdrop-blur-sm">
+              <img
+                src="/images/career/career-hero.png"
+                alt="AI Career Development"
+                className="rounded-[2.5rem] w-full h-full object-cover shadow-2xl"
+              />
+            </div>
+
+            {/* Floating Interaction Card */}
+            <motion.div
+              animate={{ y: [0, 15, 0] }}
+              transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
+              className="absolute -top-6 -left-6 px-6 py-4 bg-black/80 backdrop-blur-xl border border-white/10 rounded-2xl shadow-2xl z-20"
+            >
+              <div className="flex items-center space-x-3">
+                <div className="w-10 h-10 rounded-full bg-[#b1ff32]/20 flex items-center justify-center">
+                  <BrainCircuitIcon />
+                </div>
+                <div>
+                  <p className="text-[8px] text-gray-400 font-black uppercase tracking-widest">Join The Future</p>
+                  <p className="text-[10px] text-white font-black uppercase tracking-widest leading-none">AI Integration Experts</p>
+                </div>
+              </div>
+            </motion.div>
+          </motion.div>
+        </div>
+      </div>
+    </div>
   </section>
 );
 
@@ -114,10 +191,6 @@ const CareersPage: React.FC = () => {
 
       // Ensure defaults
       data.position = selectedJob || data.position || "Not Selected";
-      data.linkedin = data.linkedin || "Not Provided";
-      data.portfolio = data.portfolio || "Not Provided";
-      data.message = data.message || "No message provided";
-
       await emailjs.send(SERVICE_ID, TEMPLATE_ID, data, PUBLIC_KEY);
 
       setStatusMessage("Application submitted successfully!");
@@ -126,56 +199,104 @@ const CareersPage: React.FC = () => {
       setSelectedJob("");
     } catch (error) {
       console.error("EmailJS Error:", error);
-      setStatusMessage("Application submitted successfully!");
-      setIsError(false);
+      setStatusMessage("Something went wrong. Please try again.");
+      setIsError(true);
     }
   };
 
   return (
-    <main>
-      <PageHeader title="Join Our Mission" subtitle="Careers at Revotic AI" breadcrumbs={[{ name: "Home", href: "/" }, { name: "Career", href: "/career" }]} />
+    <main className="font-sans">
+      <PageHeader 
+        title="Join Our Mission" 
+        subtitle="Careers at Revotic AI" 
+        breadcrumbs={[{ name: "Home", href: "/" }, { name: "Career", href: "/career" }]} 
+      />
 
       {/* Why Work With Us */}
-      <section className="bg-white py-20 md:py-28">
-        <div className="container mx-auto px-6 grid lg:grid-cols-2 gap-12 items-center">
-          <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.3 }} variants={containerVariants}>
-            <motion.h2 className="text-4xl md:text-5xl font-bold text-black mb-6" variants={itemVariants}>Shape the Future of AI With Us</motion.h2>
-            <motion.p className="text-lg text-gray-600 mb-6" variants={itemVariants}>At Revotic AI, we're crafting the intelligent systems that power the next generation of business.</motion.p>
-            <motion.p className="text-lg text-gray-600" variants={itemVariants}>If you are passionate about AI and want to work on real-world projects, you’re in the right place.</motion.p>
-          </motion.div>
-          <motion.div className="space-y-6" initial="hidden" whileInView="visible" viewport={{ once: true }} variants={containerVariants}>
-            {perks.map((perk, i) => (
-              <motion.div key={i} variants={itemVariants} className="flex items-start gap-4 p-4 bg-gray-50 rounded-lg">
-                <div className="w-12 h-12 bg-[#b1ff32]/10 rounded-full flex items-center justify-center">{perk.icon}</div>
-                <div>
-                  <h3 className="text-xl font-bold text-black">{perk.title}</h3>
-                  <p className="text-gray-600">{perk.description}</p>
+      <section className="bg-white py-20 md:py-32 overflow-hidden relative">
+        <div className="container mx-auto px-6">
+          <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
+            <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.3 }} variants={containerVariants}>
+              <h2 className="text-4xl md:text-6xl font-black text-black mb-8 uppercase tracking-tighter leading-tight">Shape the Future <br /><span className="text-gray-300 italic">of AI With Us</span></h2>
+              <p className="text-xl text-gray-600 mb-8 font-medium leading-relaxed max-w-xl">
+                At Revotic AI, we're crafting the intelligent systems that power the next generation of business excellence. 
+                We don't just build software; we build the future.
+              </p>
+              
+              <div className="flex flex-col gap-8">
+                {perks.map((perk, i) => (
+                  <motion.div key={i} variants={itemVariants} className="group flex items-start gap-6 p-2 transition-all">
+                    <div className="w-14 h-14 bg-gray-50 border border-gray-100 rounded-2xl flex items-center justify-center flex-shrink-0 shadow-sm group-hover:bg-[#b1ff32]/10 group-hover:border-[#b1ff32]/20 transition-all duration-300">
+                      {perk.icon}
+                    </div>
+                    <div>
+                      <h3 className="text-lg font-black text-black uppercase tracking-widest mb-2">{perk.title}</h3>
+                      <p className="text-gray-500 font-medium leading-relaxed max-w-md">{perk.description}</p>
+                    </div>
+                  </motion.div>
+                ))}
+              </div>
+            </motion.div>
+
+            <motion.div 
+              initial={{ opacity: 0, x: 50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
+              className="relative hidden lg:block"
+            >
+              <div className="relative aspect-square rounded-[4rem] overflow-hidden border border-gray-100 shadow-2xl">
+                <img src="/images/career/career-hero.png" className="w-full h-full object-cover grayscale opacity-20" alt="Career background" />
+                <div className="absolute inset-0 bg-gradient-to-br from-[#b1ff32]/10 to-transparent" />
+                
+                {/* Stats Cards */}
+                <div className="absolute top-12 left-12 p-6 bg-white/80 backdrop-blur-xl border border-gray-100 rounded-[2rem] shadow-xl">
+                  <p className="text-3xl font-black text-black tracking-tighter">15+</p>
+                  <p className="text-[10px] text-gray-400 font-black uppercase tracking-widest">Global Clients</p>
                 </div>
-              </motion.div>
-            ))}
-          </motion.div>
+
+                <div className="absolute bottom-12 right-12 p-6 bg-white/80 backdrop-blur-xl border border-gray-100 rounded-[2rem] shadow-xl">
+                  <p className="text-3xl font-black text-[#b1ff32] tracking-tighter">100%</p>
+                  <p className="text-[10px] text-gray-400 font-black uppercase tracking-widest">Remote Ready</p>
+                </div>
+              </div>
+            </motion.div>
+          </div>
         </div>
       </section>
 
       {/* Job Listings */}
-      <section className="bg-neutral-900 py-20 md:py-28">
-        <div className="container mx-auto px-6 max-w-4xl">
-          <motion.div className="text-center mb-16" initial="hidden" whileInView="visible" variants={containerVariants}>
-            <motion.h2 className="text-4xl md:text-5xl font-bold text-white mb-4" variants={itemVariants}>Current Openings</motion.h2>
-            <motion.p className="text-lg text-gray-400" variants={itemVariants}>Find your place at Revotic AI — we’re looking for the best and brightest.</motion.p>
+      <section className="bg-black py-20 md:py-32 relative overflow-hidden">
+        {/* Decorative Background Element */}
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-[#b1ff32]/5 blur-[120px] rounded-full pointer-events-none" />
+
+        <div className="container mx-auto px-6 max-w-5xl relative z-10">
+          <motion.div className="text-center mb-20" initial="hidden" whileInView="visible" variants={containerVariants}>
+            <motion.h2 className="text-4xl md:text-6xl font-black text-white mb-6 uppercase tracking-tighter" variants={itemVariants}>Open <span className="text-[#b1ff32]">Positions_</span></motion.h2>
+            <motion.p className="text-lg text-gray-400 font-semibold uppercase tracking-widest opacity-60" variants={itemVariants}>Find your place at Revotic AI</motion.p>
           </motion.div>
-          <motion.div className="space-y-6" initial="hidden" whileInView="visible" variants={containerVariants}>
+
+          <motion.div className="grid gap-6" initial="hidden" whileInView="visible" variants={containerVariants}>
             {jobListings.map((job) => (
-              <motion.div key={job.title} variants={itemVariants} className="bg-black border border-neutral-800 rounded-xl p-6 flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
-                <div>
-                  <h3 className="text-2xl font-bold text-white mb-2">{job.title}</h3>
-                  <div className="flex flex-wrap gap-x-4 text-sm text-gray-400 mb-3">
-                    <span className="flex items-center"><MapPinIcon /> {job.location}</span>
-                    <span className="flex items-center"><ClockIcon /> {job.type}</span>
+              <motion.div 
+                key={job.title} 
+                variants={itemVariants} 
+                className="group bg-neutral-900/50 backdrop-blur-md border border-white/5 rounded-[2.5rem] p-8 md:p-10 flex flex-col md:flex-row items-start md:items-center justify-between gap-8 hover:border-[#b1ff32]/30 transition-all duration-500 shadow-2xl"
+              >
+                <div className="flex-grow">
+                  <div className="flex items-center gap-3 mb-4">
+                    <span className="px-3 py-1 bg-[#b1ff32]/10 text-[#b1ff32] text-[8px] font-black uppercase tracking-widest rounded-full">{job.type}</span>
+                    <span className="text-gray-600 font-black text-[10px] uppercase tracking-widest">{job.location}</span>
                   </div>
-                  <p className="text-gray-400">{job.description}</p>
+                  <h3 className="text-2xl md:text-3xl font-black text-white mb-4 uppercase tracking-tighter group-hover:text-[#b1ff32] transition-colors">{job.title}</h3>
+                  <p className="text-gray-400 font-medium leading-relaxed max-w-xl">{job.description}</p>
                 </div>
-                <button onClick={() => handleApplyClick(job.title)} className="w-full md:w-auto inline-flex items-center justify-center px-6 py-3 text-base font-bold text-black bg-[#b1ff32] rounded-full hover:bg-white transition-all">Apply Now</button>
+                <button 
+                  onClick={() => handleApplyClick(job.title)} 
+                  className="w-full md:w-auto inline-flex items-center justify-center px-10 py-5 text-sm font-black text-black bg-[#b1ff32] rounded-full hover:scale-110 active:scale-95 transition-all duration-300 shadow-xl shadow-[#b1ff32]/20 uppercase tracking-widest"
+                >
+                  Apply Now_
+                </button>
               </motion.div>
             ))}
           </motion.div>
@@ -183,39 +304,71 @@ const CareersPage: React.FC = () => {
       </section>
 
       {/* Application Form */}
-      <section className="bg-gray-50 py-20 md:py-28" ref={formRef} id="apply-form">
+      <section className="bg-[#fcfcfc] py-20 md:py-32" ref={formRef} id="apply-form">
         <div className="container mx-auto px-6 max-w-4xl">
           <motion.div className="text-center mb-16" initial="hidden" whileInView="visible" variants={containerVariants}>
-            <motion.h2 className="text-5xl font-bold text-black mb-4" variants={itemVariants}>Apply Now</motion.h2>
-            <motion.p className="text-lg text-gray-600" variants={itemVariants}>We’d love to hear from you!</motion.p>
+            <motion.h2 className="text-5xl md:text-7xl font-black text-black mb-6 uppercase tracking-tighter" variants={itemVariants}>Build Your <span className="text-gray-300">Future_</span></motion.h2>
+            <motion.p className="text-lg text-gray-400 font-black uppercase tracking-[0.3em]" variants={itemVariants}>Apply In Seconds</motion.p>
           </motion.div>
 
-          <motion.form onSubmit={handleSubmit} className="bg-white p-8 rounded-xl shadow-lg border border-gray-100" initial="hidden" whileInView="visible" variants={containerVariants}>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-              <input type="text" name="name" placeholder="Your Name" required className="border border-gray-300 rounded-lg p-3" />
-              <input type="email" name="email" placeholder="Your Email" required className="border border-gray-300 rounded-lg p-3" />
-              <input type="tel" name="phone" placeholder="Phone Number" required className="border border-gray-300 rounded-lg p-3" />
-              <select name="position" value={selectedJob} onChange={(e) => setSelectedJob(e.target.value)} required className="border border-gray-300 rounded-lg p-3">
-                <option value="">Select Position</option>
-                {jobListings.map((j) => <option key={j.title} value={j.title}>{j.title}</option>)}
-              </select>
-              <input type="url" name="linkedin" placeholder="LinkedIn Profile URL (Optional)" className="border border-gray-300 rounded-lg p-3" />
-              <input type="url" name="portfolio" placeholder="Portfolio / Website URL (Optional)" className="border border-gray-300 rounded-lg p-3" />
-            </div>
+          <motion.div 
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="bg-white p-10 md:p-16 rounded-[4rem] shadow-2xl shadow-black/5 border border-gray-100"
+          >
+            <form onSubmit={handleSubmit} className="flex flex-col gap-8">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div className="space-y-2">
+                  <label className="text-[10px] font-black text-black uppercase tracking-widest ml-1">Full Name</label>
+                  <input type="text" name="name" placeholder="John Doe" required className="w-full bg-gray-50 border border-gray-100 text-black px-6 py-4 rounded-2xl focus:outline-none focus:border-[#b1ff32] transition-colors font-bold" />
+                </div>
+                <div className="space-y-2">
+                  <label className="text-[10px] font-black text-black uppercase tracking-widest ml-1">Email Address</label>
+                  <input type="email" name="email" placeholder="john@example.com" required className="w-full bg-gray-50 border border-gray-100 text-black px-6 py-4 rounded-2xl focus:outline-none focus:border-[#b1ff32] transition-colors font-bold" />
+                </div>
+                <div className="space-y-2">
+                  <label className="text-[10px] font-black text-black uppercase tracking-widest ml-1">Phone Number</label>
+                  <input type="tel" name="phone" placeholder="+1 (555) 000-0000" required className="w-full bg-gray-50 border border-gray-100 text-black px-6 py-4 rounded-2xl focus:outline-none focus:border-[#b1ff32] transition-colors font-bold" />
+                </div>
+                <div className="space-y-2">
+                  <label className="text-[10px] font-black text-black uppercase tracking-widest ml-1">Selected Position</label>
+                  <select name="position" value={selectedJob} onChange={(e) => setSelectedJob(e.target.value)} required className="w-full bg-gray-50 border border-gray-100 text-black px-6 py-4 rounded-2xl focus:outline-none focus:border-[#b1ff32] transition-colors font-bold appearance-none">
+                    <option value="">Select Position</option>
+                    {jobListings.map((j) => <option key={j.title} value={j.title}>{j.title}</option>)}
+                  </select>
+                </div>
+                <div className="space-y-2">
+                  <label className="text-[10px] font-black text-black uppercase tracking-widest ml-1">LinkedIn Profile</label>
+                  <input type="url" name="linkedin" placeholder="https://linkedin.com/in/..." className="w-full bg-gray-50 border border-gray-100 text-black px-6 py-4 rounded-2xl focus:outline-none focus:border-[#b1ff32] transition-colors font-bold" />
+                </div>
+                <div className="space-y-2">
+                  <label className="text-[10px] font-black text-black uppercase tracking-widest ml-1">Portfolio (Optional)</label>
+                  <input type="url" name="portfolio" placeholder="https://yourportfolio.com" className="w-full bg-gray-50 border border-gray-100 text-black px-6 py-4 rounded-2xl focus:outline-none focus:border-[#b1ff32] transition-colors font-bold" />
+                </div>
+              </div>
 
-            <textarea name="message" placeholder="Cover Letter (Optional)" rows={8} className="border border-gray-300 rounded-lg p-3 w-full mb-6 resize-none"></textarea>
+              <div className="space-y-2">
+                <label className="text-[10px] font-black text-black uppercase tracking-widest ml-1">Your Story / Message</label>
+                <textarea name="message" placeholder="Tell us why you are a perfect fit..." rows={6} className="w-full bg-gray-50 border border-gray-100 text-black px-6 py-4 rounded-3xl focus:outline-none focus:border-[#b1ff32] transition-colors font-medium resize-none"></textarea>
+              </div>
 
-            <button type="submit" className="group w-full flex items-center justify-center px-8 py-3 text-lg font-bold text-black bg-[#b1ff32] rounded-full hover:bg-black hover:text-[#b1ff32] transition-all duration-300 shadow-lg">
-              Submit Application
-              <ArrowRightIcon />
-            </button>
+              <button type="submit" className="group w-full flex items-center justify-center px-10 py-6 text-sm font-black text-black bg-[#b1ff32] rounded-full hover:bg-black hover:text-[#b1ff32] transition-all duration-500 shadow-2xl shadow-[#b1ff32]/20 uppercase tracking-[0.3em]">
+                {statusMessage === "Application submitted successfully!" ? "Submitted Successfully!" : "Submit Application_"}
+                {statusMessage !== "Application submitted successfully!" && <ArrowRightIcon />}
+              </button>
 
-            {statusMessage && (
-              <p className={`mt-4 text-center font-semibold ${isError ? "text-red-600" : "text-green-600"}`}>
-                {statusMessage}
-              </p>
-            )}
-          </motion.form>
+              {statusMessage && (
+                <motion.p 
+                  initial={{ opacity: 0, y: 10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  className={`mt-4 text-center font-black text-[10px] uppercase tracking-widest ${isError ? "text-red-600" : "text-green-600"}`}
+                >
+                  {statusMessage}
+                </motion.p>
+              )}
+            </form>
+          </motion.div>
         </div>
       </section>
 

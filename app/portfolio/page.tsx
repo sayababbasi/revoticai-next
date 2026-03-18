@@ -1,10 +1,11 @@
-
 "use client";
 
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import ServiceGrid from "@/components/sections/Services/ServiceGrid";
+import PortfolioPageHeader from "@/components/sections/Portfolio/PortfolioPageHeader";
 import ProjectsGallery from "@/components/sections/Portfolio/ProjectsGallery";
+import ServiceGrid from "@/components/sections/Services/ServiceGrid";
+
 // ------------------ ICONS ------------------
 const ArrowRightIcon = () => (
   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"
@@ -76,41 +77,8 @@ const categories = [
 
 // ------------------ ANIMATION VARIANTS ------------------
 const itemVariants = { hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } } };
-const containerVariants = { hidden: { opacity: 0 }, visible: { opacity: 1, transition: { staggerChildren: 0.1 } } };
 
 // ------------------ COMPONENTS ------------------
-interface PageHeaderProps {
-  title: string;
-  subtitle: string;
-  description: string;
-  breadcrumbs: { name: string; href: string }[];
-  emphasizeWord?: number;
-}
-const PageHeader: React.FC<PageHeaderProps> = ({ title, subtitle, description, breadcrumbs, emphasizeWord }) => {
-  const words = title.split(" ");
-  return (
-    <section className="bg-black text-white pt-[150px] pb-16 md:pb-24">
-      <motion.div className="container mx-auto px-6 text-center" initial="hidden" animate="visible" variants={containerVariants}>
-        <motion.p className="text-sm uppercase tracking-widest font-semibold text-[#b1ff32] mb-3" variants={itemVariants}>{subtitle}</motion.p>
-        <motion.h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold mb-4" variants={itemVariants}>
-          {words.map((word, i) => (
-            <span key={i} className={i === emphasizeWord ? "text-[#b1ff32]" : ""}>{word} </span>
-          ))}
-        </motion.h1>
-        <motion.p className="text-lg text-gray-400 max-w-3xl mx-auto" variants={itemVariants}>{description}</motion.p>
-        <motion.nav className="text-sm text-gray-400 flex justify-center space-x-2 mt-6" variants={itemVariants}>
-          {breadcrumbs.map((b, i) => (
-            <React.Fragment key={b.name}>
-              <a href={b.href} className="hover:text-[#b1ff32]">{b.name}</a>
-              {i < breadcrumbs.length - 1 && <span>/</span>}
-            </React.Fragment>
-          ))}
-        </motion.nav>
-      </motion.div>
-    </section>
-  );
-};
-
 interface ProjectCardProps { project: typeof allProjects[0]; }
 const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => (
   <motion.a href={project.link} target="_blank" rel="noopener noreferrer"
@@ -144,7 +112,7 @@ const CTASection: React.FC = () => (
           <p className="text-lg text-gray-400 mb-10">
             Let's turn your idea into an intelligent, scalable reality.
           </p>
-          <a href="/contact" className="group inline-flex items-center justify-center px-8 py-4 bg-[#b1ff32] text-black font-bold rounded-full text-lg transition-transform hover:scale-105">
+          <a href="/contact" className="group inline-flex items-center justify-center px-8 py-4 bg-[#b1ff32] text-black font-bold rounded-full text-lg transition-transform hover:scale-105" target="_blank">
             Get a Free Quote <ArrowRightIcon />
           </a>
         </div>
@@ -154,23 +122,16 @@ const CTASection: React.FC = () => (
 );
 
 // ------------------ MAIN PAGE ------------------
-const PortfolioPage: React.FC = () => {
+export default function PortfolioPage() {
   const [activeFilter, setActiveFilter] = useState("All");
   const filteredProjects = allProjects.filter(p => activeFilter === "All" || p.category === activeFilter);
 
-  const breadcrumbs = [
-    { name: "Home", href: "/" },
-    { name: "Portfolio", href: "/portfolio" },
-  ];
-
   return (
     <main>
-      <PageHeader
+      <PortfolioPageHeader
         title="Our Digital Legacy"
-        subtitle="Success Stories and Client Work"
-        description="Explore the innovative solutions we’ve delivered across AI, machine learning, and full-stack development."
-        breadcrumbs={breadcrumbs}
-        emphasizeWord={1}
+        subtitle="Success Stories & Impact"
+        description="Explore how we've helped global leaders and ambitious startups scale through intelligence-driven engineering."
       />
 
       {/* Project Filter Section */}
@@ -201,11 +162,10 @@ const PortfolioPage: React.FC = () => {
           )}
         </div>
       </section>
+      
       <ProjectsGallery />
       <CTASection />
       <ServiceGrid />
     </main>
   );
-};
-
-export default PortfolioPage;
+}

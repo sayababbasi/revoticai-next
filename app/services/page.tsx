@@ -189,43 +189,67 @@ const ClientArrowRightIcon = () => (
 );
 // --- END: INLINED ICONS ---
 
+// --- START: INLINED INTERFACES ---
+interface Breadcrumb {
+  name: string;
+  href: string;
+}
+
+interface PageHeaderProps {
+  title?: string;
+  subtitle?: string;
+  description?: string;
+  breadcrumbs?: Breadcrumb[];
+  button?: {
+    text: string;
+    href: string;
+  };
+}
+// --- END: INLINED INTERFACES ---
+
 // --- START: INLINED DATA ---
 const services = [
   {
-    icon: <BrainCircuitIcon />,
-    title: "AI & ML Automation",
-    description: "Automate complex tasks and gain insights with our custom AI and Machine Learning models.",
+    number: "01",
+    title: "AI & ML AUTOMATION",
+    description: "Process optimization and predictive modelling.",
+    image: "/images/services/ai-ml.png",
     href: "/services/ai-ml",
   },
   {
-    icon: <CodeIcon />,
-    title: "AI-Powered Web Apps",
-    description: "Scalable, intelligent web applications that learn from user interaction.",
-    href: "/services/web-app",
+    number: "02",
+    title: "AI SaaS PRODUCTS",
+    description: "Turnkey cloud solutions for scalable growth.",
+    image: "/images/services/saas.png",
+    href: "/products",
   },
   {
-    icon: <SmartphoneIcon />,
-    title: "Game Development",
-    description: "Engaging 2D/3D games with smart AI opponents and dynamic, procedural content.",
+    number: "03",
+    title: "GAME DEVELOPMENT",
+    description: "Creating immersive AI-driven experiences.",
+    image: "/images/services/game-dev.png",
     href: "/services/game-dev",
   },
   {
-    icon: <ZapIcon />,
-    title: "Business Automation",
-    description: "We analyze and deploy RPA and AI solutions to streamline your core business processes.",
+    number: "04",
+    title: "BUSINESS AUTOMATION",
+    description: "RPA and workflow streamlining.",
+    image: "/images/services/business.png",
     href: "/services/automation",
   },
   {
-    icon: <PaletteIcon />,
-    title: "UI/UX & Digital Design",
-    description: "Human-centric, beautiful interfaces designed for maximum engagement and usability.",
-    href: "/services/ui-ux",
+    number: "05",
+    title: "WEB & APP DEV",
+    description: "High-performance intelligent applications.",
+    image: "/images/services/web-dev.png",
+    href: "/services/web-app",
   },
   {
-    icon: <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-[#b1ff32]"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z" /><path d="M12 8v8" /><path d="M8 12h8" /></svg>,
-    title: "AI SaaS Products",
-    description: "Launch your own AI-powered software products with our end-to-end development partnership.",
-    href: "/products",
+    number: "06",
+    title: "UI/UX & DESIGN",
+    description: "Human-centric digital product design.",
+    image: "/images/services/ui-ux.png",
+    href: "/services/ui-ux",
   },
 ];
 const processSteps = [
@@ -349,145 +373,221 @@ const containerVariants = {
 // --- END: INLINED ANIMATION VARIANTS ---
 
 // --- START: INLINED COMPONENT 1: PageHeader ---
-interface PageHeaderProps {
-  title: string;
-  subtitle: string;
-  description: string;
-  breadcrumbs: { name: string; href: string }[];
-  emphasizeWord?: number;
-  button?: { text: string; href: string };
-}
-const PageHeader: React.FC<PageHeaderProps> = ({
+const PageHeader: React.FC<PageHeaderProps & { emphasizeWords?: number[] }> = ({
   title = "",
   subtitle = "",
   description = "",
   breadcrumbs = [],
-  emphasizeWord,
+  emphasizeWords = [],
   button,
 }) => {
   const words = title.split(" ");
-  const emphasizedTitle =
-    emphasizeWord !== undefined && words[emphasizeWord] ? (
-      <div className="inline">
-        {words.map((word, index) => (
-          <span
-            key={index}
-            className={
-              index === emphasizeWord
-                ? "text-[#b1ff32] mr-2 inline-block leading-none"
-                : ""
-            }
-          >
-            {word}{" "}
-          </span>
-        ))}
-      </div>
-    ) : (
-      title
-    );
+  const emphasizedTitle = (
+    <div className="inline">
+      {words.map((word: string, index: number) => (
+        <span
+          key={index}
+          className={
+            emphasizeWords.includes(index)
+              ? "text-[#b1ff32]"
+              : ""
+          }
+        >
+          {word}{" "}
+        </span>
+      ))}
+    </div>
+  );
 
   return (
-    <section className="bg-black text-white pt-[150px] pb-16 md:pb-24 overflow-hidden">
-      <motion.div
-        className="container mx-auto px-6 text-center"
-        initial="hidden"
-        animate="visible"
-        variants={containerVariants}
-      >
-        <motion.p
-          className="text-sm uppercase tracking-widest font-semibold text-[#b1ff32] mb-3"
-          variants={itemVariants}
-        >
-          {subtitle}
-        </motion.p>
-        <motion.h1
-          className="text-4xl sm:text-5xl lg:text-6xl font-extrabold mb-4"
-          variants={itemVariants}
-        >
-          {emphasizedTitle}
-        </motion.h1>
-        <motion.p
-          className="text-lg text-gray-400 max-w-3xl mx-auto mb-8"
-          variants={itemVariants}
-        >
-          {description}
-        </motion.p>
-        <motion.nav
-          className="text-sm text-gray-400 flex justify-center space-x-2"
-          variants={itemVariants}
-        >
-          {breadcrumbs.map((item, index) => (
-            <React.Fragment key={item.name}>
-              <a
-                href={item.href}
-                className="hover:text-[#b1ff32] transition-colors"
-              >
-                {item.name}
-              </a>
-              {index < breadcrumbs.length - 1 && (
-                <span className="text-gray-600">/</span>
-              )}
-            </React.Fragment>
-          ))}
-        </motion.nav>
-        {button && (
-          <motion.div variants={itemVariants} className="mt-8">
-            <a
-              href={button.href}
-              className="inline-flex items-center justify-center px-8 py-3 text-lg font-bold text-black bg-[#b1ff32] rounded-full hover:bg-white transition-all duration-300 shadow-lg group"
-            >
-              {button.text}
-              <ArrowRightIcon />
+    <section className="bg-black text-white pt-[100px] pb-16 md:pb-24 overflow-hidden relative border-b border-white/5">
+      {/* Background Sophistication */}
+      <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-[#b1ff32]/5 blur invisible md:visible -translate-y-1/2 translate-x-1/2 pointer-events-none" />
+      
+      {/* Grid Pattern */}
+      <div className="absolute inset-0 z-0 opacity-20">
+        <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(#ffffff_1px,transparent_1px)] [background-size:40px_40px]" />
+      </div>
 
-            </a>
+      <div className="container mx-auto px-6 relative z-10">
+        <div className="lg:grid lg:grid-cols-12 lg:gap-16 items-center">
+          <motion.div
+            className="lg:col-span-7 mb-16 lg:mb-0 text-center lg:text-left"
+            initial="hidden"
+            animate="visible"
+            variants={containerVariants}
+          >
+            <motion.nav
+              className="text-sm font-bold text-gray-500 flex justify-center lg:justify-start space-x-2 mb-8 uppercase tracking-widest"
+              variants={itemVariants}
+            >
+              {breadcrumbs.map((item: Breadcrumb, index: number) => (
+                <React.Fragment key={item.name}>
+                  <a
+                    href={item.href}
+                    className="hover:text-[#b1ff32] transition-colors"
+                  >
+                    {item.name}
+                  </a>
+                  {index < breadcrumbs.length - 1 && (
+                    <span className="text-gray-700">/</span>
+                  )}
+                </React.Fragment>
+              ))}
+            </motion.nav>
+
+            <motion.p
+              className="text-sm uppercase tracking-[0.3em] font-black text-[#b1ff32] mb-6"
+              variants={itemVariants}
+            >
+              {subtitle}
+            </motion.p>
+            
+            <motion.h1
+              className="text-4xl lg:text-7xl font-black mb-8 leading-tight tracking-tighter text-white uppercase"
+              variants={itemVariants}
+            >
+              {emphasizedTitle}
+            </motion.h1>
+            
+            <motion.p
+              className="text-lg text-gray-400 max-w-xl mx-auto lg:mx-0 mb-12 leading-relaxed font-medium tracking-wide"
+              variants={itemVariants}
+            >
+              {description}
+            </motion.p>
+
+            {button && (
+              <motion.div variants={itemVariants}>
+                <a
+                  href={button.href}
+                  className="inline-flex items-center justify-center px-12 py-5 text-xl font-black text-black bg-[#b1ff32] rounded-full hover:bg-white transition-all duration-500 shadow-[0_0_40px_rgba(177,255,50,0.3)] group"
+                >
+                  {button.text}
+                  <ArrowRightIcon />
+                </a>
+              </motion.div>
+            )}
           </motion.div>
-        )}
-      </motion.div>
+
+          <motion.div
+            className="lg:col-span-5 relative"
+            initial={{ opacity: 0, x: 50, scale: 0.9 }}
+            animate={{ opacity: 1, x: 0, scale: 1 }}
+            transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
+          >
+            <div className="relative group">
+              <div className="absolute inset-0 bg-[#b1ff32]/10 blur-[100px] rounded-full opacity-30 group-hover:opacity-60 transition-opacity duration-1000" />
+              <div className="relative overflow-hidden rounded-[3rem] border border-white/10 shadow-2xl bg-black">
+                <div className="absolute inset-0 bg-black/40 z-10 pointer-events-none" />
+                <img
+                  src="/images/services/services-hero-clean.png"
+                  alt="Elite AI Infrastructure"
+                  className="w-full h-auto transition-transform duration-1000 group-hover:scale-110"
+                  onError={(e) => e.currentTarget.src = 'https://placehold.co/900x900/111/b1ff32?text=Elite+Services'}
+                />
+              </div>
+            </div>
+          </motion.div>
+        </div>
+      </div>
     </section>
   );
 };
 // --- END: INLINED COMPONENT 1 ---
 
 // --- START: INLINED COMPONENT 2: ServiceCard (Used by ServicesOverview) ---
-interface ServiceCardProps {
-  icon: React.ReactNode;
+const CapabilityCard: React.FC<{
+  number: string;
   title: string;
   description: string;
+  image: string;
   href: string;
-}
-const ServiceCard: React.FC<ServiceCardProps> = ({ icon, title, description, href }) => (
-  <a
-    href={href}
-    className="group block p-8 bg-white rounded-xl shadow-lg border border-gray-100 transition-all duration-300 hover:shadow-2xl hover:-translate-y-2"
+  isLeft: boolean;
+  index: number;
+}> = ({ number, title, description, image, href, isLeft, index }) => (
+  <motion.div
+    variants={itemVariants}
+    className={`flex items-center w-full relative ${
+      isLeft ? "md:flex-row" : "md:flex-row-reverse"
+    } flex-col group ${index > 0 ? "md:-mt-52" : ""}`}
   >
-    <div className="w-14 h-14 bg-[#b1ff32]/10 rounded-full flex items-center justify-center mb-5 group-hover:bg-[#b1ff32]/20 transition-colors">
-      {icon}
+    {/* Card Content */}
+    <a
+      href={href}
+      className="w-full md:w-[45%] p-8 bg-neutral-900/60 backdrop-blur-md rounded-2xl border border-white/10 shadow-2xl hover:border-[#b1ff32]/40 transition-all duration-300 relative overflow-hidden group"
+    >
+      <div className="flex flex-col h-full relative z-10">
+        <div className="text-4xl md:text-5xl font-black text-[#b1ff32] mb-6 opacity-80">
+          {number}
+        </div>
+        <div className="flex flex-col lg:flex-row gap-6 items-start">
+          <div className="flex-1">
+            <h3 className="text-2xl font-bold text-white mb-3 uppercase tracking-tight group-hover:text-[#b1ff32] transition-colors">
+              {title}
+            </h3>
+            <p className="text-gray-400 text-lg leading-relaxed">
+              {description}
+            </p>
+          </div>
+          <div className="w-full lg:w-48 h-32 rounded-xl overflow-hidden border border-white/5 shadow-inner bg-black/40">
+            <img
+              src={image}
+              alt={title}
+              className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+              onError={(e) => (e.currentTarget.src = 'https://placehold.co/200x120/111/444?text=Service')}
+            />
+          </div>
+        </div>
+      </div>
+      {/* Subtle Inner Glow */}
+      <div className="absolute inset-0 bg-gradient-to-br from-[#b1ff32]/5 to-transparent pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity" />
+    </a>
+
+    {/* Connection Node (Desktop Only) */}
+    <div className="hidden md:flex w-[10%] justify-center relative">
+      <div className="w-4 h-4 rounded-full bg-[#b1ff32] shadow-[0_0_15px_rgba(177,255,50,0.8)] z-20" />
+      <div className={`absolute top-1/2 w-full h-[2px] bg-gradient-to-r ${isLeft ? 'from-[#b1ff32] to-transparent' : 'from-transparent to-[#b1ff32]'} opacity-40`} />
     </div>
-    <h3 className="text-2xl font-bold text-black mb-3">{title}</h3>
-    <p className="text-gray-600 mb-5">{description}</p>
-    <span className="text-sm font-semibold text-black group-hover:text-[#b1ff32] transition-colors flex items-center">
-      Learn More <ArrowRightIcon />
-    </span>
-  </a>
+
+    {/* Spacer for bilateral layout */}
+    <div className="hidden md:block w-[45%]" />
+  </motion.div>
 );
 // --- END: INLINED COMPONENT 2 ---
 
 // --- START: INLINED COMPONENT 3: ServicesOverview (Grid of ServiceCards) ---
 const ServicesOverview: React.FC = () => (
-  <section className="bg-gray-50 py-20 md:py-28">
-    <div className="container mx-auto px-6">
+  <section className="bg-black py-20 pb-48 md:py-32 md:pb-64 relative overflow-hidden">
+    <div className="container mx-auto px-6 relative z-10">
+      <div className="text-center mb-16 md:mb-24">
+        <h2 className="text-4xl md:text-6xl font-black text-white uppercase tracking-tighter">
+          Our Core Capabilities
+        </h2>
+      </div>
+
       <motion.div
-        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+        className="relative max-w-7xl mx-auto"
         initial="hidden"
         whileInView="visible"
-        viewport={{ once: true, amount: 0.1 }}
+        viewport={{ once: true, amount: 0.05 }}
         variants={containerVariants}
       >
-        {services.map((service, index) => (
-          <motion.div key={index} variants={itemVariants}>
-            <ServiceCard {...service} />
-          </motion.div>
-        ))}
+        {/* Central Glowing Line (Desktop) */}
+        <div className="hidden md:block absolute left-1/2 top-0 bottom-0 w-[2px] -translate-x-1/2 bg-gradient-to-b from-transparent via-[#b1ff32]/50 to-transparent z-10">
+          <div className="absolute inset-0 -left-1 w-3 bg-[#b1ff32]/20 blur-md pointer-events-none" />
+        </div>
+
+        <div className="relative z-20 space-y-12 md:space-y-0">
+          {services.map((service, index) => (
+            <CapabilityCard
+              key={index}
+              {...service}
+              isLeft={index % 2 === 0}
+              index={index}
+            />
+          ))}
+        </div>
       </motion.div>
     </div>
   </section>
@@ -537,8 +637,8 @@ const CoreExpertiseSection: React.FC = () => (
             key={item.title}
             variants={itemVariants}
             className={`rounded-xl transition-all duration-300 ${item.isCta
-                ? "bg-[#b1ff32] text-black p-8 flex flex-col justify-between"
-                : "bg-neutral-900 border border-neutral-800 p-8 hover:border-[#b1ff32]/50"
+              ? "bg-[#b1ff32] text-black p-8 flex flex-col justify-between"
+              : "bg-neutral-900 border border-neutral-800 p-8 hover:border-[#b1ff32]/50"
               }`}
           >
             {item.isCta ? (
@@ -584,9 +684,7 @@ const CoreExpertiseSection: React.FC = () => (
     </div>
   </section>
 );
-// --- END: INLINED COMPONENT 4 ---
 
-// --- START: INLINED COMPONENT 5: WorkingProcessSection ---
 const WorkingProcessSection: React.FC = () => (
   <section className="bg-black text-white py-20 md:py-28 overflow-hidden">
     <div className="container mx-auto px-6 text-center mb-16">
@@ -649,9 +747,7 @@ const WorkingProcessSection: React.FC = () => (
     </div>
   </section>
 );
-// --- END: INLINED COMPONENT 5 ---
 
-// --- START: INLINED COMPONENT 6: OurClientsSection ---
 const OurClientsSection: React.FC = () => (
   <section className="bg-white py-20 md:py-28">
     <div className="container mx-auto px-6">
@@ -762,7 +858,7 @@ const ServicesPage: React.FC = () => {
         subtitle="Our Core Service Offerings"
         description="We combine cutting-edge AI, Machine Learning, and Full-Stack development expertise to create scalable digital products that drive business growth."
         breadcrumbs={breadcrumbs}
-        emphasizeWord={2} // Emphasize 'Built'
+        emphasizeWords={[2, 3]} // Emphasize 'with Intelligence'
         button={{ text: "Get a Custom Quote", href: "/contact" }}
       />
 
@@ -775,10 +871,10 @@ const ServicesPage: React.FC = () => {
       {/* 3. Core Expertise Grid (Inlined from Services/OurCoreExpertise.tsx) */}
 
       {/* 4. Working Process (Inlined from Home/WorkingProcess.tsx) */}
-      <WorkingProcessSection />
+      {/* <WorkingProcessSection /> */}
 
       {/* 5. Clients Scroller (Inlined from Shared/OurClients.tsx) */}
-      <OurClientsSection />
+      {/* <OurClientsSection /> */}
 
       {/* 6. Final Call to Action (Inlined from Home/CTA.tsx) */}
       <CTASection />

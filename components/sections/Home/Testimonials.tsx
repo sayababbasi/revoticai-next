@@ -63,7 +63,7 @@ const Testimonials: React.FC = () => {
           }}
           className="relative max-w-lg mx-auto" // Sized for a card stack
         >
-          {testimonials.map((testimonial, index) => (
+          {[...testimonials, ...testimonials].map((testimonial, index) => (
             <SwiperSlide
               key={index}
               className="h-auto"

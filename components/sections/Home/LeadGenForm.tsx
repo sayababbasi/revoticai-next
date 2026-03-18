@@ -94,7 +94,11 @@ const InputField: React.FC<InputFieldProps> = ({ label, name, as, ...props }) =>
 );
 
 // ✅ Main Component
-const LeadGenForm: React.FC = () => {
+interface LeadGenFormProps {
+  minimal?: boolean;
+}
+
+const LeadGenForm: React.FC<LeadGenFormProps> = ({ minimal = false }) => {
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
   const [formData, setFormData] = useState({
     name: "",
@@ -125,6 +129,116 @@ const LeadGenForm: React.FC = () => {
       setStatus("error");
     }
   };
+
+  const formCard = (
+    <div className={`${minimal ? "" : "bg-white p-8 md:p-12 rounded-2xl shadow-xl border border-gray-100"}`}>
+      <AnimatePresence mode="wait">
+        {status === "success" ? (
+          <motion.div
+            key="success"
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            exit={{ opacity: 0 }}
+            className="flex flex-col items-center justify-center text-center h-full min-h-[300px]"
+          >
+            <CheckCircleIcon />
+            <h3 className="text-2xl font-bold text-black mt-4 mb-2">
+              Message Sent!
+            </h3>
+            <p className="text-gray-600">
+              Thanks for reaching out. We'll be in touch shortly.
+            </p>
+          </motion.div>
+        ) : (
+          <motion.form
+            key="form"
+            onSubmit={handleSubmit}
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0 }}
+            className="space-y-6"
+          >
+            <InputField
+              label="Full Name"
+              name="name"
+              value={formData.name}
+              onChange={handleChange}
+              required
+            />
+            <InputField
+              label="Work Email"
+              name="email"
+              type="email"
+              value={formData.email}
+              onChange={handleChange}
+              required
+            />
+            <InputField
+              label="Company Name"
+              name="company"
+              value={formData.company}
+              onChange={handleChange}
+            />
+            <InputField
+              label="How can we help?"
+              name="message"
+              as="textarea"
+              value={formData.message}
+              onChange={handleChange}
+              required
+            />
+
+            <div>
+              <button
+                type="submit"
+                disabled={status === "loading"}
+                className="group w-full flex items-center justify-center px-8 py-3 bg-[#b1ff32] text-black font-bold rounded-full text-base transition-all duration-300 hover:scale-105 disabled:opacity-70 disabled:cursor-not-allowed"
+              >
+                {status === "loading" ? (
+                  <>
+                    <LoaderIcon />
+                    <motion.span
+                      className="ml-2"
+                      animate={{ opacity: [0.5, 1, 0.5] }}
+                      transition={{ repeat: Infinity, duration: 1.2 }}
+                    >
+                      Sending your message...
+                    </motion.span>
+                  </>
+                ) : (
+                  "Send Your Request"
+                )}
+              </button>
+            </div>
+
+            <AnimatePresence>
+              {status === "error" && (
+                <motion.div
+                  initial={{ opacity: 0, y: -5 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0 }}
+                  className="flex items-center text-sm text-red-600"
+                >
+                  <AlertCircleIcon />
+                  <span className="ml-2">
+                    Something went wrong. Please try again.
+                  </span>
+                </motion.div>
+              )}
+            </AnimatePresence>
+          </motion.form>
+        )}
+      </AnimatePresence>
+    </div>
+  );
+
+  if (minimal) {
+    return (
+      <div className="bg-white p-8 md:p-12 rounded-3xl shadow-xl border border-gray-100">
+        {formCard}
+      </div>
+    );
+  }
 
   return (
     <section className="bg-gray-50 py-20 md:py-28">
@@ -160,106 +274,7 @@ const LeadGenForm: React.FC = () => {
           </div>
 
           {/* --- Right Side Form --- */}
-          <div className="bg-white p-8 md:p-12 rounded-2xl shadow-xl border border-gray-100">
-            <AnimatePresence mode="wait">
-              {status === "success" ? (
-                <motion.div
-                  key="success"
-                  initial={{ opacity: 0, scale: 0.9 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  exit={{ opacity: 0 }}
-                  className="flex flex-col items-center justify-center text-center h-full min-h-[300px]"
-                >
-                  <CheckCircleIcon />
-                  <h3 className="text-2xl font-bold text-black mt-4 mb-2">
-                    Message Sent!
-                  </h3>
-                  <p className="text-gray-600">
-                    Thanks for reaching out. We'll be in touch shortly.
-                  </p>
-                </motion.div>
-              ) : (
-                <motion.form
-                  key="form"
-                  onSubmit={handleSubmit}
-                  initial={{ opacity: 0, y: 10 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  exit={{ opacity: 0 }}
-                  className="space-y-6"
-                >
-                  <InputField
-                    label="Full Name"
-                    name="name"
-                    value={formData.name}
-                    onChange={handleChange}
-                    required
-                  />
-                  <InputField
-                    label="Work Email"
-                    name="email"
-                    type="email"
-                    value={formData.email}
-                    onChange={handleChange}
-                    required
-                  />
-                  <InputField
-                    label="Company Name"
-                    name="company"
-                    value={formData.company}
-                    onChange={handleChange}
-                  />
-                  <InputField
-                    label="How can we help?"
-                    name="message"
-                    as="textarea"
-                    value={formData.message}
-                    onChange={handleChange}
-                    required
-                  />
-
-                  <div>
-                    <button
-                      type="submit"
-                      disabled={status === "loading"}
-                      className="group w-full flex items-center justify-center px-8 py-3 bg-[#b1ff32] text-black font-bold rounded-full text-base transition-all duration-300 hover:scale-105 disabled:opacity-70 disabled:cursor-not-allowed"
-                    >
-                      {status === "loading" ? (
-                        <>
-                          <LoaderIcon />
-                          <motion.span
-                            className="ml-2"
-                            animate={{ opacity: [0.5, 1, 0.5] }}
-                            transition={{ repeat: Infinity, duration: 1.2 }}
-                          >
-                            Sending your message...
-                          </motion.span>
-                        </>
-                      ) : (
-                        "Send Your Request"
-                      )}
-                    </button>
-                  </div>
-
-                  {/* ✅ Animated Error Message */}
-                  <AnimatePresence>
-                    {status === "error" && (
-                      <motion.div
-                        initial={{ opacity: 0, y: -5 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        exit={{ opacity: 0 }}
-                        className="flex items-center text-sm text-red-600"
-                      >
-                        <AlertCircleIcon />
-                        <span className="ml-2">
-                          Something went wrong. Please try again.
-                        </span>
-                      </motion.div>
-                    )}
-                  </AnimatePresence>
-                </motion.form>
-              )}
-            </AnimatePresence>
-          </div>
+          {formCard}
         </div>
       </div>
     </section>

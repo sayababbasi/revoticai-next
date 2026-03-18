@@ -33,7 +33,12 @@ const ContactPageHeader: React.FC<ContactPageHeaderProps> = ({
   subtitle = "Contact Us",
   breadcrumbs = [], 
 }) => (
-  <section className="bg-black text-white pt-[150px] pb-16 md:pb-24 overflow-hidden">
+  <section className="bg-black text-white pt-[150px] pb-16 md:pb-24 overflow-hidden relative">
+    {/* Grid Pattern */}
+    <div className="absolute inset-0 z-0 opacity-20">
+      <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(#ffffff_1px,transparent_1px)] [background-size:40px_40px]" />
+    </div>
+
     <motion.div
       className="container mx-auto px-6 text-center"
       initial="hidden"

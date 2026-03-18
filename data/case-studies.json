@@ -10,6 +10,8 @@
     "duration": "3 Months",
     "challenge": "FinEdge faced challenges with manual data handling and slow risk assessment workflows, leading to delayed investment insights and operational inefficiency.",
     "solution": "We developed a fully automated, AI-driven risk analysis engine using Python and FastAPI, integrated with a real-time dashboard built in Next.js. The solution streamlined data ingestion, analysis, and reporting.",
+    "metric": "40%",
+    "metricLabel": "Efficiency Increase",
     "results": [
       "40% increase in data processing efficiency",
       "Reduced manual intervention by 60%",
@@ -29,6 +31,8 @@
     "duration": "2 Months",
     "challenge": "RetailCo needed an intelligent e-commerce platform capable of recommending products based on customer behavior and purchase patterns.",
     "solution": "We built a modern full-stack web app using Next.js and Node.js, powered by an AI-based recommendation engine that personalizes user journeys in real time.",
+    "metric": "25%",
+    "metricLabel": "Increase in Conversions",
     "results": [
       "25% increase in conversion rates",
       "Enhanced customer engagement through personalized suggestions",

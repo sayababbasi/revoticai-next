@@ -2,6 +2,7 @@
 
 import React from "react";
 import { motion } from "framer-motion";
+import { ArrowRight } from "lucide-react";
 
 const itemVariants = {
   hidden: { opacity: 0, y: 20 },
@@ -9,100 +10,113 @@ const itemVariants = {
 };
 
 const OurMissionSection: React.FC = () => {
+  const executionPrinciples = [
+    {
+      title: "Staying Ahead of the Curve",
+      description: "We keep up with the latest in AI so you don't have to. Our team stays on the cutting edge and brings the right technology to your business at the right time.",
+    },
+    {
+      title: "We Build for Results, Not Just Delivery",
+      description: "Every project we take on has one goal - measurable impact. We don't just ship features; we make sure what we build actually moves the needle for your business.",
+    },
+    {
+      title: "Honest, Transparent Partnership",
+      description: "We believe the best work happens when there's trust. We keep you in the loop at every stage, communicate openly, and always do what we say we'll do.",
+    },
+    {
+      title: "We Keep Improving, Always",
+      description: "Technology never stands still, and neither do we. We continuously refine our work, incorporate feedback, and make sure your solution keeps getting better over time.",
+    },
+  ];
+
   return (
-    <section className="relative bg-neutral-900 text-white  py-20 md:py-32 overflow-hidden pt-[0px]">
-      {/* Background pattern */}
-      <div className="absolute inset-0 z-0 opacity-5">
-        <svg className="w-full h-full" fill="none" viewBox="0 0 100 100">
-          <pattern id="pattern-zigzag-mission" x="0" y="0" width="10" height="10" patternUnits="userSpaceOnUse">
-            <path d="M0 5L5 0L10 5L5 10L0 5Z" stroke="#dcfce7" strokeWidth="1" fill="none" />
-          </pattern>
-          <rect x="0" y="0" width="100%" height="100%" fill="url(#pattern-zigzag-mission)" />
-        </svg>
+    <section className="relative bg-white text-black py-16 md:py-24 overflow-hidden border-t border-gray-100">
+      {/* Background patterns */}
+      <div className="absolute inset-0 z-0 opacity-[0.02]">
+        <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(#000000_1px,transparent_1px)] [background-size:40px_40px]" />
       </div>
 
       <div className="container mx-auto px-6 relative z-10">
-        <div className="lg:grid lg:grid-cols-12 lg:gap-12 items-center">
-          {/* --- Left Side: Content & CTA --- */}
-          <motion.div 
-            className="lg:col-span-7 mb-16 lg:mb-0 text-center lg:text-left"
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, amount: 0.3 }}
-            variants={{ visible: { transition: { staggerChildren: 0.1 } } }}
-          >
-            <motion.p 
-              className="text-sm uppercase tracking-widest font-semibold text-gray-300 mb-4"
-              variants={itemVariants}
-            >
-              Our Purpose
-            </motion.p>
-            
-            <motion.h2 
-              className="text-4xl md:text-5xl font-extrabold mb-8 leading-tight"
-              variants={itemVariants}
-            >
-              Our Mission at Revotic AI
-            </motion.h2>
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-24 items-start">
 
-            <motion.p 
-              className="text-lg text-gray-100 max-w-2xl lg:max-w-none mx-auto lg:mx-0 mb-6"
-              variants={itemVariants}
+          {/* --- Left Side: Manifesto --- */}
+          <div className="lg:col-span-4">
+            <motion.div
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.1 }}
+              variants={{ visible: { transition: { staggerChildren: 0.1 } } }}
             >
-              At Revotic AI, our mission is to empower businesses, startups, and
-              enterprises with <span className="text-[#b1ff32] font-semibold">AI-driven automation</span>, innovative digital solutions, and
-              next-gen web & app development. We aim to simplify workflows, accelerate
-              digital transformation, and enable organizations to scale with confidence in
-              the era of artificial intelligence.
-            </motion.p>
-
-            <motion.p 
-              className="text-lg text-gray-100 max-w-2xl lg:max-w-none mx-auto lg:mx-0 mb-10"
-              variants={itemVariants}
-            >
-              By merging technology, <span className="italic">creativity, and intelligence</span>, we craft solutions that
-              don't just solve today's challenges but prepare our partners for the
-              opportunities of tomorrow.
-            </motion.p>
-
-            <motion.div variants={itemVariants}>
-              <a
-                href="/careers" // Assuming a careers page or a general "Join Us" link
-                className="inline-flex items-center justify-center px-8 py-4 text-lg font-bold text-black bg-[#f0ff46] rounded-full hover:bg-[#b1ff32] transition-all duration-300 shadow-md"
+              <motion.div
+                className="inline-flex items-center gap-3 px-5 py-2 rounded-full bg-black/5 border border-black/10 text-gray-500 text-[10px] font-black uppercase tracking-[0.5em] mb-12"
+                variants={itemVariants}
               >
-                JOIN OUR JOURNEY
-              </a>
-            </motion.div>
-          </motion.div>
+                The Standard
+              </motion.div>
 
-          {/* --- Right Side: Mission Graphic --- */}
-          <motion.div 
-            className="lg:col-span-5 flex justify-center items-center"
-            initial={{ opacity: 0, scale: 0.8 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true, amount: 0.3 }}
-            transition={{ duration: 0.6, ease: "easeOut" }}
-          >
-            <div className="relative w-[350px] h-[350px]">
-              {/* Main oval shape with gradient */}
-              <svg className="absolute inset-0" viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <defs>
-                  <linearGradient id="missionGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                    <stop offset="0%" stopColor="#8a2387" /> {/* Darker purple */}
-                    <stop offset="50%" stopColor="#e94057" /> {/* Reddish */}
-                    <stop offset="100%" stopColor="#f27121" /> {/* Orange */}
-                  </linearGradient>
-                </defs>
-                <ellipse cx="200" cy="200" rx="180" ry="140" fill="url(#missionGradient)" />
-                {/* Inner white oval for "Our Mission" text */}
-                <ellipse cx="200" cy="200" rx="140" ry="100" fill="white" />
-              </svg>
-              <div className="absolute inset-0 flex flex-col items-center justify-center text-center">
-                <span className="text-black text-4xl font-extrabold mb-1 leading-tight">Our</span>
-                <span className="text-black text-4xl font-extrabold leading-tight">Mission</span>
-              </div>
-            </div>
-          </motion.div>
+              <motion.h2
+                className="text-3xl md:text-5xl font-black mb-10 leading-tight tracking-tighter uppercase"
+                variants={itemVariants}
+              >
+                How <span className="text-gray-800">We Work</span>
+              </motion.h2>
+
+              <motion.div 
+                className="space-y-8 text-gray-800 text-sm md:text-base font-medium leading-relaxed max-w-2xl"
+                variants={itemVariants}
+              >
+                <p>
+                  At RevoticAI, we go beyond just writing code. We take the time to understand your business, your challenges, and your goals - then we build solutions that actually make a difference.
+                </p>
+                <p>
+                  We partner with businesses to bring AI into their everyday operations - not as a buzzword, but as a practical tool that saves time, reduces costs, and drives real growth.
+                </p>
+              </motion.div>
+
+              <motion.div className="mt-12" variants={itemVariants}>
+                <a
+                  href="/contact"
+                  className="group inline-flex items-center px-8 py-4 rounded-full bg-gray-800 text-white font-black text-sm uppercase tracking-widest hover:bg-black transition-colors"
+                >
+                  Let's Work Together
+                  <ArrowRight className="ml-4 w-5 h-5 group-hover:translate-x-2 transition-transform text-[#b1ff32]" />
+                </a>
+              </motion.div>
+            </motion.div>
+          </div>
+
+          {/* --- Right Side: Principles Matrix --- */}
+          <div className="lg:col-span-8">
+            <motion.div
+              className="grid grid-cols-1 md:grid-cols-2 gap-8"
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.1 }}
+              variants={{ visible: { transition: { staggerChildren: 0.15 } } }}
+            >
+              {executionPrinciples.map((v, i) => (
+                <motion.div
+                  key={i}
+                  variants={itemVariants}
+                  className="p-10 bg-gray-50/50 border border-gray-100 rounded-[2.5rem] hover:border-black/10 transition-all duration-700 group relative overflow-hidden"
+                >
+                  <div className="absolute top-0 right-0 p-8 text-gray-800 font-black text-5xl group-hover:text-black transition-colors">
+                    0{i + 1}
+                  </div>
+                  <div className="w-14 h-14 rounded-2xl bg-black text-white flex items-center justify-center font-black text-2xl mb-8 group-hover:bg-gray-300 group-hover:text-gray-500 transition-all duration-500 shadow-xl">
+                    {/* Visual Icon Placeholder */}
+                    <div className="w-3 h-3 rounded-full bg-current animate-pulse" />
+                  </div>
+                  <h3 className="text-xl font-black text-gray-700 mb-4 group-hover:text-gray-800 transition-colors uppercase tracking-tight leading-none">
+                    {v.title}
+                  </h3>
+                  <p className="text-gray-800 leading-relaxed text-sm font-medium group-hover:text-black transition-colors">
+                    {v.description}
+                  </p>
+                </motion.div>
+              ))}
+            </motion.div>
+          </div>
         </div>
       </div>
     </section>

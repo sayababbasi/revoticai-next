@@ -2,178 +2,65 @@
 
 import React from "react";
 
-// --- Inlined SVG Icon (to prevent build errors) ---
-const CheckIcon = () => (
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    viewBox="0 0 20 20"
-    fill="currentColor"
-    className="w-5 h-5 text-[#b1ff32] flex-shrink-0"
-  >
-    <path
-      fillRule="evenodd"
-      d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
-      clipRule="evenodd"
-    />
-  </svg>
-);
-
-// --- Inlined Data for the 3 Process Cards ---
+// --- Data for the 4 Process Steps ---
 const processSteps = [
   {
+    step: "01",
     title: "Discovery & Strategy",
-    description:
-      "We start by understanding your business goals, pain points, and growth targets to define a clear AI strategy with measurable ROI.",
-    points: [
-      "Deep-dive into your business operations & goals",
-      "Identify high-impact automation opportunities",
-      "Define success metrics & expected ROI",
-    ],
+    description: "Deep dive into your operations to identify high-impact automation opportunities and map a clear ROI.",
   },
   {
-    title: "Architecture & Development",
-    description:
-      "Our expert team designs and builds your custom AI solution, from data pipelines and ML models to polished user interfaces.",
-    points: [
-      "Tailored solution architecture & system design",
-      "AI model development & API integration",
-      "Intuitive interfaces designed for your users",
-    ],
+    step: "02",
+    title: "Design & Architecture",
+    description: "We architect robust, scalable solutions and design intuitive interfaces tailored exactly to your business.",
   },
   {
-    title: "Deployment & Ongoing Support",
-    description:
-      "We deploy to production, monitor performance, and continuously optimize, providing dedicated support as your business scales.",
-    points: [
-      "Scalable cloud deployment & infrastructure",
-      "Real-time performance monitoring & alerts",
-      "Ongoing optimization & priority support",
-    ],
+    step: "03",
+    title: "Development & QA",
+    description: "Agile sprints and rigorous testing ensure your AI tools and platforms are built to enterprise standards.",
+  },
+  {
+    step: "04",
+    title: "Launch & Support",
+    description: "Seamless deployment with continuous monitoring, optimization, and strategic support for long-term scale.",
   },
 ];
 
-// --- Inlined Data for the Image Scroller ---
-// (Duplicates are added to create the seamless loop)
-const workImages = [
-  { title: "AI Dashboards", src: "images/sliderproduct/dash-img-333.png" },
-  { title: "E-Commerce", src: "images/sliderproduct/MEXT.jpg" },
-  { title: "Web Development", src: "images/sliderproduct/web-dev-2.webp" },
-  { title: "App Development", src: "images/sliderproduct/product.webp" },
-  { title: "AI/ML Model", src: "images/sliderproduct/ai.webp" },
-  { title: "SAAS Product", src: "images/sliderproduct/product-dev-2.webp" },
-  { title: "CRM Platform", src: "images/sliderproduct/hhuiu.webp" },
-];
-const allWorkImages = [...workImages, ...workImages]; // Duplicate for seamless loop
-
-// --- Main Working Process Component ---
 const WorkingProcess: React.FC = () => {
   return (
-    // Section with dark theme
-    <section className="bg-black text-white py-20 md:py-28 overflow-hidden">
-      {/* --- Section Header (matches screenshot) --- */}
-      <div className="container mx-auto px-6 text-center mb-16">
-        <h3 className="inline-flex items-center text-sm font-semibold text-gray-400 uppercase tracking-wider mb-4">
-          <span className="w-8 h-px bg-gray-600 mr-3"></span>
-          Our Working Process
-          <span className="w-8 h-px bg-gray-600 ml-3"></span>
-        </h3>
-        <h2 className="text-3xl md:text-4xl font-bold text-white">
-          From Discovery to Deployment
-        </h2>
+    <section className="bg-black text-white py-20 md:py-28 overflow-hidden relative">
+      <div className="container mx-auto px-6 mb-12 text-center md:text-left md:flex md:items-end md:justify-between">
+        <div className="max-w-xl mx-auto md:mx-0">
+          <p className="text-sm uppercase tracking-wider text-[#b1ff32] font-semibold mb-3">
+            Our Working Process
+          </p>
+          <h2 className="text-4xl md:text-5xl font-bold text-white">
+            From Discovery to Deployment
+          </h2>
+        </div>
       </div>
 
-      {/* --- Top Part: 3 Process Cards --- */}
-      <div className="container mx-auto px-6 mb-20">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {processSteps.map((step) => (
-            <div
-              key={step.title}
-              // Card styling from screenshot
-              className="bg-neutral-900 border border-neutral-800 rounded-lg p-6"
-            >
-              <h4 className="text-xl font-bold text-white mb-3">
+      <div className="container mx-auto px-6 relative mt-16 md:mt-24">
+        {/* Horizontal Line for Desktop */}
+        <div className="hidden md:block absolute top-[28px] left-[4%] right-[4%] h-[2px] bg-neutral-800 z-0"></div>
+
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-12 md:gap-8 relative z-10 w-full">
+          {processSteps.map((step, index) => (
+            <div key={index} className="flex flex-col items-center md:items-start group">
+              {/* Step Circle */}
+              <div className="w-14 h-14 md:w-16 md:h-16 rounded-full bg-black border-2 border-neutral-700 flex items-center justify-center text-lg md:text-xl font-bold text-[#b1ff32] mb-6 relative z-10 transition-colors duration-500 group-hover:border-[#b1ff32] group-hover:bg-neutral-900 group-hover:shadow-[0_0_20px_rgba(177,255,50,0.2)]">
+                {step.step}
+              </div>
+              <h4 className="text-xl font-bold text-white mb-3 text-center md:text-left">
                 {step.title}
               </h4>
-              <p className="text-gray-400 text-sm mb-5">
+              <p className="text-gray-400 text-sm leading-relaxed text-center md:text-left">
                 {step.description}
               </p>
-              <ul className="space-y-3">
-                {step.points.map((point) => (
-                  <li key={point} className="flex items-start gap-2">
-                    <CheckIcon />
-                    <span className="text-gray-300 text-sm">{point}</span>
-                  </li>
-                ))}
-              </ul>
             </div>
           ))}
         </div>
       </div>
-
-      {/* --- Bottom Part: Wide Image Scroller --- */}
-      {/* This 'w-full' and 'overflow-hidden' creates the "wide range" effect */}
-      <div
-        className="group w-full overflow-hidden"
-        style={{
-          maskImage:
-            "linear-gradient(to right, transparent, black 10%, black 90%, transparent)",
-        }}
-      >
-        <div className="flex w-max animate-scroll group-hover:pause">
-          {allWorkImages.map((item, index) => (
-            <div key={index} className="flex-shrink-0 w-60 mx-4 text-center">
-              <img
-                src={item.src}
-                alt={item.title}
-                className="w-full h-40 object-cover rounded-lg shadow-lg mb-3"
-                onError={(e) => (e.currentTarget.src = 'https://placehold.co/200x150/f00/fff?text=Error')}
-              />
-              <p className="text-sm font-semibold text-gray-300">
-                {item.title}
-              </p>
-            </div>
-          ))}
-        </div>
-      </div>
-
-      {/* This CSS defines the 'scroll' animation. 
-        It needs to be added to your global CSS file (e.g., globals.css or animations.css)
-        and configured in your 'tailwind.config.js'
-      */}
-      <style jsx global>{`
-        /* ADD THIS TO YOUR 'tailwind.config.js' file in the 'extend' section:
-          
-          theme: {
-            extend: {
-              animation: {
-                scroll: 'scroll 40s linear infinite',
-              },
-              keyframes: {
-                scroll: {
-                  '0%': { transform: 'translateX(0)' },
-                  '100%': { transform: 'translateX(-50%)' },
-                }
-              }
-            }
-          }
-        */
-
-        /* This is the fallback if you don't edit tailwind.config.js */
-        @keyframes scroll {
-          0% {
-            transform: translateX(0);
-          }
-          100% {
-            transform: translateX(-50%);
-          }
-        }
-        .animate-scroll {
-          animation: scroll 40s linear infinite;
-        }
-        .group-hover\\:pause:hover {
-          animation-play-state: paused;
-        }
-      `}</style>
     </section>
   );
 };

@@ -28,9 +28,9 @@
 //       <div className="fixed bottom-0 left-0 w-full bg-black text-[#b1ff32] text-sm font-medium overflow-hidden z-[9999] border-b border-[#222]">
 //         <div className="relative py-2 px-8 flex items-center justify-center">
 //           <div className="animate-marquee whitespace-nowrap">
-//             ⚙️ Our website is under scheduled maintenance — some features may not work properly.
+//             ⚙️ Our website is under scheduled maintenance   some features may not work properly.
 //             &nbsp;&nbsp; | &nbsp;&nbsp;
-//             We’re improving performance and adding new features — thank you for your patience!
+//             We’re improving performance and adding new features   thank you for your patience!
 //           </div>
 //           <button
 //             onClick={handleClose}

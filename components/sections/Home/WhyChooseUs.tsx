@@ -73,27 +73,27 @@ const SupportIcon = () => (
 const reasons = [
     {
         icon: <PerformanceIcon />,
-        title: "Blazing Performance",
+        title: "AI-Native Engineering",
         description:
-            "Lightning-fast systems optimized for scale, handling millions of requests without breaking a sweat.",
+            "Unlike generic agencies that bolt on AI as an afterthought, we architect systems where artificial intelligence is natively integrated from day one.",
     },
     {
         icon: <SecurityIcon />,
-        title: "Enterprise Security",
+        title: "Business-Obsessed ROI",
         description:
-            "Bank-grade security protocols, GDPR/HIPAA compliance, and robust data protection built into every solution.",
+            "We aren't just developers; we're growth partners. Every line of code we write is optimized for your revenue, efficiency, and bottom line.",
     },
     {
         icon: <AIExpertiseIcon />,
-        title: "Deep AI Expertise",
+        title: "Elite Technical Talent",
         description:
-            "Specialized teams in machine learning, NLP, computer vision, and intelligent automation, not generalists.",
+            "No outsourced junior devs. You work directly with elite engineers, AI researchers, and architects who have built enterprise-grade platforms.",
     },
     {
         icon: <SupportIcon />,
-        title: "Dedicated Partnership",
+        title: "True Partnership",
         description:
-            "We don't just deliver and disappear. Strategic partnership with ongoing support, optimization, and growth planning.",
+            "We act as an extension of your team. Transparent communication, agile sprints, and continuous post-launch optimization and support.",
     },
 ];
 

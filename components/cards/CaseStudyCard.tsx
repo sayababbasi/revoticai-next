@@ -9,6 +9,8 @@ interface CaseStudyCardProps {
   title: string;
   image: string;
   link: string;
+  metric?: string;
+  metricLabel?: string;
 }
 
 const CaseStudyCard: React.FC<CaseStudyCardProps> = ({
@@ -16,6 +18,8 @@ const CaseStudyCard: React.FC<CaseStudyCardProps> = ({
   title,
   image,
   link,
+  metric,
+  metricLabel,
 }) => {
   const placeholderImg = "https://placehold.co/1000x800/1a1a1a/333333?text=Project";
 
@@ -39,6 +43,14 @@ const CaseStudyCard: React.FC<CaseStudyCardProps> = ({
             {tag}
           </p>
           <h3 className="text-3xl font-bold mb-4">{title}</h3>
+
+          {metric && metricLabel && (
+            <div className="flex items-center gap-3 mb-6 bg-black/40 backdrop-blur-sm p-3 rounded-lg border border-white/10 w-fit">
+              <span className="text-3xl font-bold text-[#b1ff32]">{metric}</span>
+              <span className="text-sm text-gray-300 font-medium leading-tight max-w-[120px]">{metricLabel}</span>
+            </div>
+          )}
+
           <span className="inline-flex items-center font-medium group-hover:text-[#b1ff32] transition-colors duration-300">
             Read Case Study
             <ArrowRight className="w-4 h-4 ml-2 transition-transform duration-300 group-hover:translate-x-1" />

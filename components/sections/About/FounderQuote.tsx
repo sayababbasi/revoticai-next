@@ -10,50 +10,69 @@ const fadeIn = {
 
 const FounderQuoteSection: React.FC = () => {
   return (
-    <section className="bg-white py-20 md:py-32 overflow-hidden">
-      <div className="container mx-auto px-6"> 
+    <section className="relative bg-neutral-950 py-16 md:py-24 overflow-hidden border-t border-white/5">
+      {/* Subtle Glows */}
+      <div className="absolute top-1/2 left-0 w-[400px] h-[400px] bg-[#b1ff32]/5 blur-[120px] rounded-full -translate-x-1/2 -translate-y-1/2 pointer-events-none" />
+
+      <div className="container mx-auto px-6 relative z-10"> 
         <motion.div
-          className="relative max-w-6xl mx-auto bg-white border-2 border-[#0B0E2D]/50 rounded-xl shadow-xl p-8 md:p-12 text-center"
+          className="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-16 md:gap-24"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.3 }}
-          variants={fadeIn}
+          variants={{ visible: { transition: { staggerChildren: 0.2 } } }}
         >
-          {/* Top Label */}
-          <motion.p
-            className="text-sm uppercase tracking-widest font-semibold text-[#0B0E2D] mb-6"
+          {/* --- Left Side: Portait --- */}
+          <motion.div 
+            className="w-full md:w-1/3 flex justify-center"
             variants={fadeIn}
           >
-           <b>From Our Founder </b>
-          </motion.p>
+            <div className="relative group">
+              <div className="absolute inset-0 bg-[#b1ff32] rounded-3xl blur-2xl opacity-10 group-hover:opacity-30 transition-opacity" />
+              <div className="relative overflow-hidden rounded-3xl border border-white/10 aspect-[4/5] w-[300px] md:w-[350px]">
+                <img
+                  src="/images/experts/sayab.png"
+                  alt="Sayab Gulfaraz - Founder & CEO"
+                  className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 scale-105 group-hover:scale-100"
+                  onError={(e) => (e.currentTarget.src = 'https://placehold.co/600x800/111/444?text=CEO')}
+                />
+              </div>
+              {/* Badge */}
+              <div className="absolute -bottom-6 -right-6 bg-[#b1ff32] text-black px-8 py-3 rounded-2xl font-black uppercase text-sm shadow-2xl">
+                Founder & CEO
+              </div>
+            </div>
+          </motion.div>
 
-          {/* Quote */}
-          <motion.blockquote
-            className="text-xl md:text-3xl italic font-serif text-gray-800 leading-relaxed mb-10 relative"
+          {/* --- Right Side: Visionary Quote --- */}
+          <motion.div 
+            className="w-full md:w-2/3 text-center md:text-left"
             variants={fadeIn}
           >
-            <span className="absolute left-0 top-0 text-7xl font-extrabold text-[#0B0E2D] opacity-70 transform -translate-x-1/2 -translate-y-1/2">
-              &ldquo;
-            </span>
-            At Revotic AI, we believe that the future belongs to those who embrace innovation. By merging artificial intelligence, creativity, and human-centric design, we empower businesses to transform ideas into lasting impact.
-            <span className="absolute right-0 bottom-0 text-7xl font-extrabold text-[#0B0E2D] opacity-70 transform translate-x-1/2 translate-y-1/2">
-              &rdquo;
-            </span>
-          </motion.blockquote>
+            <div className="mb-6 flex justify-center md:justify-start">
+              <p className="text-[#b1ff32] font-black text-xs uppercase tracking-[0.3em]">
+                A Message from Our Founder
+              </p>
+            </div>
 
-          {/* Founder Info */}
-          <motion.div
-            className="flex flex-col items-center"
-            variants={fadeIn}
-          >
-            <img
-              src="/images/experts/sayab.png"
-              alt="Sayab Gulfaraz, Founder & Chief Executive Officer"
-              className="w-24 h-24 rounded-full object-cover mb-4 border-4 border-gray-200 shadow-md"
-              onError={(e) => (e.currentTarget.src = 'https://placehold.co/96x96/e0e0e0/333?text=SG')} // Fallback image
-            />
-            <h3 className="text-xl font-bold text-gray-900 mb-1">Sayab Gulfaraz</h3>
-            <p className="text-md text-gray-600">Founder & Chief Executive Officer</p>
+            <h2 className="text-3xl md:text-4xl font-black text-white leading-tight tracking-tighter uppercase mb-10">
+              Built by Someone Who <br />
+              Understands Your Problem
+            </h2>
+
+            <blockquote className="relative mb-10">
+              <span className="absolute -top-8 -left-4 text-[10rem] font-black text-white opacity-5 pointer-events-none select-none">
+                "
+              </span>
+              <p className="text-sm md:text-base text-gray-400 font-medium leading-relaxed italic">
+                RevoticAI was born from a simple frustration - too many businesses were being left behind because AI felt too complex, too expensive, or too far out of reach. I started this company to change that. We build practical AI solutions that real businesses can actually use, understand, and grow with.
+              </p>
+            </blockquote>
+
+            <div className="flex flex-col items-center md:items-start">
+              <h3 className="text-xl font-black text-[#b1ff32] uppercase tracking-tighter leading-none">Sayab Gulfaraz</h3>
+              <p className="text-gray-500 uppercase tracking-[0.3em] font-black text-[10px] mt-3">Founder & CEO, RevoticAI</p>
+            </div>
           </motion.div>
         </motion.div>
       </div>
