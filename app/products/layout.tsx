@@ -1,8 +1,8 @@
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Products | RevoticAI — AI SaaS Solutions',
-  description: 'Discover RevoticAI products — AI-powered SaaS solutions and tools built to solve real business problems.',
+  title: 'Products | RevoticAI - AI SaaS Solutions',
+  description: 'Discover RevoticAI products - AI-powered SaaS solutions and tools built to solve real business problems.',
   keywords: [
     'AI products', 'SaaS products', 'AI tools', 'software products',
     'AI solutions', 'automated tools', 'RevoticAI products'

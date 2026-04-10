@@ -12,7 +12,6 @@ import TechStack from "@/components/common/TechStack"
 import ProductShowcase from "@/components//sections/Home/ProductShowcase"
 // import FeaturedBlog from "@/components/sections/Home/FeaturedBlog"
 // import DiscoverSection from "@/components/sections/Home/DiscoverSection"
-import Reviews from "@/components/sections/Home/Reviews"
 import WorkingProcess from "@/components/sections/Home/OurWorkingProcess"
 // import LeadGenPopup from "@/components/sections/Home/LeadGenForm"
 import WhyChooseUs from "@/components/sections/Home/WhyChooseUs"
@@ -80,7 +79,6 @@ export default function Home() {
       <PricingTiers />
       <CTA />
       <LeadGenForm />
-      <Reviews />
     </main>
   );
 }

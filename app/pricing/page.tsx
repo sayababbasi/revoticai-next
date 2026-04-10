@@ -16,14 +16,14 @@ const PricingPage: React.FC = () => {
   return (
     <main>
       {/* 1. Page Header (Investment Vision) */}
-      <IndustryPageHeader 
+      <IndustryPageHeader
         title="Predictable Investment Models"
         subtitle="Scale Your Intelligence Strategically"
-        description="Transparent, value-driven pricing structures designed for businesses at every stage of their AI maturity journey—from MVP to autonomous enterprise."
+        description="Transparent, value-driven pricing structures designed for businesses at every stage of their AI maturity journey-from MVP to autonomous enterprise."
         breadcrumbs={breadcrumbs}
         emphasizeWord={2} // Emphasize 'Models'
       />
-      
+
       {/* 2. Pricing Tiers (The Core Offering) */}
       <PricingTiers />
 

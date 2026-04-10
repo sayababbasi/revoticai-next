@@ -61,7 +61,7 @@ const products = [
     title: "AI-Powered Project & BMS",
     subtitle: "Task Management",
     description:
-      "Taskdoo is our internal project management platform built for fast-moving teams. Manage tasks across Kanban boards, track progress in real time, assign team members, and hit every deadline — without the complexity of tools like Jira.",
+      "Taskdoo is our internal project management platform built for fast-moving teams. Manage tasks across Kanban boards, track progress in real time, assign team members, and hit every deadline without the complexity of tools like Jira.",
     features: [
       "Kanban board with drag-and-drop tasks",
       "Role-based access control (Admin, Manager, Member)",
@@ -115,10 +115,10 @@ const products = [
   },
   {
     id: "wearino",
-    title: "Wearino.pk — AI-Powered Fashion Store",
+    title: "Wearino.pk - AI-Powered Fashion Store",
     subtitle: "Smart Online Stores",
     description:
-      "Wearino.pk is our own e-commerce clothing brand built on a custom AI-powered storefront. The platform delivers personalized product recommendations, smart search, and a seamless checkout experience — proving what we can build for your e-commerce business.",
+      "Wearino.pk is our own e-commerce clothing brand built on a custom AI-powered storefront. The platform delivers personalized product recommendations, smart search, and a seamless checkout experience proving what we can build for your e-commerce business.",
     features: [
       "AI recommendation engine for personalized shopping",
       "Smart search with natural language support",

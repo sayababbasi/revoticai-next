@@ -1,7 +1,7 @@
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Careers | RevoticAI — Join Our Team',
+  title: 'Careers | RevoticAI - Join Our Team',
   description: 'Join RevoticAI and work on cutting-edge AI solutions. We are hiring talented engineers, designers, and entrepreneurs in Pakistan.',
   keywords: [
     'careers', 'jobs', 'hiring', 'engineer jobs Pakistan', 'AI jobs',

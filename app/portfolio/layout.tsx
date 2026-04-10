@@ -1,7 +1,7 @@
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Portfolio | RevoticAI — Projects & Work Showcase',
+  title: 'Portfolio | RevoticAI - Projects & Work Showcase',
   description: 'View our portfolio of AI solutions, web applications, and digital products built for clients across industries.',
   keywords: [
     'portfolio', 'project showcase', 'AI projects', 'web development portfolio',

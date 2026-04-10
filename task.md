@@ -1,6 +1,6 @@
-# Website Architecture — Full Blueprint
+# Website Architecture - Full Blueprint
 
-## Phase 1 — Core Pages (Remaining)
+## Phase 1 - Core Pages (Remaining)
 
 
 ### Case Studies Page (`/case-studies`)

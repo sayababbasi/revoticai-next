@@ -1,7 +1,7 @@
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Pricing | RevoticAI — Transparent AI Solution Costs',
+  title: 'Pricing | RevoticAI - Transparent AI Solution Costs',
   description: 'Affordable and transparent pricing for AI solutions, automation, and web development. Custom packages for businesses of all sizes.',
   keywords: [
     'pricing', 'AI pricing', 'automation pricing', 'web development pricing',

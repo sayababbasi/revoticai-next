@@ -1,7 +1,7 @@
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Services | RevoticAI — AI, Automation, Web Development & UI/UX',
+  title: 'Services | RevoticAI - AI, Automation, Web Development & UI/UX',
   description: 'RevoticAI offers AI/ML solutions, business automation, web app development, UI/UX design, and game development. Custom AI solutions for your business.',
   keywords: [
     'AI services Pakistan', 'machine learning services', 'business automation services',

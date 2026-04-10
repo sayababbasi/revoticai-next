@@ -1,7 +1,7 @@
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Contact Us | RevoticAI — Get in Touch',
+  title: 'Contact Us | RevoticAI - Get in Touch',
   description: 'Contact RevoticAI for AI automation, web development, and business solutions. Based in Rawalpindi, Pakistan. Email: hello@revoticai.com',
   keywords: [
     'contact RevoticAI', 'contact AI agency Pakistan', 'AI agency email',

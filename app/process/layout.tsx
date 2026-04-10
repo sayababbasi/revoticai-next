@@ -1,7 +1,7 @@
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Process | RevoticAI — Our Development Process',
+  title: 'Process | RevoticAI - Our Development Process',
   description: 'Learn how RevoticAI develops AI solutions with a strategic, tested, and transparent process from discovery to deployment.',
   keywords: [
     'development process', 'AI process', 'workflow', 'methodology',

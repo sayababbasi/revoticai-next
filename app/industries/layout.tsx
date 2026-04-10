@@ -1,7 +1,7 @@
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Industries | RevoticAI — Vertical Expertise',
+  title: 'Industries | RevoticAI - Vertical Expertise',
   description: 'RevoticAI serves multiple industries including e-commerce, finance, healthcare, education, and more with AI and automation solutions.',
   keywords: [
     'industries', 'industry solutions', 'vertical expertise', 'e-commerce AI',
