@@ -15,7 +15,7 @@ import ProductShowcase from "@/components//sections/Home/ProductShowcase"
 import WorkingProcess from "@/components/sections/Home/OurWorkingProcess"
 // import LeadGenPopup from "@/components/sections/Home/LeadGenForm"
 import WhyChooseUs from "@/components/sections/Home/WhyChooseUs"
-import PricingTiers from "@/components/sections/Pricing/PricingTiers"
+// import PricingTiers from "@/components/sections/Pricing/PricingTiers"
 
 
 export default function Home() {
@@ -76,9 +76,10 @@ export default function Home() {
       {/* <DiscoverSection /> */}
       <Testimonials />
       <ProductShowcase />
-      <PricingTiers />
+      {/* <PricingTiers /> */}
       <CTA />
       <LeadGenForm />
     </main>
   );
 }
+// Trigger hot reload

@@ -1,9 +1,8 @@
-
 "use client";
 
 import React from 'react';
 import IndustryPageHeader from '@/components/sections/Industries/IndustryPageHeader';
-import PricingTiers from '@/components/sections/Pricing/PricingTiers';
+// import PricingTiers from '@/components/sections/Pricing/PricingTiers';
 import PricingFAQ from '@/components/sections/Pricing/PricingFAQ';
 import CTA from '@/components/sections/Home/CTA';
 
@@ -25,7 +24,7 @@ const PricingPage: React.FC = () => {
       />
 
       {/* 2. Pricing Tiers (The Core Offering) */}
-      <PricingTiers />
+      {/* <PricingTiers /> */}
 
       {/* 3. FAQ Section (Trust & Verification) */}
       <PricingFAQ />

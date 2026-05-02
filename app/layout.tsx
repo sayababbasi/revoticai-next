@@ -67,6 +67,9 @@ export const metadata: Metadata = {
     description: 'Custom AI solutions, automation, and software products. Founded by Sayab Gulfaraz.',
     images: ['https://revoticai.com/og-image.jpg'],
   },
+  icons: {
+    icon: '/favicon-black.png',
+  },
 };
 
 const inter = Inter({ subsets: ["latin"] });
