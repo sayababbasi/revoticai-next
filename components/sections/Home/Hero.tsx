@@ -54,12 +54,12 @@ const Hero: React.FC = () => {
                   src={slide.image || placeholderImg}
                   alt={slide.title}
                   fill
-                  className="object-cover opacity-70 animate-slow-zoom" 
+                  className="object-cover animate-slow-zoom" 
                   priority={index === 0}
                   onError={(e) => (e.currentTarget.src = placeholderImg)}
                 />
                 {/* Premium Corporate Gradient overlay */}
-                <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a0a] via-[#0a0a0a]/60 to-transparent md:bg-gradient-to-r md:from-[#0a0a0a] md:via-[#0a0a0a]/80 md:to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a0a] from-[40%] via-[#0a0a0a]/80 to-transparent md:bg-gradient-to-r md:from-[#0a0a0a] md:from-[40%] md:via-[#0a0a0a]/50 md:to-transparent" />
               </div>
 
               {/* Left Content */}

@@ -11,9 +11,9 @@ const categories = ["All", "AI & ML", "Web Development", "Automation", "Design",
 const BlogGrid: React.FC = () => {
   const [activeCategory, setActiveCategory] = useState("All");
 
-  const filteredBlogs = blogs.filter(
-    (blog) => activeCategory === "All" || blog.category === activeCategory
-  );
+  const filteredBlogs = [...blogs]
+    .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
+    .filter((blog) => activeCategory === "All" || blog.category === activeCategory);
 
   return (
     <section className="py-24 bg-gray-50">
