@@ -29,19 +29,20 @@ export default function Home() {
     "description": "RevoticAI is an AI automation and software development agency based in Rawalpindi, Pakistan. We build custom AI systems, web applications, and AI SaaS products.",
     "founder": {
       "@type": "Person",
-      "name": "Sayab Gulfaraz"
+      "name": "Sayab Gulfaraz Abbasi",
+      "role": "CEO & Founder",
     },
     "foundingDate": "2023",
     "address": {
       "@type": "PostalAddress",
-      "addressLocality": "Rawalpindi",
-      "addressRegion": "Punjab",
-      "addressCountry": "PK"
+      "addressLocality": "Islamabad",
+      "addressRegion": "Capital Territory",
+      "addressCountry": "Pakistan"
     },
     "contactPoint": {
       "@type": "ContactPoint",
       "contactType": "customer service",
-      "email": "hello@revoticai.com",
+      "email": "contact.revoticai@gmail.com",
       "availableLanguage": ["English", "Urdu"]
     },
     "sameAs": [
@@ -54,7 +55,12 @@ export default function Home() {
     "knowsAbout": [
       "Artificial Intelligence", "Machine Learning", "Business Automation",
       "Web Development", "AI SaaS", "RAG Systems", "Agentic AI",
-      "UI/UX Design", "Game Development"
+      "UI/UX Design", "Game Development", "Mobile App Development",
+      "AI Consulting", "AI Solutions", "AI Website Development", "Web App Development",
+      "Custom Software Development", "AI Agents", "AI Agents for Business",
+      "AI Solutions for Enterprises", "AI Agents for Startups", "AI Agents for Developers",
+      "AI Agents for Product Managers", "AI Agents for Business Owners", "UI/UX Design",
+      "React js", "Next js", "TypeScript", "Python", "Node js", "TensorFlow", "PyTorch", "LangChain"
     ]
   };
 
@@ -67,15 +73,15 @@ export default function Home() {
       /> {/* <-- ALL CLASSES REMOVED */}
       <Hero />
       <Clients />
-      <ServicesOverview />
       <TechStack />
-      <WhyChooseUs />
+      {/* <WhyChooseUs /> */}
       <WorkingProcess />
       {/* <ValueProposition /> */}
       <CaseStudies />
       {/* <DiscoverSection /> */}
       <Testimonials />
       <ProductShowcase />
+      <ServicesOverview />
       {/* <PricingTiers /> */}
       <CTA />
       <LeadGenForm />
