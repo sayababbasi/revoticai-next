@@ -2,6 +2,7 @@
 // app/layout.tsx
 import "../styles/globals.css";
 import type { Metadata } from "next";
+import Script from "next/script";
 import { Inter } from "next/font/google";
 import Topbar from "@/components/common/Topbar";
 import Navbar from "@/components/common/Navbar";
@@ -81,6 +82,24 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" suppressHydrationWarning>
+      <head>
+        <Script
+          strategy="afterInteractive"
+          src="https://www.googletagmanager.com/gtag/js?id=G-FNL76JMYYP"
+        />
+        <Script
+          id="google-analytics"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-FNL76JMYYP');
+            `,
+          }}
+        />
+      </head>
       <body className={`${inter.className} bg-white text-gray-900`} suppressHydrationWarning>
         {/* Maintenance bar + glowing ball */}
 
