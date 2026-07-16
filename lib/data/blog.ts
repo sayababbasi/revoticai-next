@@ -7,6 +7,7 @@ export interface Blog {
   date: string;
   image: string;
   content: string;
+  readTime?: string;
 }
 
 export const blogs: Blog[] = [

@@ -1,6 +1,6 @@
 
 import { notFound } from "next/navigation";
-import { blogs, BlogPost } from "@/lib/data/blog";
+import { blogs, Blog } from "@/lib/data/blog";
 import { ArrowLeft, Clock, User, Calendar } from "lucide-react";
 import Link from "next/link";
 import BlogCTA from "@/components/sections/Blogs/BlogCTA";
@@ -19,7 +19,7 @@ export default async function BlogDetailsPage({
   params: Promise<BlogPageParams>;
 }) {
   const { slug } = await params;
-  const post = blogs.find((b: BlogPost) => b.slug === slug);
+  const post = blogs.find((b: Blog) => b.slug === slug);
 
   if (!post) return notFound();
 

@@ -73,6 +73,7 @@ export default function Home() {
       /> {/* <-- ALL CLASSES REMOVED */}
       <Hero />
       <Clients />
+      <ServicesOverview />
       <TechStack />
       {/* <WhyChooseUs /> */}
       <WorkingProcess />
@@ -81,7 +82,6 @@ export default function Home() {
       {/* <DiscoverSection /> */}
       <Testimonials />
       <ProductShowcase />
-      <ServicesOverview />
       {/* <PricingTiers /> */}
       <CTA />
       <LeadGenForm />
