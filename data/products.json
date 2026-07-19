@@ -70,6 +70,7 @@
     "websiteUrl": "https://stroovo.revoticai.com",
     "industry": "Productivity & Collaboration",
     "image": "/images/product/stroovo.png",
+    "thumbnail": "/revoticai%20products/stroovo%20product/Stroovo%20Thumbnail.png",
     "logo": "Briefcase",
     "technology": ["React", "Node.js", "LangChain", "MongoDB"],
     "mainFeatures": [
