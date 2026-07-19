@@ -15,13 +15,13 @@ const RelatedCases: React.FC<RelatedCasesProps> = ({ currentSlug }) => {
   if (related.length === 0) return null;
 
   return (
-    <section className="bg-[#050505] py-24 md:py-32 border-t border-white/5">
+    <section className="bg-gray-50 py-24 relative">
       <div className="container mx-auto px-6">
         <div className="mb-16">
-          <div className="inline-flex items-center gap-3 px-4 py-1 border border-white/10 rounded-full text-[10px] uppercase tracking-[0.5em] font-black text-white mb-6">
-            More <span className="text-[#b1ff32]">Protocols</span>
+          <div className="inline-flex items-center gap-3 px-4 py-1 border border-gray-200 rounded-full text-[10px] uppercase tracking-[0.5em] font-black text-black mb-6 shadow-sm bg-white">
+            More <span className="text-[#82c125]">Protocols</span>
           </div>
-          <h2 className="text-3xl md:text-5xl font-black text-white uppercase tracking-tighter">
+          <h2 className="text-3xl md:text-5xl font-black text-black uppercase tracking-tighter">
             Similar Case Studies
           </h2>
         </div>
