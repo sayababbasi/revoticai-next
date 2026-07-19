@@ -6,6 +6,7 @@ import CaseStudyHero from "@/components/sections/CaseStudies/CaseStudyHero";
 import CaseStudyMetrics from "@/components/sections/CaseStudies/CaseStudyMetrics";
 import CaseStudyContent from "@/components/sections/CaseStudies/CaseStudyContent";
 import WearinoContent from "@/components/sections/CaseStudies/WearinoContent";
+import StroovoContent from "@/components/sections/CaseStudies/StroovoContent";
 import CaseStudyQuote from "@/components/sections/CaseStudies/CaseStudyQuote";
 import RelatedCases from "@/components/sections/CaseStudies/RelatedCases";
 import LeadGenForm from "@/components/sections/Home/LeadGenForm";
@@ -42,6 +43,8 @@ export default async function CaseStudyPage({ params }: { params: Promise<{ slug
       <CaseStudyMetrics study={study} />
       {study.slug === "wearino-ecommerce" ? (
         <WearinoContent study={study} />
+      ) : study.slug === "stroovo" ? (
+        <StroovoContent study={study} />
       ) : (
         <CaseStudyContent study={study} />
       )}
