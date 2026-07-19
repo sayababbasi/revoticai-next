@@ -59,12 +59,12 @@ const BarChart3Icon = () => (
 
 // ------------------ DATA ------------------
 const allProjects = [
-  { id: 1, title: "Intelligent Lead Platform", category: "AI & ML", tags: ['AI', 'SaaS', 'Sales'], image: "/images/sliderproduct/ai.webp", link: "/case-studies/intelligent-lead-platform" },
-  { id: 2, title: "Custom E-commerce Web App", category: "Web Development", tags: ['Backend', 'E-commerce', 'API'], image: "/images/sliderproduct/MEXT.jpg", link: "/case-studies/wearino-ecommerce" },
-  { id: 3, title: "Finance Automation Bot", category: "Automation", tags: ['RPA', 'FinTech'], image: "/images/product/dashb-dev-3.jpg", link: "/case-studies/finance-automation-bot" },
-  { id: 4, title: "Predictive Analytics Dashboard", category: "Data & Analytics", tags: ['DataViz', 'ML', 'Python'], image: "/images/sliderproduct/dash-img-333.png", link: "/case-studies/predictive-analytics-dashboard" },
-  { id: 5, title: "Logistics Tracking App", category: "App Development", tags: ['Mobile', 'Flutter', 'IoT'], image: "/images/product/yt1.webp", link: "/case-studies/logistics-tracking-app" },
-  { id: 6, title: "Healthcare AI Assistant", category: "AI & ML", tags: ['GenAI', 'Healthcare', 'NLP'], image: "/images/blogs/aiinhealth.jpeg", link: "/case-studies/healthcare-ai-assistant" },
+  { id: 1, title: "Intelligent Lead Platform", category: "AI & ML", tags: ['AI', 'SaaS', 'Sales'], image: "/images/Product Thumbnails/Intelligent Lead Platform.png", link: "/case-studies/intelligent-lead-platform" },
+  { id: 2, title: "Custom E-commerce Web App", category: "Web Development", tags: ['Backend', 'E-commerce', 'API'], image: "/images/Product Thumbnails/waerino thumbnail.png", link: "/case-studies/wearino-ecommerce" },
+  { id: 3, title: "Finance Automation Bot", category: "Automation", tags: ['RPA', 'FinTech'], image: "/images/Product Thumbnails/Finance bot.png", link: "/case-studies/finance-automation-bot" },
+  { id: 4, title: "Predictive Analytics Dashboard", category: "Data & Analytics", tags: ['DataViz', 'ML', 'Python'], image: "/images/Product Thumbnails/predictive analytics dashboard.png", link: "/case-studies/predictive-analytics-dashboard" },
+  { id: 5, title: "Logistics Tracking App", category: "App Development", tags: ['Mobile', 'Flutter', 'IoT'], image: "/images/Product Thumbnails/478bd79a-006f-4e6d-8e58-bd835272ba5d.png", link: "/case-studies/logistics-tracking-app" },
+  { id: 6, title: "Healthcare AI Assistant", category: "AI & ML", tags: ['GenAI', 'Healthcare', 'NLP'], image: "/images/Product Thumbnails/health assistant thumbnail.png", link: "/case-studies/healthcare-ai-assistant" },
 ];
 
 const categories = [

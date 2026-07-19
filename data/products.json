@@ -69,8 +69,8 @@
     "shortDescription": "Intelligent workspace designed to centralize team collaboration, AI agents, and task management.",
     "websiteUrl": "https://stroovo.revoticai.com",
     "industry": "Productivity & Collaboration",
-    "image": "/images/product/stroovo.png",
-    "thumbnail": "/revoticai%20products/stroovo%20product/Stroovo%20Thumbnail.png",
+    "image": "/images/Product Thumbnails/Stroovo.png",
+    "thumbnail": "/images/Product Thumbnails/Stroovo Thumbnail.png",
     "logo": "Briefcase",
     "technology": ["React", "Node.js", "LangChain", "MongoDB"],
     "mainFeatures": [
@@ -130,9 +130,9 @@
     "shortDescription": "Scalable, AI-enhanced learning management system for modern educational institutions.",
     "websiteUrl": "https://lms.revoticai.com",
     "industry": "Education & EdTech",
-    "image": "/images/product/lms.png",
+    "image": "/images/Product Thumbnails/lms.png",
     "video": "/revoticai%20products/lms%20product/revoticai%20LMS%20demo%20ads.mp4",
-    "thumbnail": "/revoticai%20products/lms%20product/lms%20thumbnail.png",
+    "thumbnail": "/images/Product Thumbnails/lms thumbnail.png",
     "logo": "GraduationCap",
     "technology": ["Next.js", "Django", "AWS", "MySQL"],
     "mainFeatures": [
@@ -192,8 +192,8 @@
     "shortDescription": "Advanced multimodal search and research engine combining text, image, and document analysis.",
     "websiteUrl": "https://dmrsce.revoticai.com",
     "industry": "Research & Enterprise Data",
-    "image": "/images/product/d-mrsce.png",
-    "thumbnail": "/revoticai%20products/dmrsce%20prduct/dmrsce.png",
+    "image": "/images/Product Thumbnails/dmrsce.png",
+    "thumbnail": "/images/Product Thumbnails/dmrsce.png",
     "logo": "Network",
     "technology": ["Python", "FastAPI", "Milvus", "PyTorch"],
     "mainFeatures": [

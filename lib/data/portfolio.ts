@@ -16,7 +16,7 @@ export const portfolioProjects: Project[] = [
     category: "AI & ML",
     description: "An AI-powered sales intelligence platform that automates lead scoring and outreach personalization.",
     tech: ["Next.js", "Python", "OpenAI", "Pinecone"],
-    image: "/images/sliderproduct/ai.webp",
+    image: "/images/Product Thumbnails/Intelligent Lead Platform.png",
     link: "/case-studies/intelligent-lead-platform",
     featured: true
   },
@@ -26,8 +26,8 @@ export const portfolioProjects: Project[] = [
     category: "Web Development",
     description: "A high-performance headless e-commerce store with real-time inventory and global payments.",
     tech: ["React", "Node.js", "Stripe", "AWS"],
-    image: "/images/sliderproduct/MEXT.jpg",
-    link: "/case-studies/ecommerce-personalization",
+    image: "/images/Product Thumbnails/waerino thumbnail.png",
+    link: "/case-studies/wearino-ecommerce",
     featured: true
   },
   {
@@ -36,8 +36,8 @@ export const portfolioProjects: Project[] = [
     category: "Automation",
     description: "Custom RPA solution for automating complex financial reconciliation and reporting workflows.",
     tech: ["Python", "Selenium", "PostgreSQL"],
-    image: "/images/product/dashb-dev-3.jpg",
-    link: "#",
+    image: "/images/Product Thumbnails/Finance bot.png",
+    link: "/case-studies/finance-automation-bot",
     featured: false
   },
   {
@@ -46,8 +46,8 @@ export const portfolioProjects: Project[] = [
     category: "Data & Analytics",
     description: "Real-time data visualization platform for monitoring business metrics and predicting growth trends.",
     tech: ["D3.js", "Python", "BigQuery"],
-    image: "/images/sliderproduct/dash-img-333.png",
-    link: "/case-studies/healthcare-data-pipeline",
+    image: "/images/Product Thumbnails/predictive analytics dashboard.png",
+    link: "/case-studies/predictive-analytics-dashboard",
     featured: true
   },
   {
@@ -56,8 +56,8 @@ export const portfolioProjects: Project[] = [
     category: "App Development",
     description: "A mobile-first solution for real-time fleet tracking and dynamic route optimization.",
     tech: ["Flutter", "Firebase", "Google Maps"],
-    image: "/images/product/yt1.webp",
-    link: "/case-studies/logistics-route-optimization",
+    image: "/images/Product Thumbnails/478bd79a-006f-4e6d-8e58-bd835272ba5d.png",
+    link: "/case-studies/logistics-tracking-app",
     featured: false
   },
   {
@@ -66,7 +66,7 @@ export const portfolioProjects: Project[] = [
     category: "AI & ML",
     description: "GenAI-powered medical assistant for patient symptom analysis and documentation.",
     tech: ["GenAI", "NLP", "React"],
-    image: "/images/blogs/aiinhealth.jpeg",
+    image: "/images/Product Thumbnails/health assistant thumbnail.png",
     link: "/case-studies/healthcare-ai-assistant",
     featured: false
   },
@@ -76,7 +76,7 @@ export const portfolioProjects: Project[] = [
     category: "AI & ML",
     description: "Custom AI chatbot trained on business data to automate customer support interactions.",
     tech: ["Next.js", "Python", "OpenAI API"],
-    image: "/images/product/ai.webp",
+    image: "/images/Product Thumbnails/dmrsce.png",
     link: "/case-studies/ai-chat-automation"
   },
   {
@@ -85,7 +85,7 @@ export const portfolioProjects: Project[] = [
     category: "Data & Analytics",
     description: "A real-time analytics dashboard for Wearino online store performance tracking.",
     tech: ["Next.js", "NestJS", "PostgreSQL"],
-    image: "images/sliderproduct/ecommerce-dashboard.png",
+    image: "/images/Product Thumbnails/wearino admin dashboard.png",
     link: "/case-studies/wearino-dashboard"
   },
   {
@@ -94,7 +94,7 @@ export const portfolioProjects: Project[] = [
     category: "AI & ML",
     description: "ML-based image classification system for product tagging automation.",
     tech: ["TensorFlow", "Flask", "React"],
-    image: "images/sliderproduct/img.webp",
+    image: "/images/Product Thumbnails/478bd79a-006f-4e6d-8e58-bd835272ba5d.png",
     link: "/case-studies/smart-image-recognition"
   },
   {
@@ -103,7 +103,7 @@ export const portfolioProjects: Project[] = [
     category: "UI/UX Design",
     description: "Modernized interface for a finance startup to enhance user engagement and trust.",
     tech: ["Figma", "Tailwind CSS", "Next.js"],
-    image: "images/sliderproduct/uiux-finance.jpg",
+    image: "/images/Product Thumbnails/478bd79a-006f-4e6d-8e58-bd835272ba5d.png",
     link: "/case-studies/fintech-ui-ux"
   }
 ];

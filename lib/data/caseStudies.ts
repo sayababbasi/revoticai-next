@@ -109,7 +109,7 @@ export const caseStudies: CaseStudy[] = [
       { label: "Predictive Accuracy", value: "High" },
       { label: "Sales Forecasting", value: "Real-time" }
     ],
-    image: "/images/sliderproduct/ai.webp"
+    image: "/images/Product Thumbnails/Intelligent Lead Platform.png"
   },
   {
     id: "cs-06",
@@ -126,7 +126,7 @@ export const caseStudies: CaseStudy[] = [
       { label: "Processing Speed", value: "10x Faster" },
       { label: "Audit Logging", value: "Automated" }
     ],
-    image: "/images/product/dashb-dev-3.jpg"
+    image: "/images/Product Thumbnails/Finance bot.png"
   },
   {
     id: "cs-07",
@@ -143,7 +143,7 @@ export const caseStudies: CaseStudy[] = [
       { label: "Delivery Delays", value: "Minimized" },
       { label: "Alert Latency", value: "<1s" }
     ],
-    image: "/images/product/yt1.webp"
+    image: "/images/Product Thumbnails/478bd79a-006f-4e6d-8e58-bd835272ba5d.png"
   },
   {
     id: "cs-08",
@@ -160,7 +160,7 @@ export const caseStudies: CaseStudy[] = [
       { label: "Patient Support", value: "24/7" },
       { label: "Data Compliance", value: "100%" }
     ],
-    image: "/images/blogs/aiinhealth.jpeg"
+    image: "/images/Product Thumbnails/health assistant thumbnail.png"
   },
   {
     id: "cs-09",
@@ -177,7 +177,7 @@ export const caseStudies: CaseStudy[] = [
       { label: "Anomaly Detection", value: "Real-time" },
       { label: "Decision Making", value: "Data-Driven" }
     ],
-    image: "/images/sliderproduct/dash-img-333.png"
+    image: "/images/Product Thumbnails/predictive analytics dashboard.png"
   },
   {
     id: "cs-10",
@@ -194,7 +194,7 @@ export const caseStudies: CaseStudy[] = [
       { label: "Checkout Conversion", value: "+35%" },
       { label: "Inventory Sync Latency", value: "Real-time" }
     ],
-    image: "/images/sliderproduct/MEXT.jpg"
+    image: "/images/Product Thumbnails/waerino thumbnail.png"
   },
   {
     id: "cs-11",
@@ -211,7 +211,7 @@ export const caseStudies: CaseStudy[] = [
       { label: "Response Time", value: "< 2s" },
       { label: "Customer Satisfaction", value: "+40%" }
     ],
-    image: "/images/product/ai.webp"
+    image: "/images/Product Thumbnails/478bd79a-006f-4e6d-8e58-bd835272ba5d.png"
   },
   {
     id: "cs-12",
@@ -228,7 +228,7 @@ export const caseStudies: CaseStudy[] = [
       { label: "Inventory Tracking", value: "Automated" },
       { label: "Reporting Time", value: "-80%" }
     ],
-    image: "images/sliderproduct/ecommerce-dashboard.png"
+    image: "/images/Product Thumbnails/wearino admin dashboard.png"
   },
   {
     id: "cs-13",
@@ -245,7 +245,7 @@ export const caseStudies: CaseStudy[] = [
       { label: "Onboarding Speed", value: "10x Faster" },
       { label: "Manual Effort", value: "-90%" }
     ],
-    image: "images/sliderproduct/img.webp"
+    image: "/images/Product Thumbnails/478bd79a-006f-4e6d-8e58-bd835272ba5d.png"
   },
   {
     id: "cs-14",
@@ -262,7 +262,7 @@ export const caseStudies: CaseStudy[] = [
       { label: "Session Duration", value: "+30%" },
       { label: "Bounce Rate", value: "-40%" }
     ],
-    image: "images/sliderproduct/uiux-finance.jpg"
+    image: "/images/Product Thumbnails/478bd79a-006f-4e6d-8e58-bd835272ba5d.png"
   }
 ];
 
