@@ -31,6 +31,7 @@ const navItems: NavItem[] = [
       { name: "Case Studies", href: "/portfolio" },
     ],
   },
+  { name: "Products", href: "/products" },
   {
     name: "Company",
     dropdown: [

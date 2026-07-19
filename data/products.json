@@ -1,0 +1,261 @@
+[
+  {
+    "slug": "wearino",
+    "title": "Wearino",
+    "category": "AI eCommerce Platform",
+    "status": "Live",
+    "shortDescription": "Modern AI-powered online shopping platform designed for fashion brands.",
+    "websiteUrl": "https://wearino.revoticai.com",
+    "industry": "eCommerce & Retail",
+    "image": "/images/product/wearino.png",
+    "logo": "ShoppingBag",
+    "technology": ["Next.js", "Python", "TensorFlow", "PostgreSQL"],
+    "mainFeatures": [
+      "AI recommendation engine for personalized shopping",
+      "Smart search with natural language support",
+      "Inventory management & order tracking",
+      "Mobile-first, fast-loading storefront"
+    ],
+    "overview": "Wearino is an end-to-end AI-powered eCommerce platform built specifically for modern fashion brands. It delivers an intuitive, personalized shopping experience while providing robust backend management tools to streamline operations.",
+    "features": [
+      {
+        "title": "Hyper-Personalization",
+        "description": "AI models analyze user behavior in real-time to suggest the most relevant products, boosting conversion rates."
+      },
+      {
+        "title": "Visual Search",
+        "description": "Allow customers to upload images and find visually similar products instantly within your catalog."
+      },
+      {
+        "title": "Smart Inventory Management",
+        "description": "Predictive analytics help forecast demand, minimizing overstock and stockouts."
+      }
+    ],
+    "benefits": [
+      "Increase customer lifetime value",
+      "Reduce cart abandonment",
+      "Streamline supply chain operations",
+      "Enhance brand loyalty"
+    ],
+    "techStack": [
+      { "name": "Frontend", "value": "Next.js, Tailwind CSS, Framer Motion" },
+      { "name": "Backend", "value": "Node.js, Python FastAPI" },
+      { "name": "AI/ML", "value": "TensorFlow, HuggingFace" },
+      { "name": "Database", "value": "PostgreSQL, Redis" }
+    ],
+    "useCases": [
+      "Fashion and Apparel Retailers",
+      "Direct-to-Consumer (D2C) Brands",
+      "Multivendor Marketplaces"
+    ],
+    "faqs": [
+      {
+        "question": "Can Wearino integrate with my existing ERP?",
+        "answer": "Yes, Wearino offers robust APIs and pre-built connectors for major ERP systems."
+      },
+      {
+        "question": "How long does implementation take?",
+        "answer": "A standard deployment typically takes 4-6 weeks depending on data migration requirements."
+      }
+    ]
+  },
+  {
+    "slug": "stroovo",
+    "title": "Stroovo",
+    "category": "AI Workspace Platform",
+    "status": "Live",
+    "shortDescription": "Intelligent workspace designed to centralize team collaboration, AI agents, and task management.",
+    "websiteUrl": "https://stroovo.revoticai.com",
+    "industry": "Productivity & Collaboration",
+    "image": "/images/product/stroovo.png",
+    "logo": "Briefcase",
+    "technology": ["React", "Node.js", "LangChain", "MongoDB"],
+    "mainFeatures": [
+      "Unified AI assistant integration",
+      "Smart document retrieval",
+      "Automated task delegation",
+      "Real-time team collaboration spaces"
+    ],
+    "overview": "Stroovo is the next-generation workspace platform that natively integrates AI into your team's daily workflows. From managing projects to drafting documents with intelligent AI copilots, Stroovo centralizes productivity.",
+    "features": [
+      {
+        "title": "AI Copilot Integration",
+        "description": "Draft emails, summarize threads, and generate reports without leaving your workspace."
+      },
+      {
+        "title": "Intelligent Task Routing",
+        "description": "Automatically assign tasks based on team capacity and expertise."
+      },
+      {
+        "title": "Centralized Knowledge Base",
+        "description": "Chat with your company documents and find answers instantly using RAG technology."
+      }
+    ],
+    "benefits": [
+      "Reduce context switching",
+      "Accelerate onboarding",
+      "Break down data silos",
+      "Automate repetitive admin tasks"
+    ],
+    "techStack": [
+      { "name": "Frontend", "value": "React, Redux, SCSS" },
+      { "name": "Backend", "value": "Node.js, Express" },
+      { "name": "AI/ML", "value": "LangChain, OpenAI Models" },
+      { "name": "Database", "value": "MongoDB, Pinecone" }
+    ],
+    "useCases": [
+      "Remote and Hybrid Teams",
+      "Agency Operations",
+      "Enterprise Knowledge Management"
+    ],
+    "faqs": [
+      {
+        "question": "Is our data secure and private?",
+        "answer": "Yes, Stroovo employs enterprise-grade encryption and ensures your data is never used to train public AI models."
+      },
+      {
+        "question": "Can we bring our own LLM models?",
+        "answer": "Enterprise customers have the option to connect their own custom models or dedicated API keys."
+      }
+    ]
+  },
+  {
+    "slug": "university-lms",
+    "title": "University LMS",
+    "category": "White-label Learning Management System",
+    "status": "Live",
+    "shortDescription": "Scalable, AI-enhanced learning management system for modern educational institutions.",
+    "websiteUrl": "https://lms.revoticai.com",
+    "industry": "Education & EdTech",
+    "image": "/images/product/lms.png",
+    "logo": "GraduationCap",
+    "technology": ["Next.js", "Django", "AWS", "MySQL"],
+    "mainFeatures": [
+      "AI-driven learning paths",
+      "Automated grading and feedback",
+      "Interactive multimedia courses",
+      "Comprehensive admin dashboards"
+    ],
+    "overview": "Our White-label University LMS is designed to bring educational institutions into the AI era. It offers a fully customizable platform that supports adaptive learning, simplifying administration while elevating the student experience.",
+    "features": [
+      {
+        "title": "Adaptive Learning Paths",
+        "description": "Dynamically adjust course difficulty and content based on student performance."
+      },
+      {
+        "title": "AI Grading Assistant",
+        "description": "Automate grading for assignments and quizzes, providing instant, constructive feedback."
+      },
+      {
+        "title": "Virtual Classroom & Proctoring",
+        "description": "Integrated video conferencing with smart AI proctoring for secure assessments."
+      }
+    ],
+    "benefits": [
+      "Improve student retention",
+      "Reduce faculty workload",
+      "Scale educational offerings globally",
+      "Data-driven insights into student performance"
+    ],
+    "techStack": [
+      { "name": "Frontend", "value": "Next.js, Material UI" },
+      { "name": "Backend", "value": "Python Django" },
+      { "name": "Infrastructure", "value": "AWS (EC2, S3, RDS)" },
+      { "name": "Database", "value": "MySQL" }
+    ],
+    "useCases": [
+      "Universities and Colleges",
+      "Corporate Training Programs",
+      "Online Course Creators"
+    ],
+    "faqs": [
+      {
+        "question": "Can we customize the branding?",
+        "answer": "Absolutely. It's a fully white-label solution allowing complete customization of colors, logos, and domains."
+      },
+      {
+        "question": "Does it support SCORM?",
+        "answer": "Yes, the LMS is fully compliant with SCORM and xAPI standards."
+      }
+    ]
+  },
+  {
+    "slug": "d-mrsce",
+    "title": "D-MRSCE",
+    "category": "Deep Multimodal Retrieval Summarization Chat Engine",
+    "status": "Live",
+    "shortDescription": "Advanced multimodal search and research engine combining text, image, and document analysis.",
+    "websiteUrl": "https://deepmars.revoticai.com",
+    "industry": "Research & Enterprise Data",
+    "image": "/images/product/d-mrsce.png",
+    "logo": "Network",
+    "technology": ["Python", "FastAPI", "Milvus", "PyTorch"],
+    "mainFeatures": [
+      "Cross-modal semantic search",
+      "Automated document summarization",
+      "Visual and text reasoning",
+      "Secure enterprise deployment"
+    ],
+    "overview": "D-MRSCE (Deep Multimodal Retrieval Summarization Chat Engine) is an enterprise-grade research engine. It empowers organizations to search across vast, unstructured datasets including text, images, and complex documents with unprecedented accuracy.",
+    "features": [
+      {
+        "title": "Multimodal Vector Search",
+        "description": "Search using text to find images, or use images to find related documents using unified embeddings."
+      },
+      {
+        "title": "Deep Research Agents",
+        "description": "Deploy autonomous agents to synthesize large volumes of research papers into actionable insights."
+      },
+      {
+        "title": "Explainable AI Citations",
+        "description": "Every claim generated by the system includes precise citations back to the source documents."
+      }
+    ],
+    "benefits": [
+      "Drastically reduce research time",
+      "Uncover hidden patterns in unstructured data",
+      "Ensure data lineage and accuracy",
+      "Enhance decision-making capabilities"
+    ],
+    "techStack": [
+      { "name": "Frontend", "value": "React, Tailwind CSS" },
+      { "name": "Backend", "value": "Python FastAPI" },
+      { "name": "AI/ML", "value": "PyTorch, Vision Transformers" },
+      { "name": "Database", "value": "Milvus Vector Database" }
+    ],
+    "useCases": [
+      "R&D Departments",
+      "Legal and Compliance Teams",
+      "Healthcare and Life Sciences"
+    ],
+    "faqs": [
+      {
+        "question": "How does D-MRSCE handle sensitive documents?",
+        "answer": "It can be deployed entirely on-premise or in a private cloud to ensure strict data sovereignty."
+      },
+      {
+        "question": "What document formats are supported?",
+        "answer": "D-MRSCE natively supports PDFs, Word documents, Excel, PPTs, images, and raw text files."
+      }
+    ]
+  },
+  {
+    "slug": "future-products",
+    "title": "Future Products",
+    "category": "Coming Soon",
+    "status": "Coming Soon",
+    "shortDescription": "We are constantly innovating. More groundbreaking AI products are currently in development.",
+    "websiteUrl": "#",
+    "industry": "Various",
+    "image": "/images/product/coming-soon.png",
+    "logo": "Rocket",
+    "technology": [],
+    "mainFeatures": [],
+    "overview": "",
+    "features": [],
+    "benefits": [],
+    "techStack": [],
+    "useCases": [],
+    "faqs": []
+  }
+]

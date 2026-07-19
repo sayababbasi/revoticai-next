@@ -50,14 +50,19 @@ const fadeUp = {
 
 // --- Footer Links Data ---
 const footerLinks = {
-  information: [
-    { name: "About Us", href: "/about" },
-    { name: "Contact Us", href: "/contact" },
-    { name: "Portfolio", href: "/portfolio" },
-    { name: "Our Process", href: "/process" },
-    { name: "Service", href: "/services" },
+  products: [
+    { name: "Wearino", href: "/products/wearino" },
+    { name: "Stroovo", href: "/products/stroovo" },
+    { name: "University LMS", href: "/products/university-lms" },
+    { name: "D-MRSCE", href: "/products/d-mrsce" },
+  ],
+  quickLinks: [
+    { name: "Services", href: "/services" },
+    { name: "Solutions", href: "/industries" },
+    { name: "Contact", href: "/contact" },
     { name: "Blogs", href: "/blogs" },
-    { name: "Our Experts", href: "/experts" },
+    { name: "Privacy Policy", href: "/legal/privacy-policy" },
+    { name: "Terms & Conditions", href: "/legal/terms-and-conditions" },
   ],
   services: [
     { name: "AI & ML Automation", href: "/services/ai-ml" },
@@ -66,12 +71,6 @@ const footerLinks = {
     { name: "AI-Powered Web Development", href: "/services/web-app" },
     { name: "AI-Powered App Development", href: "/services/app-dev" },
     { name: "Personalized AI Dashboards", href: "/services/ai-ml" },
-  ],
-  legal: [
-    { name: "Terms & Conditions", href: "/legal/terms-and-conditions" },
-    { name: "Privacy Policy", href: "/legal/privacy-policy" },
-    { name: "Cookie Policy", href: "/legal/cookie-policy" },
-    { name: "Certificate Verification", href: "/verify" },
   ],
 };
 
@@ -117,11 +116,11 @@ const Footer: React.FC = () => {
         variants={fadeUp}
       >
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {/* Column 1: Information */}
+          {/* Column 1: Products */}
           <div>
-            <h5 className="text-white text-lg font-semibold mb-4">Information</h5>
+            <h5 className="text-white text-lg font-semibold mb-4">Products</h5>
             <ul className="space-y-3">
-              {footerLinks.information.map((link) => (
+              {footerLinks.products.map((link) => (
                 <li key={link.name}>
                   <a href={link.href} className="hover:text-white hover:underline transition-colors">
                     {link.name}
@@ -131,25 +130,25 @@ const Footer: React.FC = () => {
             </ul>
           </div>
 
-          {/* Column 2: Explore Services */}
+          {/* Column 2: Quick Links */}
+          <div>
+            <h5 className="text-white text-lg font-semibold mb-4">Quick Links</h5>
+            <ul className="space-y-3">
+              {footerLinks.quickLinks.map((link) => (
+                <li key={link.name}>
+                  <a href={link.href} className="hover:text-white hover:underline transition-colors">
+                    {link.name}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Column 3: Explore Services */}
           <div>
             <h5 className="text-white text-lg font-semibold mb-4">Explore Services</h5>
             <ul className="space-y-3">
               {footerLinks.services.map((link) => (
-                <li key={link.name}>
-                  <a href={link.href} className="hover:text-white hover:underline transition-colors">
-                    {link.name}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Column 3: Legal */}
-          <div>
-            <h5 className="text-white text-lg font-semibold mb-4">Legal</h5>
-            <ul className="space-y-3">
-              {footerLinks.legal.map((link) => (
                 <li key={link.name}>
                   <a href={link.href} className="hover:text-white hover:underline transition-colors">
                     {link.name}

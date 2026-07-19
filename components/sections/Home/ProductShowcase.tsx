@@ -3,6 +3,9 @@
 import React, { useState, useEffect } from "react";
 // We will use Framer Motion for the animation, as it's in your stack.
 import { motion, AnimatePresence } from "framer-motion";
+import Link from "next/link";
+import DemoBookingButton from "@/app/products/[slug]/DemoBookingButton";
+import productsData from "@/data/products.json";
 
 // --- Inlined SVG Icons (to prevent build errors) ---
 const ArrowLeftIcon = () => (
@@ -54,81 +57,16 @@ const CheckIcon = () => (
   </svg>
 );
 
-// --- Inlined Product Data (as requested) ---
-const products = [
-  {
-    id: "taskdoo",
-    title: "AI-Powered Project & BMS",
-    subtitle: "Task Management",
-    description:
-      "Taskdoo is our internal project management platform built for fast-moving teams. Manage tasks across Kanban boards, track progress in real time, assign team members, and hit every deadline without the complexity of tools like Jira.",
-    features: [
-      "Kanban board with drag-and-drop tasks",
-      "Role-based access control (Admin, Manager, Member)",
-      "Real-time progress tracking & sprint analytics",
-      "Built with Django + React",
-    ],
-    image:
-      "/images/product/ai_dashboard.png",
-  },
-  {
-    id: "crm",
-    title: "AI-Powered CRM",
-    subtitle: "Customer Relationship Management",
-    description:
-      "Our AI-CRM automatically analyzes customer interactions to provide deep insights, predict sales, and automate follow-ups, letting your team focus on building relationships.",
-    features: [
-      "Predictive Lead Scoring",
-      "Automated Data Entry",
-      "Sentiment Analysis",
-    ],
-    image:
-      "/images/product/dashb-dev-3.jpg",
-  },
-  {
-    id: "bms",
-    title: "Intelligent BMS",
-    subtitle: "Business Management System",
-    description:
-      "A unified platform to manage your projects, finances, and HR. Our AI identifies inefficiencies and suggests optimizations for your entire workflow.",
-    features: [
-      "Automated Project Reporting",
-      "AI-Powered Financial Forecasting",
-      "Smart Resource Allocation",
-    ],
-    image:
-      "/images/product/dashb-dev-3.jpg",
-  },
-  {
-    id: "automation",
-    title: "Robotic Process Automation",
-    subtitle: "Automation Tools",
-    description:
-      "Eliminate repetitive manual tasks. Our RPA bots can handle everything from data entry and report generation to complex system integrations, 24/7.",
-    features: [
-      "Cross-Platform Integration",
-      "No-Code Bot Builder",
-      "Scalable Cloud Infrastructure",
-    ],
-    image:
-      "/images/product/robotic-process.png",
-  },
-  {
-    id: "wearino",
-    title: "Wearino.pk - AI-Powered Fashion Store",
-    subtitle: "Smart Online Stores",
-    description:
-      "Wearino.pk is our own e-commerce clothing brand built on a custom AI-powered storefront. The platform delivers personalized product recommendations, smart search, and a seamless checkout experience proving what we can build for your e-commerce business.",
-    features: [
-      "AI recommendation engine for personalized shopping",
-      "Smart search with natural language support",
-      "Inventory management & order tracking",
-      "Mobile-first, fast-loading storefront",
-    ],
-    image:
-      "/images/product/ecommers.png",
-  },
-];
+// --- Product Data ---
+const products = productsData.filter(p => p.status !== "Coming Soon").map(p => ({
+  id: p.slug,
+  title: p.title,
+  subtitle: p.category,
+  description: p.shortDescription,
+  features: p.mainFeatures,
+  image: p.image,
+  slug: p.slug,
+}));
 
 // --- Main Product Showcase Component ---
 const ProductShowcase: React.FC = () => {
@@ -221,18 +159,16 @@ const ProductShowcase: React.FC = () => {
                     ))}
                   </ul>
                   <div className="flex gap-4">
-                    <a
-                      href="/contact"
+                    <DemoBookingButton
+                      productName={activeProduct.title}
                       className="group inline-flex items-center justify-center px-6 py-3 bg-[#b1ff32] text-black font-bold rounded-lg text-base transition-transform duration-300 hover:scale-105"
-                    >
-                      Schedule a Demo
-                    </a>
-                    <a
-                      href="/products"
+                    />
+                    <Link
+                      href={`/products/${activeProduct.slug}`}
                       className="group inline-flex items-center justify-center px-6 py-3 bg-gray-100 text-gray-800 font-bold rounded-lg text-base transition-all duration-300 hover:bg-gray-200"
                     >
                       Learn More
-                    </a>
+                    </Link>
                   </div>
                 </div>
               </div>
