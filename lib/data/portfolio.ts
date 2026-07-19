@@ -17,7 +17,7 @@ export const portfolioProjects: Project[] = [
     description: "An AI-powered sales intelligence platform that automates lead scoring and outreach personalization.",
     tech: ["Next.js", "Python", "OpenAI", "Pinecone"],
     image: "/images/sliderproduct/ai.webp",
-    link: "/case-studies/fintech-automation",
+    link: "/case-studies/intelligent-lead-platform",
     featured: true
   },
   {

@@ -93,6 +93,23 @@ export const caseStudies: CaseStudy[] = [
       { label: "Fleet Utilization", value: "+15%" }
     ],
     image: "https://images.unsplash.com/photo-1586528116311-ad8ed7c80a30?q=80&w=2940&auto=format&fit=crop"
+  },
+  {
+    id: "cs-05",
+    slug: "intelligent-lead-platform",
+    client: "RevoticAI",
+    industry: "Sales Tech",
+    service: "AI & ML",
+    techStack: ["Next.js", "TypeScript", "Python", "FastAPI", "TensorFlow", "Scikit-learn", "Docker"],
+    problem: "Modern sales teams struggle with prioritizing leads, analyzing complex customer interactions, and accurately forecasting growth. Traditional CRMs lack predictive capabilities to optimize workflows.",
+    solution: "Engineered an intelligent SaaS platform utilizing advanced ML models for dynamic lead scoring, conversation prediction, and predictive sales growth forecasting.",
+    mainResult: "AI-Driven Sales Growth",
+    results: [
+      { label: "Lead Qualification", value: "3x Faster" },
+      { label: "Predictive Accuracy", value: "High" },
+      { label: "Sales Forecasting", value: "Real-time" }
+    ],
+    image: "/images/sliderproduct/ai.webp"
   }
 ];
 

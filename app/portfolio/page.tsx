@@ -59,7 +59,7 @@ const BarChart3Icon = () => (
 
 // ------------------ DATA ------------------
 const allProjects = [
-  { id: 1, title: "Intelligent Lead Platform", category: "AI & ML", tags: ['AI', 'SaaS', 'Sales'], image: "/images/sliderproduct/ai.webp", link: "#" },
+  { id: 1, title: "Intelligent Lead Platform", category: "AI & ML", tags: ['AI', 'SaaS', 'Sales'], image: "/images/sliderproduct/ai.webp", link: "/case-studies/intelligent-lead-platform" },
   { id: 2, title: "Custom E-commerce Web App", category: "Web Development", tags: ['Backend', 'E-commerce', 'API'], image: "/images/sliderproduct/MEXT.jpg", link: "#" },
   { id: 3, title: "Finance Automation Bot", category: "Automation", tags: ['RPA', 'FinTech'], image: "/images/product/dashb-dev-3.jpg", link: "#" },
   { id: 4, title: "Predictive Analytics Dashboard", category: "Data & Analytics", tags: ['DataViz', 'ML', 'Python'], image: "/images/sliderproduct/dash-img-333.png", link: "#" },

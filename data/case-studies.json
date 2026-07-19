@@ -59,5 +59,26 @@
     ],
     "technologies": ["React", "Node.js", "WebRTC", "PostgreSQL", "AWS"],
     "link": "/case-studies/telehealth-saas"
+  },
+  {
+    "slug": "intelligent-lead-platform",
+    "tag": "AI & Sales SaaS",
+    "title": "Intelligent Lead Platform",
+    "description": "A sophisticated SaaS sales solution leveraging advanced AI and Machine Learning to transform raw sales data into actionable intelligence and predictive insights.",
+    "image": "/images/sliderproduct/ai.webp",
+    "client": "RevoticAI",
+    "industry": "Sales Tech",
+    "duration": "Ongoing",
+    "challenge": "Modern sales teams struggle with effectively prioritizing leads, analyzing complex customer interactions, and accurately forecasting growth. Traditional CRMs lack the predictive capabilities required to optimize sales workflows and drive targeted follow-ups.",
+    "solution": "We engineered an intelligent SaaS platform combining a high-performance Next.js and TypeScript frontend with a fast, low-latency Python and FastAPI backend. Extensive R&D was conducted to train ML models using TensorFlow and Scikit-learn for dynamic lead scoring, conversation prediction, and sales growth forecasting, all containerized via Docker.",
+    "metric": "AI",
+    "metricLabel": "Driven Growth",
+    "results": [
+      "Deployed ML algorithms that accurately assign quality scores to prioritize high-potential prospects.",
+      "Trained models to analyze conversation history and predict conversion probabilities for tailored follow-ups.",
+      "Built predictive visualization models based on historical sales data to forecast future performance."
+    ],
+    "technologies": ["Next.js", "TypeScript", "Python", "FastAPI", "TensorFlow", "Scikit-learn", "Docker"],
+    "link": "/case-studies/intelligent-lead-platform"
   }
 ]
