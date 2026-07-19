@@ -65,7 +65,7 @@ const ProjectsGallery: React.FC = () => {
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0 }}
                 transition={{ duration: 0.4 }}
-                className="group relative bg-neutral-900 border border-neutral-800 rounded-xl overflow-hidden hover:border-[#b1ff32]/50 shadow-lg hover:shadow-[#b1ff32]/10"
+                className="group relative bg-neutral-900 border border-neutral-800 rounded-xl overflow-hidden hover:border-[#b1ff32]/50 shadow-lg hover:shadow-[#b1ff32]/10 flex flex-col"
               >
                 <div className="overflow-hidden">
                   <img
@@ -78,11 +78,11 @@ const ProjectsGallery: React.FC = () => {
                     }
                   />
                 </div>
-                <div className="p-5 flex flex-col h-[280px]">
+                <div className="p-5 flex flex-col">
                   <h3 className="text-xl font-semibold mb-2 text-[#b1ff32]">
                     {project.title}
                   </h3>
-                  <p className="text-gray-400 text-sm mb-3 flex-1">
+                  <p className="text-gray-400 text-sm mb-3">
                     {project.description}
                   </p>
                   <div className="flex flex-wrap gap-2 mb-6">
@@ -98,7 +98,7 @@ const ProjectsGallery: React.FC = () => {
                   
                   <Link 
                     href={project.link} 
-                    className="mt-auto text-sm font-semibold text-[#b1ff32] hover:underline"
+                    className="text-sm font-semibold text-[#b1ff32] hover:underline mt-4"
                   >
                     View Case Study &rarr;
                   </Link>

@@ -1,45 +1,45 @@
 [
   {
-    "slug": "finedge-automation",
-    "tag": "AI & Fintech",
-    "title": "Intelligent Automation for FinEdge",
-    "description": "How we built a scalable, AI-powered platform to automate risk analysis and data processing, improving efficiency by 40%.",
-    "image": "/images/casestudies/case1.jpg",
-    "client": "FinEdge",
-    "industry": "Finance & Investment",
-    "duration": "3 Months",
-    "challenge": "FinEdge faced challenges with manual data handling and slow risk assessment workflows, leading to delayed investment insights and operational inefficiency.",
-    "solution": "We developed a fully automated, AI-driven risk analysis engine using Python and FastAPI, integrated with a real-time dashboard built in Next.js. The solution streamlined data ingestion, analysis, and reporting.",
-    "metric": "40%",
-    "metricLabel": "Efficiency Increase",
+    "slug": "stroovo",
+    "tag": "AI Workspace Platform",
+    "title": "Intelligent Workspace for Stroovo",
+    "description": "Intelligent workspace designed to centralize team collaboration, AI agents, and task management.",
+    "image": "/images/Product Thumbnails/Stroovo Thumbnail.png",
+    "client": "Stroovo",
+    "industry": "Productivity & Collaboration",
+    "duration": "4 Months",
+    "challenge": "Teams faced context switching and data silos across multiple tools.",
+    "solution": "We developed an AI-powered workspace combining document retrieval, task delegation, and AI copilots into a unified platform.",
+    "metric": "3x",
+    "metricLabel": "Faster Onboarding",
     "results": [
-      "40% increase in data processing efficiency",
-      "Reduced manual intervention by 60%",
-      "Enabled real-time decision-making for investment analysts"
+      "Reduced context switching",
+      "Accelerated onboarding by 3x",
+      "Eliminated data silos"
     ],
-    "technologies": ["Python", "FastAPI", "Next.js", "MongoDB", "Azure AI"],
-    "link": "/case-studies/finedge-automation"
+    "technologies": ["React", "Node.js", "LangChain", "MongoDB"],
+    "link": "/case-studies/stroovo"
   },
   {
-    "slug": "retailco-ecommerce",
+    "slug": "wearino-ecommerce",
     "tag": "Web & E-commerce",
-    "title": "AI-Powered E-commerce for RetailCo",
-    "description": "Developed a full-stack web app with a personalized recommendation engine, increasing user engagement and conversion rates.",
-    "image": "/images/casestudies/case4.png",
-    "client": "RetailCo",
+    "title": "AI-Powered E-commerce for Wearino",
+    "description": "Developed a high-performance headless e-commerce store with real-time inventory and AI-driven recommendations.",
+    "image": "/images/Product Thumbnails/waerino thumbnail.png",
+    "client": "Wearino",
     "industry": "Retail & E-commerce",
-    "duration": "2 Months",
-    "challenge": "RetailCo needed an intelligent e-commerce platform capable of recommending products based on customer behavior and purchase patterns.",
-    "solution": "We built a modern full-stack web app using Next.js and Node.js, powered by an AI-based recommendation engine that personalizes user journeys in real time.",
-    "metric": "25%",
+    "duration": "3 Months",
+    "challenge": "Wearino needed a high-performance e-commerce architecture capable of managing complex real-time inventory and secure localized payments.",
+    "solution": "We engineered a scalable platform using Next.js 16 and NestJS, integrating Stripe, AI chatbots, and real-time inventory sync.",
+    "metric": "35%",
     "metricLabel": "Increase in Conversions",
     "results": [
-      "25% increase in conversion rates",
-      "Enhanced customer engagement through personalized suggestions",
-      "Seamless checkout and optimized mobile performance"
+      "Page load time under 1 second",
+      "35% increase in checkout conversions",
+      "Real-time inventory synchronization"
     ],
-    "technologies": ["Next.js", "Node.js", "TensorFlow", "MongoDB", "Stripe API"],
-    "link": "/case-studies/retailco-ecommerce"
+    "technologies": ["Next.js", "NestJS", "PostgreSQL", "Prisma", "Redis"],
+    "link": "/case-studies/wearino-ecommerce"
   },
   {
     "slug": "telehealth-saas",

@@ -5,6 +5,7 @@ import { caseStudies } from "@/lib/data/caseStudies";
 import CaseStudyHero from "@/components/sections/CaseStudies/CaseStudyHero";
 import CaseStudyMetrics from "@/components/sections/CaseStudies/CaseStudyMetrics";
 import CaseStudyContent from "@/components/sections/CaseStudies/CaseStudyContent";
+import WearinoContent from "@/components/sections/CaseStudies/WearinoContent";
 import CaseStudyQuote from "@/components/sections/CaseStudies/CaseStudyQuote";
 import RelatedCases from "@/components/sections/CaseStudies/RelatedCases";
 import LeadGenForm from "@/components/sections/Home/LeadGenForm";
@@ -39,7 +40,11 @@ export default async function CaseStudyPage({ params }: { params: Promise<{ slug
     <main className="bg-black min-h-screen">
       <CaseStudyHero study={study} />
       <CaseStudyMetrics study={study} />
-      <CaseStudyContent study={study} />
+      {study.slug === "wearino-ecommerce" ? (
+        <WearinoContent study={study} />
+      ) : (
+        <CaseStudyContent study={study} />
+      )}
       {study.quote && <CaseStudyQuote quote={study.quote} />}
       <RelatedCases currentSlug={study.slug} />
       <LeadGenForm />

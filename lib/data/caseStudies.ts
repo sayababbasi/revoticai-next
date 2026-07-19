@@ -245,7 +245,7 @@ export const caseStudies: CaseStudy[] = [
       { label: "Onboarding Speed", value: "10x Faster" },
       { label: "Manual Effort", value: "-90%" }
     ],
-    image: "/images/Product Thumbnails/478bd79a-006f-4e6d-8e58-bd835272ba5d.png"
+    image: "/images/Product Thumbnails/smart-image-recognition.png"
   },
   {
     id: "cs-14",
@@ -262,7 +262,7 @@ export const caseStudies: CaseStudy[] = [
       { label: "Session Duration", value: "+30%" },
       { label: "Bounce Rate", value: "-40%" }
     ],
-    image: "/images/Product Thumbnails/478bd79a-006f-4e6d-8e58-bd835272ba5d.png"
+    image: "/images/Product Thumbnails/fintech-uiux.png"
   }
 ];
 

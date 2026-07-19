@@ -94,7 +94,7 @@ export const portfolioProjects: Project[] = [
     category: "AI & ML",
     description: "ML-based image classification system for product tagging automation.",
     tech: ["TensorFlow", "Flask", "React"],
-    image: "/images/Product Thumbnails/478bd79a-006f-4e6d-8e58-bd835272ba5d.png",
+    image: "/images/Product Thumbnails/smart-image-recognition.png",
     link: "/case-studies/smart-image-recognition"
   },
   {
@@ -103,7 +103,7 @@ export const portfolioProjects: Project[] = [
     category: "UI/UX Design",
     description: "Modernized interface for a finance startup to enhance user engagement and trust.",
     tech: ["Figma", "Tailwind CSS", "Next.js"],
-    image: "/images/Product Thumbnails/478bd79a-006f-4e6d-8e58-bd835272ba5d.png",
+    image: "/images/Product Thumbnails/fintech-uiux.png",
     link: "/case-studies/fintech-ui-ux"
   }
 ];
