@@ -260,9 +260,25 @@ export const caseStudies: CaseStudy[] = [
     results: [
       { label: "User Retention", value: "+55%" },
       { label: "Session Duration", value: "+30%" },
-      { label: "Bounce Rate", value: "-40%" }
     ],
     image: "/images/Product Thumbnails/fintech-uiux.png"
+  },
+  {
+    id: "cs-15",
+    slug: "stroovo",
+    client: "Stroovo",
+    industry: "Productivity & Collaboration",
+    service: "AI Workspace Platform",
+    techStack: ["Next.js", "NestJS", "PostgreSQL", "Socket.IO", "AI"],
+    problem: "Teams faced context switching and data silos across multiple tools, leading to inefficiencies.",
+    solution: "We developed an AI-powered workspace combining document retrieval, task delegation, and AI copilots.",
+    mainResult: "3x Faster Onboarding",
+    results: [
+      { label: "Onboarding", value: "3x Faster" },
+      { label: "Context Switching", value: "Reduced" },
+      { label: "Data Silos", value: "Eliminated" }
+    ],
+    image: "/images/Product Thumbnails/Stroovo Thumbnail.png"
   }
 ];
 

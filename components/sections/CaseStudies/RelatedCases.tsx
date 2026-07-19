@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useMemo } from "react";
 import { CaseStudy, caseStudies } from "@/lib/data/caseStudies";
 import CaseStudyCard from "./CaseStudyCard";
 
@@ -9,8 +9,31 @@ interface RelatedCasesProps {
 }
 
 const RelatedCases: React.FC<RelatedCasesProps> = ({ currentSlug }) => {
-  // Simple logic to get 2 other case studies
-  const related = caseStudies.filter(cs => cs.slug !== currentSlug).slice(0, 2);
+  const related = useMemo(() => {
+    const currentStudy = caseStudies.find(cs => cs.slug === currentSlug);
+    if (!currentStudy) return [];
+
+    // Calculate relatedness score for each case study
+    const scoredStudies = caseStudies
+      .filter(cs => cs.slug !== currentSlug)
+      .map(cs => {
+        let score = 0;
+        if (cs.industry === currentStudy.industry) score += 3;
+        if (cs.service === currentStudy.service) score += 2;
+        
+        // Count matching tech stack items
+        const matchingTech = cs.techStack.filter(tech => currentStudy.techStack.includes(tech));
+        score += matchingTech.length;
+
+        return { study: cs, score };
+      });
+
+    // Sort by score descending and take the top 2
+    return scoredStudies
+      .sort((a, b) => b.score - a.score)
+      .slice(0, 2)
+      .map(item => item.study);
+  }, [currentSlug]);
 
   if (related.length === 0) return null;
 
