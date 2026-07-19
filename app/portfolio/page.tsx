@@ -64,7 +64,7 @@ const allProjects = [
   { id: 3, title: "Finance Automation Bot", category: "Automation", tags: ['RPA', 'FinTech'], image: "/images/product/dashb-dev-3.jpg", link: "/case-studies/finance-automation-bot" },
   { id: 4, title: "Predictive Analytics Dashboard", category: "Data & Analytics", tags: ['DataViz', 'ML', 'Python'], image: "/images/sliderproduct/dash-img-333.png", link: "#" },
   { id: 5, title: "Logistics Tracking App", category: "App Development", tags: ['Mobile', 'Flutter', 'IoT'], image: "/images/product/yt1.webp", link: "/case-studies/logistics-tracking-app" },
-  { id: 6, title: "Healthcare AI Assistant", category: "AI & ML", tags: ['GenAI', 'Healthcare', 'NLP'], image: "/images/blogs/aiinhealth.jpeg", link: "#" },
+  { id: 6, title: "Healthcare AI Assistant", category: "AI & ML", tags: ['GenAI', 'Healthcare', 'NLP'], image: "/images/blogs/aiinhealth.jpeg", link: "/case-studies/healthcare-ai-assistant" },
 ];
 
 const categories = [

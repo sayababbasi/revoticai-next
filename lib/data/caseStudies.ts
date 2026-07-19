@@ -144,6 +144,23 @@ export const caseStudies: CaseStudy[] = [
       { label: "Alert Latency", value: "<1s" }
     ],
     image: "/images/product/yt1.webp"
+  },
+  {
+    id: "cs-08",
+    slug: "healthcare-ai-assistant",
+    client: "Confidential Healthcare Provider",
+    industry: "Healthcare",
+    service: "Generative AI & NLP",
+    techStack: ["Next.js", "TypeScript", "Python", "FastAPI", "LangChain", "OpenAI", "Docker"],
+    problem: "Healthcare facilities face overwhelming volumes of patient inquiries and complex medical data, leading to inefficient pre-triage, delayed responses, and increased administrative burden.",
+    solution: "Developed a secure, HIPAA-compliant Generative AI assistant using advanced NLP to accurately interpret medical text. Orchestrated RAG pipelines via LangChain to safely handle pre-triage and generate context-aware patient support.",
+    mainResult: "Conversational Clinical Intelligence",
+    results: [
+      { label: "Triage Efficiency", value: "Improved" },
+      { label: "Patient Support", value: "24/7" },
+      { label: "Data Compliance", value: "100%" }
+    ],
+    image: "/images/blogs/aiinhealth.jpeg"
   }
 ];
 
