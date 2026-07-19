@@ -127,6 +127,23 @@ export const caseStudies: CaseStudy[] = [
       { label: "Audit Logging", value: "Automated" }
     ],
     image: "/images/product/dashb-dev-3.jpg"
+  },
+  {
+    id: "cs-07",
+    slug: "logistics-tracking-app",
+    client: "Global Supply Chain",
+    industry: "Logistics",
+    service: "IoT & Mobile Development",
+    techStack: ["Flutter", "Python", "FastAPI", "Firebase", "Docker"],
+    problem: "Traditional supply chains lack real-time visibility, leading to inefficient routing, missed delivery windows, and poor tracking of shipment coordinates.",
+    solution: "Engineered a cross-platform Flutter application integrated with real-time IoT telemetry pipelines. Utilized FastAPI to handle concurrent sensor data and Firebase for real-time synchronization and geofencing alerts.",
+    mainResult: "Transparent Real-Time Network",
+    results: [
+      { label: "Supply Chain Visibility", value: "Real-time" },
+      { label: "Delivery Delays", value: "Minimized" },
+      { label: "Alert Latency", value: "<1s" }
+    ],
+    image: "/images/product/yt1.webp"
   }
 ];
 
