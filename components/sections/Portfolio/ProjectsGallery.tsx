@@ -2,64 +2,8 @@
 
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-// import { Button } from "@/components/ui/button";
-
-// -------------------------------
-//  PROJECT DATA
-// -------------------------------
-const projects = [
-  {
-    id: 1,
-    title: "AI Chat Automation",
-    category: "AI",
-    description: "Custom AI chatbot trained on business data to automate support.",
-    tech: ["Next.js", "Python", "OpenAI API"],
-    image:
-      "/images/product/ai.webp",
-  },
-  {
-    id: 2,
-    title: "E-Commerce Dashboard",
-    category: "Web Apps",
-    description:
-      "A real-time analytics dashboard for online store performance tracking.",
-    tech: ["React", "Node.js", "MongoDB"],
-    image:
-      "images/sliderproduct/ecommerce-dashboard.png",
-  },
-  {
-    id: 3,
-    title: "Smart Image Recognition",
-    category: "AI",
-    description:
-      "An ML-based image classification system for product tagging automation.",
-    tech: ["TensorFlow", "Flask", "React"],
-    image:
-      "images/sliderproduct/img.webp",
-  },
-  {
-    id: 4,
-    title: "UI/UX Re-Design for FinTech",
-    category: "UI/UX",
-    description:
-      "Modernized interface for a finance startup to enhance user engagement.",
-    tech: ["Figma", "Tailwind CSS", "Next.js"],
-    image:
-      "images/sliderproduct/uiux-finance.jpg",
-  },
-  {
-    id: 5,
-    title: "Corporate Branding Suite",
-    category: "Branding",
-    description:
-      "Comprehensive branding and visual identity for a SaaS company.",
-    tech: ["Illustrator", "Photoshop"],
-    image:
-      "/images/sliderproduct/product-dev-2.webp",
-  },
-];
-
-const categories = ["All", "AI", "Web Apps", "UI/UX", "Branding"];
+import Link from "next/link";
+import { portfolioProjects, portfolioCategories } from "@/lib/data/portfolio";
 
 // -------------------------------
 //  COMPONENT
@@ -69,8 +13,8 @@ const ProjectsGallery: React.FC = () => {
 
   const filteredProjects =
     activeCategory === "All"
-      ? projects
-      : projects.filter((p) => p.category === activeCategory);
+      ? portfolioProjects
+      : portfolioProjects.filter((p) => p.category === activeCategory);
 
   return (
     <section className="py-24 bg-neutral-950 text-white">
@@ -92,20 +36,19 @@ const ProjectsGallery: React.FC = () => {
 
         {/* Category Filter Buttons */}
         <div className="flex flex-wrap justify-center gap-3 mb-14">
-          {/* {categories.map((cat) => (
-            <Button
+          {portfolioCategories.map((cat) => (
+            <button
               key={cat}
-              variant={activeCategory === cat ? "default" : "outline"}
               onClick={() => setActiveCategory(cat)}
-              className={`px-5 py-2 rounded-full transition-all duration-300 ${
+              className={`px-5 py-2 rounded-full transition-all duration-300 font-medium text-sm ${
                 activeCategory === cat
                   ? "bg-[#b1ff32] text-black"
                   : "bg-transparent border border-gray-700 text-gray-300 hover:text-white hover:border-[#b1ff32]"
               }`}
             >
               {cat}
-            </Button>
-          ))} */}
+            </button>
+          ))}
         </div>
 
         {/* Project Cards Grid */}
@@ -135,14 +78,14 @@ const ProjectsGallery: React.FC = () => {
                     }
                   />
                 </div>
-                <div className="p-5">
+                <div className="p-5 flex flex-col h-[280px]">
                   <h3 className="text-xl font-semibold mb-2 text-[#b1ff32]">
                     {project.title}
                   </h3>
-                  <p className="text-gray-400 text-sm mb-3">
+                  <p className="text-gray-400 text-sm mb-3 flex-1">
                     {project.description}
                   </p>
-                  <div className="flex flex-wrap gap-2 mb-4">
+                  <div className="flex flex-wrap gap-2 mb-6">
                     {project.tech.map((tech) => (
                       <span
                         key={tech}
@@ -152,9 +95,13 @@ const ProjectsGallery: React.FC = () => {
                       </span>
                     ))}
                   </div>
-                  <button className="text-sm font-semibold text-[#b1ff32] hover:underline">
-                    View Case Study →
-                  </button>
+                  
+                  <Link 
+                    href={project.link} 
+                    className="mt-auto text-sm font-semibold text-[#b1ff32] hover:underline"
+                  >
+                    View Case Study &rarr;
+                  </Link>
                 </div>
               </motion.div>
             ))}

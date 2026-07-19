@@ -67,7 +67,7 @@ export const portfolioProjects: Project[] = [
     description: "GenAI-powered medical assistant for patient symptom analysis and documentation.",
     tech: ["GenAI", "NLP", "React"],
     image: "/images/blogs/aiinhealth.jpeg",
-    link: "#",
+    link: "/case-studies/healthcare-ai-assistant",
     featured: false
   },
   {
@@ -77,16 +77,16 @@ export const portfolioProjects: Project[] = [
     description: "Custom AI chatbot trained on business data to automate customer support interactions.",
     tech: ["Next.js", "Python", "OpenAI API"],
     image: "/images/product/ai.webp",
-    link: "#"
+    link: "/case-studies/ai-chat-automation"
   },
   {
     id: "p-08",
-    title: "E-Commerce Dashboard",
+    title: "Wearino Analytics Dashboard",
     category: "Data & Analytics",
-    description: "A real-time analytics dashboard for online store performance tracking.",
-    tech: ["React", "Node.js", "MongoDB"],
+    description: "A real-time analytics dashboard for Wearino online store performance tracking.",
+    tech: ["Next.js", "NestJS", "PostgreSQL"],
     image: "images/sliderproduct/ecommerce-dashboard.png",
-    link: "#"
+    link: "/case-studies/wearino-dashboard"
   },
   {
     id: "p-09",
@@ -95,7 +95,7 @@ export const portfolioProjects: Project[] = [
     description: "ML-based image classification system for product tagging automation.",
     tech: ["TensorFlow", "Flask", "React"],
     image: "images/sliderproduct/img.webp",
-    link: "#"
+    link: "/case-studies/smart-image-recognition"
   },
   {
     id: "p-10",
@@ -104,7 +104,7 @@ export const portfolioProjects: Project[] = [
     description: "Modernized interface for a finance startup to enhance user engagement and trust.",
     tech: ["Figma", "Tailwind CSS", "Next.js"],
     image: "images/sliderproduct/uiux-finance.jpg",
-    link: "#"
+    link: "/case-studies/fintech-ui-ux"
   }
 ];
 

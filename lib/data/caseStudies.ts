@@ -184,17 +184,85 @@ export const caseStudies: CaseStudy[] = [
     slug: "wearino-ecommerce",
     client: "Wearino",
     industry: "Retail & E-commerce",
-    service: "Full-Stack Web Development",
-    techStack: ["Next.js", "Node.js", "Stripe API", "MongoDB", "Tailwind CSS", "AWS"],
-    problem: "Needed a high-performance headless e-commerce architecture capable of managing complex real-time inventory, dynamic product configurations, and global payments without sacrificing page load speeds.",
-    solution: "Engineered a custom, scalable storefront using Next.js for lightning-fast server-side rendering and SEO optimization. Built a robust Node.js API backend integrated with Stripe for secure transactions and MongoDB for real-time inventory tracking.",
-    mainResult: "High-Performance Global Storefront",
+    service: "Full-Stack Web Development & AI",
+    techStack: ["Next.js", "NestJS", "PostgreSQL", "Prisma", "Redis", "Stripe", "Supabase", "Socket.IO", "Python"],
+    problem: "Needed a high-performance headless e-commerce architecture capable of managing complex real-time inventory, secure localized payments (Stripe, JazzCash, Easypaisa), and AI-driven features like smart product search and SEO generation without sacrificing speed.",
+    solution: "Engineered a scalable platform using Next.js 16, React 19, and Tailwind CSS v4. Built a NestJS backend with Prisma and PostgreSQL. Integrated Redis, JWT/OAuth authentication, Supabase storage, and Python for advanced AI chatbots and product recommendations.",
+    mainResult: "High-Performance AI Storefront",
     results: [
       { label: "Page Load Time", value: "< 1s" },
       { label: "Checkout Conversion", value: "+35%" },
       { label: "Inventory Sync Latency", value: "Real-time" }
     ],
     image: "/images/sliderproduct/MEXT.jpg"
+  },
+  {
+    id: "cs-11",
+    slug: "ai-chat-automation",
+    client: "Global SaaS Provider",
+    industry: "Customer Support",
+    service: "AI Chat Automation",
+    techStack: ["Next.js", "Python", "OpenAI API", "Pinecone"],
+    problem: "Customer support teams were overwhelmed with repetitive queries, causing slow response times and degraded customer satisfaction.",
+    solution: "Developed a custom AI chatbot trained on proprietary business data using OpenAI's API. Integrated vector search to retrieve accurate context and automate Level 1 support interactions.",
+    mainResult: "Automated 70% of Support Queries",
+    results: [
+      { label: "Query Resolution", value: "70% Automated" },
+      { label: "Response Time", value: "< 2s" },
+      { label: "Customer Satisfaction", value: "+40%" }
+    ],
+    image: "/images/product/ai.webp"
+  },
+  {
+    id: "cs-12",
+    slug: "wearino-dashboard",
+    client: "Wearino",
+    industry: "Retail & E-commerce",
+    service: "Data & Analytics",
+    techStack: ["Next.js", "NestJS", "PostgreSQL", "Prisma", "Redis", "BullMQ"],
+    problem: "Store managers required a secure, role-based access control (RBAC) admin panel to oversee real-time sales metrics, AI-generated product tagging, and inventory levels across multiple payment gateways.",
+    solution: "Engineered a comprehensive Next.js 16 analytics dashboard powered by NestJS and Prisma. Connected PostgreSQL queries with Zustand and TanStack Query, utilizing Redis and BullMQ for high-speed background job processing and real-time Socket.IO updates.",
+    mainResult: "Real-Time Sales Intelligence",
+    results: [
+      { label: "Data Latency", value: "Real-Time" },
+      { label: "Inventory Tracking", value: "Automated" },
+      { label: "Reporting Time", value: "-80%" }
+    ],
+    image: "images/sliderproduct/ecommerce-dashboard.png"
+  },
+  {
+    id: "cs-13",
+    slug: "smart-image-recognition",
+    client: "E-Commerce Enterprise",
+    industry: "AI & ML",
+    service: "Computer Vision",
+    techStack: ["TensorFlow", "Flask", "React", "Python"],
+    problem: "Manual product tagging for massive e-commerce catalogs was labor-intensive, error-prone, and severely bottlenecked inventory onboarding.",
+    solution: "Deployed a custom Machine Learning image classification system using TensorFlow. Built a Flask API to serve the model to a React frontend, automating product categorization and tagging.",
+    mainResult: "Automated Product Tagging",
+    results: [
+      { label: "Tagging Accuracy", value: "96%" },
+      { label: "Onboarding Speed", value: "10x Faster" },
+      { label: "Manual Effort", value: "-90%" }
+    ],
+    image: "images/sliderproduct/img.webp"
+  },
+  {
+    id: "cs-14",
+    slug: "fintech-ui-ux",
+    client: "FinTech Startup",
+    industry: "FinTech",
+    service: "UI/UX Design",
+    techStack: ["Figma", "Tailwind CSS", "Next.js", "React"],
+    problem: "A promising finance startup suffered from low user adoption and trust due to an outdated, cluttered, and confusing user interface.",
+    solution: "Conducted extensive user research to completely modernize the interface. Delivered high-fidelity Figma prototypes and implemented a sleek, accessible UI using Tailwind CSS and Next.js.",
+    mainResult: "Enhanced User Engagement & Trust",
+    results: [
+      { label: "User Retention", value: "+55%" },
+      { label: "Session Duration", value: "+30%" },
+      { label: "Bounce Rate", value: "-40%" }
+    ],
+    image: "images/sliderproduct/uiux-finance.jpg"
   }
 ];
 
