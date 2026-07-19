@@ -110,6 +110,23 @@ export const caseStudies: CaseStudy[] = [
       { label: "Sales Forecasting", value: "Real-time" }
     ],
     image: "/images/sliderproduct/ai.webp"
+  },
+  {
+    id: "cs-06",
+    slug: "finance-automation-bot",
+    client: "Confidential FinTech",
+    industry: "Finance",
+    service: "Robotic Process Automation",
+    techStack: ["Python", "FastAPI", "Playwright", "Pandas", "Celery", "Docker"],
+    problem: "Manual financial reconciliation and data entry across legacy banking portals resulted in frequent spreadsheet errors, delayed reporting, and significant security compliance risks.",
+    solution: "Developed highly secure, deterministic RPA workflows to automatically extract, transform, and reconcile financial data. Integrated fallback protocols and comprehensive audit logging to catch transaction anomalies in real-time.",
+    mainResult: "Error-Free Automation Pipeline",
+    results: [
+      { label: "Data Accuracy", value: "100%" },
+      { label: "Processing Speed", value: "10x Faster" },
+      { label: "Audit Logging", value: "Automated" }
+    ],
+    image: "/images/product/dashb-dev-3.jpg"
   }
 ];
 
