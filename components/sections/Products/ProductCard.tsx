@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import DemoBookingModal from "./DemoBookingModal";
+import ProductVideoPlayer from "@/app/products/[slug]/ProductVideoPlayer";
 
 // Icons
 const CheckIcon = () => (
@@ -49,21 +50,15 @@ const ProductCard: React.FC<ProductCardProps> = ({ product, index }) => {
         
         {/* Top: Image */}
         <div className="w-full relative h-64 sm:h-80 bg-gray-100 overflow-hidden shrink-0">
-          <Image
-            src={product.image}
-            alt={product.title}
-            fill
-            sizes="(max-width: 768px) 100vw, 50vw"
-            className={`object-cover object-top transition-transform duration-700 ${!isComingSoon ? "group-hover:scale-105" : "opacity-60"}`}
-            priority={index < 2}
+          <ProductVideoPlayer
+            image={product.image}
+            title={product.title}
+            isComingSoon={isComingSoon}
+            video={(product as any).video}
+            thumbnail={(product as any).thumbnail}
+            className="relative w-full h-full"
+            imageClassName={`object-cover object-top transition-transform duration-700 ${!isComingSoon ? "group-hover:scale-105" : "opacity-60"}`}
           />
-          {isComingSoon && (
-            <div className="absolute inset-0 bg-black/40 flex items-center justify-center backdrop-blur-sm">
-              <span className="px-6 py-3 bg-white/20 text-white border border-white/40 font-bold uppercase tracking-widest rounded-full backdrop-blur-md">
-                Coming Soon
-              </span>
-            </div>
-          )}
         </div>
 
         {/* Bottom: Content */}

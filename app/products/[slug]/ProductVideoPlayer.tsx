@@ -9,6 +9,8 @@ interface ProductVideoPlayerProps {
   isComingSoon: boolean;
   video?: string;
   thumbnail?: string;
+  className?: string;
+  imageClassName?: string;
 }
 
 export default function ProductVideoPlayer({
@@ -17,20 +19,22 @@ export default function ProductVideoPlayer({
   isComingSoon,
   video,
   thumbnail,
+  className,
+  imageClassName,
 }: ProductVideoPlayerProps) {
   const [isPlaying, setIsPlaying] = useState(false);
 
   const displayImage = thumbnail || image;
 
   return (
-    <div className="relative rounded-2xl overflow-hidden border border-white/10 shadow-2xl bg-neutral-900 aspect-video group w-full h-full">
+    <div className={className || "relative rounded-2xl overflow-hidden border border-white/10 shadow-2xl bg-neutral-900 aspect-video group w-full h-full"}>
       {!isPlaying ? (
         <>
           <Image
             src={displayImage}
             alt={title}
             fill
-            className="object-cover object-top"
+            className={imageClassName || "object-cover object-top"}
             priority
           />
 
