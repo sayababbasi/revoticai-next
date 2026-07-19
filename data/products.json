@@ -192,6 +192,7 @@
     "websiteUrl": "https://dmrsce.revoticai.com",
     "industry": "Research & Enterprise Data",
     "image": "/images/product/d-mrsce.png",
+    "thumbnail": "/revoticai%20products/dmrsce%20prduct/dmrsce.png",
     "logo": "Network",
     "technology": ["Python", "FastAPI", "Milvus", "PyTorch"],
     "mainFeatures": [
