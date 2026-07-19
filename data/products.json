@@ -8,6 +8,8 @@
     "websiteUrl": "https://wearino.revoticai.com",
     "industry": "eCommerce & Retail",
     "image": "/images/product/wearino.png",
+    "video": "/revoticai%20products/wearino%20product/wearino%20demo%20ads.mp4",
+    "thumbnail": "/revoticai%20products/wearino%20product/waerino%20thumbnail.png",
     "logo": "ShoppingBag",
     "technology": ["Next.js", "Python", "TensorFlow", "PostgreSQL"],
     "mainFeatures": [
@@ -128,6 +130,8 @@
     "websiteUrl": "https://lms.revoticai.com",
     "industry": "Education & EdTech",
     "image": "/images/product/lms.png",
+    "video": "/revoticai%20products/lms%20product/revoticai%20LMS%20demo%20ads.mp4",
+    "thumbnail": "/revoticai%20products/lms%20product/lms%20thumbnail.png",
     "logo": "GraduationCap",
     "technology": ["Next.js", "Django", "AWS", "MySQL"],
     "mainFeatures": [
@@ -185,7 +189,7 @@
     "category": "Deep Multimodal Retrieval Summarization Chat Engine",
     "status": "Live",
     "shortDescription": "Advanced multimodal search and research engine combining text, image, and document analysis.",
-    "websiteUrl": "https://deepmars.revoticai.com",
+    "websiteUrl": "https://dmrsce.revoticai.com",
     "industry": "Research & Enterprise Data",
     "image": "/images/product/d-mrsce.png",
     "logo": "Network",

@@ -6,6 +6,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
 import DemoBookingButton from "@/app/products/[slug]/DemoBookingButton";
 import productsData from "@/data/products.json";
+import ProductVideoPlayer from "@/app/products/[slug]/ProductVideoPlayer";
 
 // --- Inlined SVG Icons (to prevent build errors) ---
 const ArrowLeftIcon = () => (
@@ -66,11 +67,14 @@ const products = productsData.filter(p => p.status !== "Coming Soon").map(p => (
   features: p.mainFeatures,
   image: p.image,
   slug: p.slug,
+  video: (p as any).video,
+  thumbnail: (p as any).thumbnail,
 }));
 
 // --- Main Product Showcase Component ---
 const ProductShowcase: React.FC = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [isPaused, setIsPaused] = useState(false);
 
   const prevSlide = () => {
     setCurrentIndex((prev) =>
@@ -86,11 +90,12 @@ const ProductShowcase: React.FC = () => {
 
   // Autoplay functionality
   useEffect(() => {
+    if (isPaused) return;
     const timer = setInterval(() => {
       nextSlide();
     }, 5000); // Change slide every 5 seconds
     return () => clearInterval(timer); // Clear timer on unmount
-  }, [currentIndex]);
+  }, [currentIndex, isPaused]);
 
   const activeProduct = products[currentIndex];
 
@@ -114,7 +119,11 @@ const ProductShowcase: React.FC = () => {
         </div>
 
         {/* --- Main Content Container --- */}
-        <div className="relative bg-white rounded-2xl shadow-xl p-8 md:p-12 overflow-hidden">
+        <div 
+          className="relative bg-white rounded-2xl shadow-xl p-8 md:p-12 overflow-hidden"
+          onMouseEnter={() => setIsPaused(true)}
+          onMouseLeave={() => setIsPaused(false)}
+        >
           {/* --- Animation Container --- */}
           {/* This will fade between products */}
           <AnimatePresence mode="wait">
@@ -128,12 +137,13 @@ const ProductShowcase: React.FC = () => {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
 
                 {/* --- Left Side (Image) --- */}
-                <div className="w-full h-80 md:h-96 rounded-xl overflow-hidden shadow-lg">
-                  <img
-                    src={activeProduct.image}
-                    alt={activeProduct.title}
-                    className="w-full h-full object-cover"
-                    onError={(e) => (e.currentTarget.src = 'https://placehold.co/600x500/f00/fff?text=Error')}
+                <div className="w-full h-80 md:h-96 rounded-xl overflow-hidden shadow-lg relative">
+                  <ProductVideoPlayer 
+                    image={activeProduct.image} 
+                    title={activeProduct.title} 
+                    isComingSoon={false} 
+                    video={activeProduct.video} 
+                    thumbnail={activeProduct.thumbnail} 
                   />
                 </div>
 

@@ -81,13 +81,66 @@ export default function ProductsPage() {
       </section>
 
       {/* Products Grid */}
-      <section id="products-grid" className="bg-gray-50 py-20 md:py-28">
-        <div className="container mx-auto px-6 max-w-7xl">
-          <div className="flex flex-col gap-16 md:gap-24">
+      <section id="products-grid" className="bg-gray-50 py-20 md:py-28 relative">
+        <div className="container mx-auto px-6 max-w-7xl relative z-10">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
             {productsData.map((product, index) => (
               <ProductCard key={product.slug} product={product} index={index} />
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* Why Choose Our Products */}
+      <section className="py-20 md:py-28 bg-white">
+        <div className="container mx-auto px-6 max-w-7xl">
+          <div className="text-center max-w-3xl mx-auto mb-16">
+            <h2 className="text-3xl md:text-5xl font-bold text-black mb-6">Built for the Enterprise</h2>
+            <p className="text-lg text-gray-600">
+              Our AI products are engineered to seamlessly integrate into your existing workflows, providing scalable, secure, and intelligent solutions.
+            </p>
+          </div>
+          <div className="grid md:grid-cols-3 gap-8">
+            <div className="p-8 bg-gray-50 rounded-2xl border border-gray-100 text-center">
+              <div className="w-16 h-16 bg-[#b1ff32]/20 rounded-full flex items-center justify-center mx-auto mb-6">
+                <svg className="w-8 h-8 text-black" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                </svg>
+              </div>
+              <h3 className="text-xl font-bold text-black mb-3">Rapid Deployment</h3>
+              <p className="text-gray-600">Launch powerful AI solutions in weeks, not months. Our modular architecture ensures fast integration.</p>
+            </div>
+            <div className="p-8 bg-gray-50 rounded-2xl border border-gray-100 text-center">
+              <div className="w-16 h-16 bg-[#b1ff32]/20 rounded-full flex items-center justify-center mx-auto mb-6">
+                <svg className="w-8 h-8 text-black" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+                </svg>
+              </div>
+              <h3 className="text-xl font-bold text-black mb-3">Enterprise Security</h3>
+              <p className="text-gray-600">Bank-grade security protocols, local deployment options, and strict data privacy compliance built-in.</p>
+            </div>
+            <div className="p-8 bg-gray-50 rounded-2xl border border-gray-100 text-center">
+              <div className="w-16 h-16 bg-[#b1ff32]/20 rounded-full flex items-center justify-center mx-auto mb-6">
+                <svg className="w-8 h-8 text-black" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
+                </svg>
+              </div>
+              <h3 className="text-xl font-bold text-black mb-3">Continuous Evolution</h3>
+              <p className="text-gray-600">Our platforms continuously learn and evolve with the latest AI advancements to keep you ahead.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Bottom CTA */}
+      <section className="py-24 bg-black text-white text-center relative overflow-hidden">
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-[#b1ff32]/10 blur-[120px] rounded-full pointer-events-none" />
+        <div className="container mx-auto px-6 max-w-3xl relative z-10">
+          <h2 className="text-4xl md:text-5xl font-black mb-6">Transform Your Operations Today</h2>
+          <p className="text-xl text-gray-400 mb-10">Book a personalized demo and see how RevoticAI products can drive massive efficiency in your business.</p>
+          <a href="/contact" className="px-10 py-4 bg-[#b1ff32] text-black font-bold rounded-full text-lg hover:scale-105 transition-transform inline-block shadow-[0_0_40px_rgba(177,255,50,0.3)]">
+            Schedule a Free Consultation
+          </a>
         </div>
       </section>
     </main>

@@ -5,6 +5,7 @@ import Link from "next/link";
 import { Metadata } from "next";
 import productsData from "@/data/products.json";
 import DemoBookingButton from "@/app/products/[slug]/DemoBookingButton";
+import ProductVideoPlayer from "@/app/products/[slug]/ProductVideoPlayer";
 
 // Icons
 const CheckIcon = () => (
@@ -158,16 +159,13 @@ export default async function ProductDetailPage({ params }: Props) {
 
             <div className="relative">
               <div className="absolute -inset-4 bg-[#b1ff32]/10 blur-[60px] rounded-[3rem]" />
-              <div className="relative rounded-2xl overflow-hidden border border-white/10 shadow-2xl bg-neutral-900 aspect-video">
-                <Image src={product.image} alt={product.title} fill className="object-cover object-top" priority />
-                {isComingSoon && (
-                  <div className="absolute inset-0 bg-black/50 backdrop-blur-sm flex items-center justify-center">
-                    <span className="px-8 py-4 bg-white/10 border border-white/20 text-white font-bold text-xl uppercase tracking-widest rounded-xl backdrop-blur-md">
-                      Coming Soon
-                    </span>
-                  </div>
-                )}
-              </div>
+              <ProductVideoPlayer 
+                image={product.image} 
+                title={product.title} 
+                isComingSoon={isComingSoon} 
+                video={(product as any).video} 
+                thumbnail={(product as any).thumbnail} 
+              />
             </div>
           </div>
         </div>
