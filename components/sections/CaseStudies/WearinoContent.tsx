@@ -199,18 +199,6 @@ Email Service`}
             </div>
           </Section>
 
-          <Section title="Future Enhancements">
-            <ul className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-4">
-              <li className="flex items-center gap-3"><div className="w-2 h-2 rounded-full bg-[#b1ff32]" /> Multi-vendor marketplace</li>
-              <li className="flex items-center gap-3"><div className="w-2 h-2 rounded-full bg-[#b1ff32]" /> Mobile applications (iOS/Android)</li>
-              <li className="flex items-center gap-3"><div className="w-2 h-2 rounded-full bg-[#b1ff32]" /> Loyalty & rewards program</li>
-              <li className="flex items-center gap-3"><div className="w-2 h-2 rounded-full bg-[#b1ff32]" /> Subscription-based products</li>
-              <li className="flex items-center gap-3"><div className="w-2 h-2 rounded-full bg-[#b1ff32]" /> Voice-enabled product search</li>
-              <li className="flex items-center gap-3"><div className="w-2 h-2 rounded-full bg-[#b1ff32]" /> AI chatbot for support</li>
-              <li className="flex items-center gap-3"><div className="w-2 h-2 rounded-full bg-[#b1ff32]" /> Dynamic pricing engine</li>
-              <li className="flex items-center gap-3"><div className="w-2 h-2 rounded-full bg-[#b1ff32]" /> Warehouse management sync</li>
-            </ul>
-          </Section>
 
           <Section title="Conclusion">
             <p>
