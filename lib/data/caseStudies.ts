@@ -211,7 +211,7 @@ export const caseStudies: CaseStudy[] = [
       { label: "Response Time", value: "< 2s" },
       { label: "Customer Satisfaction", value: "+40%" }
     ],
-    image: "/images/Product Thumbnails/478bd79a-006f-4e6d-8e58-bd835272ba5d.png"
+    image: "/images/Product Thumbnails/dmrsce.png"
   },
   {
     id: "cs-12",
