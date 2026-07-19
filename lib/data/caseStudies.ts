@@ -161,6 +161,40 @@ export const caseStudies: CaseStudy[] = [
       { label: "Data Compliance", value: "100%" }
     ],
     image: "/images/blogs/aiinhealth.jpeg"
+  },
+  {
+    id: "cs-09",
+    slug: "predictive-analytics-dashboard",
+    client: "Enterprise Data Client",
+    industry: "Data & Analytics",
+    service: "Predictive Analytics",
+    techStack: ["Next.js", "TypeScript", "Python", "FastAPI", "Scikit-learn", "Pandas", "Docker"],
+    problem: "Non-technical stakeholders struggled to interpret complex data structures and ML outputs, missing out on crucial forecasting insights, anomaly detection, and operational risks.",
+    solution: "Developed an intuitive, responsive dashboard using Next.js, powered by a high-performance Python/FastAPI backend. Integrated machine learning algorithms for time-series forecasting and real-time anomaly detection.",
+    mainResult: "Actionable Visual Intelligence",
+    results: [
+      { label: "Forecasting Accuracy", value: "High" },
+      { label: "Anomaly Detection", value: "Real-time" },
+      { label: "Decision Making", value: "Data-Driven" }
+    ],
+    image: "/images/sliderproduct/dash-img-333.png"
+  },
+  {
+    id: "cs-10",
+    slug: "wearino-ecommerce",
+    client: "Wearino",
+    industry: "Retail & E-commerce",
+    service: "Full-Stack Web Development",
+    techStack: ["Next.js", "Node.js", "Stripe API", "MongoDB", "Tailwind CSS", "AWS"],
+    problem: "Needed a high-performance headless e-commerce architecture capable of managing complex real-time inventory, dynamic product configurations, and global payments without sacrificing page load speeds.",
+    solution: "Engineered a custom, scalable storefront using Next.js for lightning-fast server-side rendering and SEO optimization. Built a robust Node.js API backend integrated with Stripe for secure transactions and MongoDB for real-time inventory tracking.",
+    mainResult: "High-Performance Global Storefront",
+    results: [
+      { label: "Page Load Time", value: "< 1s" },
+      { label: "Checkout Conversion", value: "+35%" },
+      { label: "Inventory Sync Latency", value: "Real-time" }
+    ],
+    image: "/images/sliderproduct/MEXT.jpg"
   }
 ];
 
