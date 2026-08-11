@@ -1,39 +1,39 @@
 [
   {
-    "tag": "Smart Business Dashboards",
-    "title": "Real-Time Intelligence. Smarter Decisions.",
-    "description": "Turn raw data into actionable business intelligence with AI-powered dashboards that help you spot trends, forecast outcomes, and make decisions faster.",
-    "image": "/images/hero/new-hero3.jpg",
-    "button1Text": "Schedule a Demo",
-    "button1Link": "/contact",
-    "button2Text": "Our Approach",
-    "button2Link": "/about#process"
-  },
-  {
-    "tag": "AI Automation & Agents",
-    "title": "Eliminate Manual Work. Scale with AI.",
-    "description": "Deploy intelligent AI agents and automation systems that streamline your operations, reduce overhead, and free your team to focus on what drives revenue.",
-    "image": "/images/hero/new-hero1.png",
-    "button1Text": "Book a Free Strategy Call",
-    "button1Link": "/contact",
-    "button2Text": "Explore Solutions",
-    "button2Link": "/services/ai-ml"
-  },
-  {
     "tag": "Custom SaaS Development",
     "title": "Your Vision. Our Platform. Built to Scale.",
     "description": "We architect and build custom SaaS platforms that generate recurring revenue, delight users, and scale effortlessly from MVP to enterprise.",
-    "image": "/images/hero/new-hero2.png",
+    "image": "/images/hero/new-hero3.jpg",
     "button1Text": "Get a Custom Proposal",
     "button1Link": "/contact",
     "button2Text": "View Case Studies",
     "button2Link": "/case-studies"
   },
   {
+    "tag": "AI Automation & Agents",
+    "title": "Eliminate Manual Work. Scale with AI.",
+    "description": "Deploy intelligent AI agents and automation systems that streamline your operations, reduce overhead, and free your team to focus on what drives revenue.",
+    "image": "/images/hero/new-hero2-test.png",
+    "button1Text": "Book a Free Strategy Call",
+    "button1Link": "/contact",
+    "button2Text": "Explore Solutions",
+    "button2Link": "/services/ai-ml"
+  },
+  {
+    "tag": "Smart Business Dashboards",
+    "title": "Real-Time Intelligence. Smarter Decisions.",
+    "description": "Turn raw data into actionable business intelligence with AI-powered dashboards that help you spot trends, forecast outcomes, and make decisions faster.",
+    "image": "/images/hero/new-hero2.png",
+    "button1Text": "Schedule a Demo",
+    "button1Link": "/contact",
+    "button2Text": "Our Approach",
+    "button2Link": "/about#process"
+  },
+  {
     "tag": "AI Chatbots & Conversational AI",
     "title": "24/7 Customer Engagement. Zero Downtime.",
     "description": "Deploy AI-powered chatbots and virtual assistants that qualify leads, resolve support queries, and deliver personalized experiences around the clock.",
-    "image": "/images/hero/new-test-hero-11.png",
+    "image": "/images/hero/web-hero.png",
     "button1Text": "Start Your AI Project",
     "button1Link": "/contact",
     "button2Text": "See Our Products",
@@ -43,7 +43,7 @@
     "tag": "Revotic AI - Your AI Partner",
     "title": "Smarter. Faster. Future-Ready.",
     "description": "We partner with ambitious businesses to design, build, and deploy AI-powered systems that drive measurable growth. From strategy to deployment, we deliver results.",
-    "image": "/images/hero/future-hero-22.webp",
+    "image": "/images/hero/last-hero.png",
     "button1Text": "Book a Free Strategy Call",
     "button1Link": "/contact",
     "button2Text": "About Revotic AI",
