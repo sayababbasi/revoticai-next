@@ -288,19 +288,19 @@ const Hero: React.FC = () => {
             <div className="col-span-1 lg:col-span-3 flex flex-row lg:flex-col gap-6 lg:gap-10 justify-around lg:justify-center pl-0 lg:pl-12 order-3">
               <div className="text-center lg:text-left">
                 <h2 className="text-4xl lg:text-5xl font-extrabold text-[#f97316] mb-1 flex items-start justify-center lg:justify-start">
-                  12<span className="text-2xl lg:text-3xl mt-1">+</span>
+                  3<span className="text-2xl lg:text-3xl mt-1">+</span>
                 </h2>
                 <p className="text-gray-600 text-xs lg:text-sm font-medium">Years Experience</p>
               </div>
               <div className="text-center lg:text-left">
                 <h2 className="text-4xl lg:text-5xl font-extrabold text-[#f97316] mb-1 flex items-start justify-center lg:justify-start">
-                  800<span className="text-2xl lg:text-3xl mt-1">+</span>
+                  200<span className="text-2xl lg:text-3xl mt-1">+</span>
                 </h2>
                 <p className="text-gray-600 text-xs lg:text-sm font-medium">Projects Done</p>
               </div>
               <div className="text-center lg:text-left">
                 <h2 className="text-4xl lg:text-5xl font-extrabold text-[#f97316] mb-1 flex items-start justify-center lg:justify-start">
-                  500<span className="text-2xl lg:text-3xl mt-1">+</span>
+                  190<span className="text-2xl lg:text-3xl mt-1">+</span>
                 </h2>
                 <p className="text-gray-600 text-xs lg:text-sm font-medium">Happy Clients</p>
               </div>
