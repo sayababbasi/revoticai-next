@@ -1,5 +1,15 @@
 [
   {
+    "tag": "Smart Business Dashboards",
+    "title": "Real-Time Intelligence. Smarter Decisions.",
+    "description": "Turn raw data into actionable business intelligence with AI-powered dashboards that help you spot trends, forecast outcomes, and make decisions faster.",
+    "image": "/images/hero/new-hero3.jpg",
+    "button1Text": "Schedule a Demo",
+    "button1Link": "/contact",
+    "button2Text": "Our Approach",
+    "button2Link": "/about#process"
+  },
+  {
     "tag": "AI Automation & Agents",
     "title": "Eliminate Manual Work. Scale with AI.",
     "description": "Deploy intelligent AI agents and automation systems that streamline your operations, reduce overhead, and free your team to focus on what drives revenue.",
@@ -18,16 +28,6 @@
     "button1Link": "/contact",
     "button2Text": "View Case Studies",
     "button2Link": "/case-studies"
-  },
-  {
-    "tag": "Smart Business Dashboards",
-    "title": "Real-Time Intelligence. Smarter Decisions.",
-    "description": "Turn raw data into actionable business intelligence with AI-powered dashboards that help you spot trends, forecast outcomes, and make decisions faster.",
-    "image": "/images/hero/hero-dash-1.png",
-    "button1Text": "Schedule a Demo",
-    "button1Link": "/contact",
-    "button2Text": "Our Approach",
-    "button2Link": "/about#process"
   },
   {
     "tag": "AI Chatbots & Conversational AI",
