@@ -8,7 +8,7 @@ const teamMembers = [
   {
     name: "SAYAB GULFARAZ",
     title: "Founder & Chief Executive Officer",
-    image: "/images/experts/founder and ceo sayab.png", // Ensure this path is correct in your public folder
+    image: "/images/experts/ceo-of-revoticai.png", // Ensure this path is correct in your public folder
   },
   {
     name: "Hasaan Farooq",

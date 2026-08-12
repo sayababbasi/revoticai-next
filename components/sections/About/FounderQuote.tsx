@@ -31,8 +31,9 @@ const FounderQuoteSection: React.FC = () => {
               <div className="absolute inset-0 bg-[#b1ff32] rounded-3xl blur-2xl opacity-10 group-hover:opacity-30 transition-opacity" />
               <div className="relative overflow-hidden rounded-3xl border border-white/10 aspect-[4/5] w-[300px] md:w-[350px]">
                 <img
-                  src="/images/experts/sayab.png"
-                  alt="Sayab Gulfaraz - Founder & CEO"
+                  src="/images/experts/ceo-of-revoticai.png"
+                  alt="CEO and Founder of RevoticAI - Sayab Gulfaraz"
+                  title="CEO of RevoticAI"
                   className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 scale-105 group-hover:scale-100"
                   onError={(e) => (e.currentTarget.src = 'https://placehold.co/600x800/111/444?text=CEO')}
                 />

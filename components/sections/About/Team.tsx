@@ -18,7 +18,7 @@ const team: TeamMember[] = [
   {
     name: "Sayab Gulfaraz",
     role: "Founder & CEO",
-    image: "/images/experts/sayab.png",
+    image: "/images/experts/ceo-of-revoticai.png",
     bio: "Started RevoticAI to make AI practical and accessible for businesses of all sizes. Oversees every project personally and stays involved from the first call to final delivery.",
     linkedin: "https://www.linkedin.com/in/sayab-abbasi/",
     skills: ["Leadership", "Strategy", "AI Products"],
